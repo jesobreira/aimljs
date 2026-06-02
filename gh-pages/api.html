@@ -1,0 +1,2888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Full API reference for aimljs classes, methods, and types."/>
+  <title>API Reference — aimljs</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">🤖 aimljs</a>
+      <nav class="site-nav"><a href="index.html" class="nav-link">Home</a><a href="getting-started.html" class="nav-link">Getting Started</a><a href="cli.html" class="nav-link">CLI Reference</a><a href="api.html" class="nav-link active">API Docs</a></nav>
+      <a href="https://github.com/jesobreira/aimljs" class="gh-link" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.4-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 6.1 18 6.4 18 6.4c.6 1.6.2 2.7.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </header>
+
+  <main class="site-main">
+<div class="docs-layout">
+  <aside class="docs-sidebar">
+    <div class="sidebar-group">
+      <span class="sidebar-label">API Reference</span>
+      <a href="#classes" class="sidebar-link">Classes</a><a href="#bots" class="sidebar-link h3">Bots</a><a href="#core" class="sidebar-link h3">Core</a><a href="#interfaces" class="sidebar-link">Interfaces</a><a href="#type-aliases" class="sidebar-link">Type Aliases</a><a href="#functions" class="sidebar-link">Functions</a><a href="#parsers" class="sidebar-link h3">Parsers</a><a href="#other" class="sidebar-link h3">Other</a><a href="#quick-start-nodejs" class="sidebar-link h3">Quick-start (Node.js)</a><a href="#quick-start-browser" class="sidebar-link h3">Quick-start (browser)</a><a href="#session-continuity" class="sidebar-link h3">Session continuity</a><a href="#extended-by" class="sidebar-link">Extended by</a><a href="#accessors" class="sidebar-link">Accessors</a><a href="#categorycount" class="sidebar-link h3">categoryCount</a><a href="#constructors" class="sidebar-link">Constructors</a><a href="#constructor" class="sidebar-link h3">Constructor</a><a href="#methods" class="sidebar-link">Methods</a><a href="#addcategory" class="sidebar-link h3">addCategory()</a><a href="#addsubstitution" class="sidebar-link h3">addSubstitution()</a><a href="#createsession" class="sidebar-link h3">createSession()</a><a href="#deletesession" class="sidebar-link h3">deleteSession()</a><a href="#getorcreatesession" class="sidebar-link h3">getOrCreateSession()</a><a href="#getproperty" class="sidebar-link h3">getProperty()</a><a href="#getsession" class="sidebar-link h3">getSession()</a><a href="#handlegossip" class="sidebar-link h3">handleGossip()</a><a href="#handlenomatch" class="sidebar-link h3">handleNoMatch()</a><a href="#loadallserializedsessions" class="sidebar-link h3">loadAllSerializedSessions()</a><a href="#loaddirectory" class="sidebar-link h3">loadDirectory()</a><a href="#loadfile" class="sidebar-link h3">loadFile()</a><a href="#loadfiles" class="sidebar-link h3">loadFiles()</a><a href="#loadmap" class="sidebar-link h3">loadMap()</a><a href="#loadproperties" class="sidebar-link h3">loadProperties()</a><a href="#loadserializedsession" class="sidebar-link h3">loadSerializedSession()</a><a href="#loadset" class="sidebar-link h3">loadSet()</a><a href="#loadsubstitutions" class="sidebar-link h3">loadSubstitutions()</a><a href="#loadxmlstring" class="sidebar-link h3">loadXMLString()</a><a href="#serializeallsessions" class="sidebar-link h3">serializeAllSessions()</a><a href="#serializesession" class="sidebar-link h3">serializeSession()</a><a href="#setproperty" class="sidebar-link h3">setProperty()</a><a href="#talk" class="sidebar-link h3">talk()</a><a href="#talksession" class="sidebar-link h3">talkSession()</a><a href="#validatexml" class="sidebar-link h3">validateXML()</a><a href="#basic-usage" class="sidebar-link h3">Basic usage</a><a href="#loading-individual-files" class="sidebar-link h3">Loading individual files</a><a href="#standard-directory-layout-auto-loader" class="sidebar-link h3">Standard directory layout (auto-loader)</a><a href="#extends" class="sidebar-link">Extends</a><a href="#accessors" class="sidebar-link">Accessors</a><a href="#categorycount" class="sidebar-link h3">categoryCount</a><a href="#constructors" class="sidebar-link">Constructors</a><a href="#constructor" class="sidebar-link h3">Constructor</a><a href="#methods" class="sidebar-link">Methods</a><a href="#addcategory" class="sidebar-link h3">addCategory()</a><a href="#addsubstitution" class="sidebar-link h3">addSubstitution()</a><a href="#createsession" class="sidebar-link h3">createSession()</a><a href="#deletesession" class="sidebar-link h3">deleteSession()</a><a href="#getorcreatesession" class="sidebar-link h3">getOrCreateSession()</a><a href="#getproperty" class="sidebar-link h3">getProperty()</a><a href="#getsession" class="sidebar-link h3">getSession()</a><a href="#handlegossip" class="sidebar-link h3">handleGossip()</a><a href="#handlenomatch" class="sidebar-link h3">handleNoMatch()</a>
+    </div>
+  </aside>
+  <div class="docs-content"><div class="prose"><h1 id="aimljs-v100">aimljs v1.0.0</h1>
+<h2 id="classes">Classes</h2>
+<h3 id="bots">Bots</h3>
+<ul>
+<li><a href="classes/AIML1Bot.md">AIML1Bot</a></li>
+<li><a href="classes/AIML2Bot.md">AIML2Bot</a></li>
+<li><a href="classes/AIMLBot.md">AIMLBot</a></li>
+</ul>
+<h3 id="core">Core</h3>
+<ul>
+<li><a href="classes/Normalizer.md">Normalizer</a></li>
+<li><a href="classes/PatternMatcher.md">PatternMatcher</a></li>
+<li><a href="classes/Session.md">Session</a></li>
+</ul>
+<h2 id="interfaces">Interfaces</h2>
+<ul>
+<li><a href="interfaces/AIML1BotOptions.md">AIML1BotOptions</a></li>
+<li><a href="interfaces/AIML2BotOptions.md">AIML2BotOptions</a></li>
+<li><a href="interfaces/AIMLBotOptions.md">AIMLBotOptions</a></li>
+<li><a href="interfaces/BotOptions.md">BotOptions</a></li>
+<li><a href="interfaces/BotProperties.md">BotProperties</a></li>
+<li><a href="interfaces/Category.md">Category</a></li>
+<li><a href="interfaces/ConversationTurn.md">ConversationTurn</a></li>
+<li><a href="interfaces/FileContent.md">FileContent</a></li>
+<li><a href="interfaces/MatchResult.md">MatchResult</a></li>
+<li><a href="interfaces/ParsedAIML.md">ParsedAIML</a></li>
+<li><a href="interfaces/ParsedPattern.md">ParsedPattern</a></li>
+<li><a href="interfaces/SessionData.md">SessionData</a></li>
+<li><a href="interfaces/SubstitutionPair.md">SubstitutionPair</a></li>
+<li><a href="interfaces/Substitutions.md">Substitutions</a></li>
+<li><a href="interfaces/TalkResult.md">TalkResult</a></li>
+<li><a href="interfaces/TripleEntry.md">TripleEntry</a></li>
+<li><a href="interfaces/ValidationError.md">ValidationError</a></li>
+<li><a href="interfaces/ValidationResult.md">ValidationResult</a></li>
+</ul>
+<h2 id="type-aliases">Type Aliases</h2>
+<ul>
+<li><a href="type-aliases/AIMLMap.md">AIMLMap</a></li>
+<li><a href="type-aliases/AIMLSet.md">AIMLSet</a></li>
+<li><a href="type-aliases/FileSource.md">FileSource</a></li>
+<li><a href="type-aliases/PatternToken.md">PatternToken</a></li>
+<li><a href="type-aliases/WildcardChar.md">WildcardChar</a></li>
+</ul>
+<h2 id="functions">Functions</h2>
+<h3 id="parsers">Parsers</h3>
+<ul>
+<li><a href="functions/parseAIML.md">parseAIML</a></li>
+<li><a href="functions/parseMap.md">parseMap</a></li>
+<li><a href="functions/parseMapJSON.md">parseMapJSON</a></li>
+<li><a href="functions/parseMapText.md">parseMapText</a></li>
+<li><a href="functions/parseProperties.md">parseProperties</a></li>
+<li><a href="functions/parsePropertiesJSON.md">parsePropertiesJSON</a></li>
+<li><a href="functions/parsePropertiesText.md">parsePropertiesText</a></li>
+<li><a href="functions/parseSet.md">parseSet</a></li>
+<li><a href="functions/parseSetJSON.md">parseSetJSON</a></li>
+<li><a href="functions/parseSetText.md">parseSetText</a></li>
+<li><a href="functions/parseSubstitutions.md">parseSubstitutions</a></li>
+<li><a href="functions/parseSubstitutionsJSON.md">parseSubstitutionsJSON</a></li>
+<li><a href="functions/parseSubstitutionsText.md">parseSubstitutionsText</a></li>
+<li><a href="functions/validateAIML.md">validateAIML</a></li>
+</ul>
+<h3 id="other">Other</h3>
+<ul>
+<li><a href="functions/applySubstitutions.md">applySubstitutions</a></li>
+<li><a href="functions/buildSubstitutionPair.md">buildSubstitutionPair</a></li>
+<li><a href="functions/createDefaultSubstitutions.md">createDefaultSubstitutions</a></li>
+<li><a href="functions/loadFileSource.md">loadFileSource</a></li>
+<li><a href="functions/parsePattern.md">parsePattern</a></li>
+<li><a href="functions/tokenize.md">tokenize</a></li>
+</ul>
+
+<hr/>
+<p><a href="../globals.md">aimljs</a> / AIMLBot</p>
+<h1 id="class-aimlbot">Class: AIMLBot</h1>
+<p>Defined in: bots/AIMLBot.ts:101</p>
+<p>Base class for all AIML bots.</p>
+<p><code>AIMLBot</code> provides the complete bot runtime: pattern matching, template
+evaluation, session management, file loading, and serialisation.  The
+two specialised subclasses (<a href="AIML1Bot.md">AIML1Bot</a> and <a href="AIML2Bot.md">AIML2Bot</a>) add
+version-specific helpers but share this API.</p>
+<hr>
+<h3 id="quick-start-nodejs">Quick-start (Node.js)</h3>
+<pre><code class="language-ts">import { AIML1Bot } from &#39;aimljs&#39;;
+
+const bot = new AIML1Bot({ properties: { name: &#39;Alice&#39; } });
+await bot.loadDirectory(&#39;./aiml&#39;);          // load all .aiml files
+
+const { response } = await bot.talk(&#39;hello&#39;);
+console.log(response); // &quot;Hi there!&quot;
+</code></pre>
+<h3 id="quick-start-browser">Quick-start (browser)</h3>
+<pre><code class="language-ts">import { AIML1Bot } from &#39;aimljs&#39;;
+
+const bot = new AIML1Bot();
+// Pass File objects from &lt;input type=&quot;file&quot;&gt; or pre-loaded content:
+await bot.loadFile({ name: &#39;greetings.aiml&#39;, content: xmlString });
+
+const { response, sessionId } = await bot.talk(&#39;hello&#39;);
+</code></pre>
+<h3 id="session-continuity">Session continuity</h3>
+<pre><code class="language-ts">// First turn — a default session is created automatically
+const r1 = await bot.talk(&#39;my name is Alice&#39;);
+
+// Pass the sessionId back to continue the same conversation
+const r2 = await bot.talk(&#39;what is my name&#39;, r1.sessionId);
+console.log(r2.response); // &quot;Your name is Alice.&quot;
+</code></pre>
+<h2 id="extended-by">Extended by</h2>
+<ul>
+<li><a href="AIML1Bot.md"><code>AIML1Bot</code></a></li>
+<li><a href="AIML2Bot.md"><code>AIML2Bot</code></a></li>
+</ul>
+<h2 id="accessors">Accessors</h2>
+<h3 id="categorycount">categoryCount</h3>
+<h4 id="get-signature">Get Signature</h4>
+<blockquote>
+<p><strong>get</strong> <strong>categoryCount</strong>(): <code>number</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:444</p>
+<p>Total number of loaded categories.</p>
+<h5 id="returns">Returns</h5>
+<p><code>number</code></p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="constructor">Constructor</h3>
+<blockquote>
+<p><strong>new AIMLBot</strong>(<code>options?</code>): <code>AIMLBot</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:127</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="options">options?</h5>
+<p><a href="../interfaces/AIMLBotOptions.md"><code>AIMLBotOptions</code></a> = <code>{}</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>AIMLBot</code></p>
+<h2 id="methods">Methods</h2>
+<h3 id="addcategory">addCategory()</h3>
+<blockquote>
+<p><strong>addCategory</strong>(<code>pattern</code>, <code>template</code>, <code>options?</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:431</p>
+<p>Programmatically add a single AIML category.</p>
+<p>The pattern and template strings use AIML XML syntax (tags are allowed).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="pattern">pattern</h5>
+<p><code>string</code></p>
+<p>AIML input pattern.</p>
+<h5 id="template">template</h5>
+<p><code>string</code></p>
+<p>AIML response template.</p>
+<h5 id="options">options?</h5>
+<p>Optional <code>that</code> and <code>topic</code> constraints.</p>
+<h6 id="that">that?</h6>
+<p><code>string</code></p>
+<h6 id="topic">topic?</h6>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.addCategory(&#39;HELLO&#39;, &#39;Hi there!&#39;);
+bot.addCategory(&#39;DO YOU LIKE *&#39;, &#39;I love &lt;star/&gt;!&#39;, { topic: &#39;ANIMALS&#39; });
+</code></pre>
+<hr>
+<h3 id="addsubstitution">addSubstitution()</h3>
+<blockquote>
+<p><strong>addSubstitution</strong>(<code>type</code>, <code>find</code>, <code>replace</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:363</p>
+<p>Append a single substitution rule to a table.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="type">type</h5>
+<p><code>&quot;normal&quot;</code> | <code>&quot;person&quot;</code> | <code>&quot;person2&quot;</code> | <code>&quot;gender&quot;</code> | <code>&quot;denormal&quot;</code></p>
+<p>Which table to extend.</p>
+<h5 id="find">find</h5>
+<p><code>string</code></p>
+<p>The text to find.</p>
+<h5 id="replace">replace</h5>
+<p><code>string</code></p>
+<p>The replacement.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.addSubstitution(&#39;normal&#39;, &quot;ain&#39;t&quot;, &#39;am not&#39;);
+</code></pre>
+<hr>
+<h3 id="createsession">createSession()</h3>
+<blockquote>
+<p><strong>createSession</strong>(<code>sessionId?</code>): <a href="Session.md"><code>Session</code></a></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:464</p>
+<p>Create a new session.</p>
+<p>Sessions are created automatically by <a href="#talk">talk</a>, so you only need this
+if you want to pre-configure a session (set predicates, topic, etc.).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId?</h5>
+<p><code>string</code></p>
+<p>Optional explicit ID.  A unique ID is generated if omitted.</p>
+<h4 id="returns">Returns</h4>
+<p><a href="Session.md"><code>Session</code></a></p>
+<p>The new session.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const session = bot.createSession(&#39;user-42&#39;);
+session.setPredicate(&#39;name&#39;, &#39;Alice&#39;);
+const { response } = await bot.talkSession(&#39;hello&#39;, session);
+</code></pre>
+<hr>
+<h3 id="deletesession">deleteSession()</h3>
+<blockquote>
+<p><strong>deleteSession</strong>(<code>sessionId</code>): <code>boolean</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:502</p>
+<p>Delete a session and free its memory.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId</h5>
+<p><code>string</code></p>
+<p>Session to delete.</p>
+<h4 id="returns">Returns</h4>
+<p><code>boolean</code></p>
+<p><code>true</code> if the session existed and was deleted.</p>
+<hr>
+<h3 id="getorcreatesession">getOrCreateSession()</h3>
+<blockquote>
+<p><strong>getOrCreateSession</strong>(<code>sessionId?</code>): <a href="Session.md"><code>Session</code></a></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:489</p>
+<p>Get an existing session or create one if it does not exist.</p>
+<p>When <code>sessionId</code> is omitted a persistent default session (<code>__default__</code>)
+is used for all calls without an ID.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId?</h5>
+<p><code>string</code></p>
+<p>Optional session ID.</p>
+<h4 id="returns">Returns</h4>
+<p><a href="Session.md"><code>Session</code></a></p>
+<hr>
+<h3 id="getproperty">getProperty()</h3>
+<blockquote>
+<p><strong>getProperty</strong>(<code>name</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:305</p>
+<p>Get a bot property value.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Property name (case-insensitive).</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<p>The property value, or <code>&quot;&quot;</code> if not set.</p>
+<hr>
+<h3 id="getsession">getSession()</h3>
+<blockquote>
+<p><strong>getSession</strong>(<code>sessionId</code>): <a href="Session.md"><code>Session</code></a> | <code>undefined</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:477</p>
+<p>Retrieve an existing session by ID.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId</h5>
+<p><code>string</code></p>
+<p>The session ID to look up.</p>
+<h4 id="returns">Returns</h4>
+<p><a href="Session.md"><code>Session</code></a> | <code>undefined</code></p>
+<p>The session, or <code>undefined</code> if not found.</p>
+<hr>
+<h3 id="handlegossip">handleGossip()</h3>
+<blockquote>
+<p><code>protected</code> <strong>handleGossip</strong>(<code>_text</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:705</p>
+<p>Called whenever a <code>&lt;gossip&gt;</code> tag is encountered.
+Override to log or store gossip messages.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="text">\_text</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3 id="handlenomatch">handleNoMatch()</h3>
+<blockquote>
+<p><code>protected</code> <strong>handleNoMatch</strong>(<code>_input</code>, <code>_session</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:586</p>
+<p>Called when no category matches the user&#39;s input.</p>
+<p>Override in a subclass to provide a custom fallback response.
+The default implementation returns <code>&quot;&quot;</code>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="input">\_input</h5>
+<p><code>string</code></p>
+<h5 id="session">\_session</h5>
+<p><a href="Session.md"><code>Session</code></a></p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>string</code>&gt;</p>
+<hr>
+<h3 id="loadallserializedsessions">loadAllSerializedSessions()</h3>
+<blockquote>
+<p><strong>loadAllSerializedSessions</strong>(<code>data</code>): <code>string</code>[]</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:669</p>
+<p>Restore all sessions from a JSON string produced by <a href="#serializeallsessions">serializeAllSessions</a>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="data">data</h5>
+<p><code>string</code></p>
+<p>Serialised sessions JSON.</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code>[]</p>
+<p>Array of restored session IDs.</p>
+<hr>
+<h3 id="loaddirectory">loadDirectory()</h3>
+<blockquote>
+<p><strong>loadDirectory</strong>(<code>dirPath</code>, <code>recursive?</code>, <code>extensions?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:265</p>
+<p>Recursively load all <code>.aiml</code> files from a directory.</p>
+<p><strong>Node.js only.</strong> Throws in browser environments.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="dirpath">dirPath</h5>
+<p><code>string</code></p>
+<p>Absolute or relative path to the directory.</p>
+<h5 id="recursive">recursive?</h5>
+<p><code>boolean</code> = <code>true</code></p>
+<p>Whether to descend into subdirectories. Default <code>true</code>.</p>
+<h5 id="extensions">extensions?</h5>
+<p><code>string</code>[] = <code>...</code></p>
+<p>File extensions to include. Default <code>[&#39;.aiml&#39;]</code>.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadDirectory(&#39;./knowledge-base&#39;);
+await bot.loadDirectory(&#39;./kb&#39;, true, [&#39;.aiml&#39;, &#39;.xml&#39;]);
+</code></pre>
+<hr>
+<h3 id="loadfile">loadFile()</h3>
+<blockquote>
+<p><strong>loadFile</strong>(<code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:227</p>
+<p>Load a single AIML file from any <a href="../type-aliases/FileSource.md">FileSource</a>.</p>
+<p>Works on both Node.js (string path) and in the browser (File object or
+pre-loaded <code>{ name, content }</code> object).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="source">source</h5>
+<p><a href="../type-aliases/FileSource.md"><code>FileSource</code></a></p>
+<p>The file to load.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">// Node.js
+await bot.loadFile(&#39;/path/to/greetings.aiml&#39;);
+
+// Browser (from &lt;input type=&quot;file&quot;&gt;)
+const [file] = inputElement.files;
+await bot.loadFile(file);
+
+// Pre-loaded content (both platforms)
+await bot.loadFile({ name: &#39;greeting.aiml&#39;, content: xmlString });
+</code></pre>
+<hr>
+<h3 id="loadfiles">loadFiles()</h3>
+<blockquote>
+<p><strong>loadFiles</strong>(<code>sources</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:246</p>
+<p>Load multiple AIML files concurrently.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sources">sources</h5>
+<p><a href="../type-aliases/FileSource.md"><code>FileSource</code></a>[]</p>
+<p>Array of <a href="../type-aliases/FileSource.md">FileSource</a> values.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadFiles([
+  &#39;/path/to/greetings.aiml&#39;,
+  &#39;/path/to/personality.aiml&#39;,
+  { name: &#39;custom.aiml&#39;, content: inlineXml },
+]);
+</code></pre>
+<hr>
+<h3 id="loadmap">loadMap()</h3>
+<blockquote>
+<p><strong>loadMap</strong>(<code>name</code>, <code>data</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:404</p>
+<p>Register a named map for use in <code>&lt;map name=&quot;...&quot;&gt;</code> template tags.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Map name (case-insensitive).</p>
+<h5 id="data">data</h5>
+<p><code>string</code> | <code>Map</code>&lt;<code>string</code>, <code>string</code>&gt; | <code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;</p>
+<p>Map content: plain object, <code>Map&lt;string, string&gt;</code>, JSON object, or <code>key:value</code> text.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.loadMap(&#39;capitals&#39;, { france: &#39;Paris&#39;, japan: &#39;Tokyo&#39; });
+bot.loadMap(&#39;colors&#39;, &#39;red : #FF0000\ngreen : #00FF00&#39;);
+bot.loadMap(&#39;scores&#39;, &#39;{&quot;alice&quot;:&quot;100&quot;,&quot;bob&quot;:&quot;200&quot;}&#39;);
+</code></pre>
+<hr>
+<h3 id="loadproperties">loadProperties()</h3>
+<blockquote>
+<p><strong>loadProperties</strong>(<code>data</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:322</p>
+<p>Load bot properties from a text or JSON data source.</p>
+<p>Accepts the same formats as <a href="../functions/parseProperties.md">parseProperties</a>:</p>
+<ul>
+<li>Plain object</li>
+<li>JSON string (<code>{ &quot;key&quot;: &quot;value&quot; }</code>)</li>
+<li>Text file (<code>key:value</code> or <code>key=value</code>, one per line)</li>
+</ul>
+<h4 id="parameters">Parameters</h4>
+<h5 id="data">data</h5>
+<p><code>string</code> | <code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.loadProperties(&#39;name:Alice\nversion:2.0&#39;);
+bot.loadProperties({ name: &#39;Alice&#39;, version: &#39;2.0&#39; });
+bot.loadProperties(&#39;{&quot;name&quot;:&quot;Alice&quot;}&#39;);
+</code></pre>
+<hr>
+<h3 id="loadserializedsession">loadSerializedSession()</h3>
+<blockquote>
+<p><strong>loadSerializedSession</strong>(<code>data</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:643</p>
+<p>Restore a session from a JSON string produced by <a href="#serializesession">serializeSession</a>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="data">data</h5>
+<p><code>string</code></p>
+<p>Serialised session JSON.</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<p>The restored session&#39;s ID.</p>
+<hr>
+<h3 id="loadset">loadSet()</h3>
+<blockquote>
+<p><strong>loadSet</strong>(<code>name</code>, <code>data</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:387</p>
+<p>Register a named set for use in pattern matching.</p>
+<p>Sets enable patterns like <code>I LIKE &lt;set&gt;color&lt;/set&gt;</code> to match any member
+of the named set.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Set name (case-insensitive).</p>
+<h5 id="data">data</h5>
+<p><code>string</code> | <code>string</code>[] | <code>Set</code>&lt;<code>string</code>&gt;</p>
+<p>Set content: string array, <code>Set&lt;string&gt;</code>, JSON array, or one-per-line text.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.loadSet(&#39;color&#39;, [&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;]);
+bot.loadSet(&#39;animal&#39;, &#39;cat\ndog\nbird&#39;);
+bot.loadSet(&#39;fruit&#39;, &#39;[&quot;apple&quot;,&quot;banana&quot;,&quot;cherry&quot;]&#39;);
+</code></pre>
+<hr>
+<h3 id="loadsubstitutions">loadSubstitutions()</h3>
+<blockquote>
+<p><strong>loadSubstitutions</strong>(<code>type</code>, <code>data</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:345</p>
+<p>Replace a substitution table entirely.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="type">type</h5>
+<p><code>&quot;normal&quot;</code> | <code>&quot;person&quot;</code> | <code>&quot;person2&quot;</code> | <code>&quot;gender&quot;</code> | <code>&quot;denormal&quot;</code></p>
+<p>Which table to replace (<code>&#39;normal&#39;</code>, <code>&#39;person&#39;</code>, etc.).</p>
+<h5 id="data">data</h5>
+<p><code>string</code> | <a href="../interfaces/SubstitutionPair.md"><code>SubstitutionPair</code></a>[]</p>
+<p>Text, JSON, or already-parsed pairs.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">// Load contractions from text
+bot.loadSubstitutions(&#39;normal&#39;, &quot;can&#39;t : cannot\nwon&#39;t : will not&quot;);
+// Load from JSON array
+bot.loadSubstitutions(&#39;person&#39;, &#39;[{&quot;find&quot;:&quot;I&quot;,&quot;replace&quot;:&quot;he or she&quot;}]&#39;);
+</code></pre>
+<hr>
+<h3 id="loadxmlstring">loadXMLString()</h3>
+<blockquote>
+<p><strong>loadXMLString</strong>(<code>xml</code>, <code>fileName?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:197</p>
+<p>Parse and load an AIML XML string directly.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="xml">xml</h5>
+<p><code>string</code></p>
+<p>AIML XML content.</p>
+<h5 id="filename">fileName?</h5>
+<p><code>string</code></p>
+<p>Optional name shown in validation error messages.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="throws">Throws</h4>
+<p>If the XML contains parse errors.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadXMLString(`
+  &lt;aiml version=&quot;1.0&quot;&gt;
+    &lt;category&gt;
+      &lt;pattern&gt;HELLO&lt;/pattern&gt;
+      &lt;template&gt;Hi!&lt;/template&gt;
+    &lt;/category&gt;
+  &lt;/aiml&gt;
+`);
+</code></pre>
+<hr>
+<h3 id="serializeallsessions">serializeAllSessions()</h3>
+<blockquote>
+<p><strong>serializeAllSessions</strong>(): <code>string</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:655</p>
+<p>Serialise <strong>all</strong> active sessions to a single JSON string.</p>
+<p>Useful for persisting a multi-user application&#39;s full state.
+Restore with <a href="#loadallserializedsessions">loadAllSerializedSessions</a>.</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<hr>
+<h3 id="serializesession">serializeSession()</h3>
+<blockquote>
+<p><strong>serializeSession</strong>(<code>sessionId</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:631</p>
+<p>Serialise a single session to a JSON string.</p>
+<p>Store the result and pass it to <a href="#loadserializedsession">loadSerializedSession</a> later to
+resume the conversation.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId</h5>
+<p><code>string</code></p>
+<p>The session to serialise.</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<h4 id="throws">Throws</h4>
+<p>If the session does not exist.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const json = bot.serializeSession(sessionId);
+localStorage.setItem(&#39;mySession&#39;, json);
+
+// Later…
+const saved = localStorage.getItem(&#39;mySession&#39;)!;
+const id = bot.loadSerializedSession(saved);
+const { response } = await bot.talk(&#39;hello again&#39;, id);
+</code></pre>
+<hr>
+<h3 id="setproperty">setProperty()</h3>
+<blockquote>
+<p><strong>setProperty</strong>(<code>name</code>, <code>value</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:293</p>
+<p>Set a single bot property.</p>
+<p>Bot properties are accessed in AIML templates via <code>&lt;bot name=&quot;...&quot;/&gt;</code>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Property name (case-insensitive).</p>
+<h5 id="value">value</h5>
+<p><code>string</code></p>
+<p>Property value.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.setProperty(&#39;name&#39;, &#39;Alice&#39;);
+// In AIML: &lt;bot name=&quot;name&quot;/&gt; → &quot;Alice&quot;
+</code></pre>
+<hr>
+<h3 id="talk">talk()</h3>
+<blockquote>
+<p><strong>talk</strong>(<code>input</code>, <code>sessionId?</code>): <code>Promise</code>&lt;<a href="../interfaces/TalkResult.md"><code>TalkResult</code></a>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:532</p>
+<p>Send a message to the bot and get a response.</p>
+<p>If <code>sessionId</code> is omitted, a shared default session (<code>__default__</code>) is used
+so that consecutive calls without a session ID maintain conversational state.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="input">input</h5>
+<p><code>string</code></p>
+<p>The user&#39;s message.</p>
+<h5 id="sessionid">sessionId?</h5>
+<p><code>string</code></p>
+<p>Optional session ID.  Pass the <code>sessionId</code> from a previous
+                 result to continue that conversation.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<a href="../interfaces/TalkResult.md"><code>TalkResult</code></a>&gt;</p>
+<p>An object with the bot&#39;s <code>response</code> and the <code>sessionId</code> used.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const r1 = await bot.talk(&#39;my name is Alice&#39;);
+// r1.sessionId is &#39;__default__&#39; (or whatever was used)
+
+const r2 = await bot.talk(&#39;what is my name&#39;, r1.sessionId);
+console.log(r2.response); // &quot;Your name is Alice.&quot;
+
+// Multi-user: pass explicit session IDs
+await bot.talk(&#39;hello&#39;, &#39;user-1&#39;);
+await bot.talk(&#39;hello&#39;, &#39;user-2&#39;);
+</code></pre>
+<hr>
+<h3 id="talksession">talkSession()</h3>
+<blockquote>
+<p><strong>talkSession</strong>(<code>input</code>, <code>session</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:547</p>
+<p>Send a message using an explicit <a href="Session.md">Session</a> object.</p>
+<p>Useful when you manage sessions yourself rather than by ID.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="input">input</h5>
+<p><code>string</code></p>
+<p>The user&#39;s message.</p>
+<h5 id="session">session</h5>
+<p><a href="Session.md"><code>Session</code></a></p>
+<p>The session to use.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>string</code>&gt;</p>
+<p>The bot&#39;s response string.</p>
+<hr>
+<h3 id="validatexml">validateXML()</h3>
+<blockquote>
+<p><strong>validateXML</strong>(<code>xml</code>, <code>fileName?</code>): <a href="../interfaces/ValidationResult.md"><code>ValidationResult</code></a></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:605</p>
+<p>Validate an AIML XML string without loading it.</p>
+<p>Returns a <a href="../interfaces/ValidationResult.md">ValidationResult</a> with <code>valid</code>, <code>errors</code>, and <code>warnings</code>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="xml">xml</h5>
+<p><code>string</code></p>
+<h5 id="filename">fileName?</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><a href="../interfaces/ValidationResult.md"><code>ValidationResult</code></a></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const result = bot.validateXML(xmlString, &#39;mybot.aiml&#39;);
+if (!result.valid) {
+  result.errors.forEach(e =&gt; console.error(e.message));
+}
+</code></pre>
+
+<hr/>
+<p><a href="../globals.md">aimljs</a> / AIML1Bot</p>
+<h1 id="class-aiml1bot">Class: AIML1Bot</h1>
+<p>Defined in: bots/AIML1Bot.ts:93</p>
+<p>AIML 1.0 bot.</p>
+<p>Extends <a href="AIMLBot.md">AIMLBot</a> with helpers tailored to the AIML 1.0 ecosystem:</p>
+<ul>
+<li><code>.properties</code> text files (<code>key:value</code> or <code>key=value</code>)</li>
+<li>Substitution text files (<code>find : replace</code> per line)</li>
+<li>Set text files (one item per line)</li>
+<li>Standard AIML 1.0 directory layout auto-loader</li>
+</ul>
+<p>All AIML 1.0 template tags are supported:
+<code>&lt;star&gt;</code>, <code>&lt;srai&gt;</code>, <code>&lt;sr&gt;</code>, <code>&lt;set&gt;</code>, <code>&lt;get&gt;</code>, <code>&lt;bot&gt;</code>, <code>&lt;think&gt;</code>,
+<code>&lt;condition&gt;</code>, <code>&lt;random&gt;</code>, <code>&lt;uppercase&gt;</code>, <code>&lt;lowercase&gt;</code>, <code>&lt;formal&gt;</code>,
+<code>&lt;sentence&gt;</code>, <code>&lt;person&gt;</code>, <code>&lt;person2&gt;</code>, <code>&lt;gender&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;that&gt;</code>,
+<code>&lt;thatstar&gt;</code>, <code>&lt;topicstar&gt;</code>, <code>&lt;learn&gt;</code>, <code>&lt;gossip&gt;</code>, <code>&lt;system&gt;</code>,
+<code>&lt;javascript&gt;</code>, <code>&lt;date&gt;</code>, <code>&lt;version&gt;</code>, <code>&lt;size&gt;</code>, <code>&lt;id&gt;</code>, <code>&lt;br&gt;</code>.</p>
+<hr>
+<h3 id="basic-usage">Basic usage</h3>
+<pre><code class="language-ts">import { AIML1Bot } from &#39;aimljs&#39;;
+
+const bot = new AIML1Bot({ properties: { name: &#39;Alice&#39; } });
+await bot.loadDirectory(&#39;./alice&#39;);
+
+const { response, sessionId } = await bot.talk(&#39;hello&#39;);
+console.log(response); // &quot;Hi there!&quot;
+</code></pre>
+<h3 id="loading-individual-files">Loading individual files</h3>
+<pre><code class="language-ts">await bot.loadFile(&#39;/path/to/greetings.aiml&#39;);
+await bot.loadPropertiesFile(&#39;/path/to/bot.properties&#39;);
+await bot.loadSubstitutionFile(&#39;normal&#39;, &#39;/path/to/normal.txt&#39;);
+await bot.loadSetFile(&#39;color&#39;, &#39;/path/to/colors.txt&#39;);
+</code></pre>
+<h3 id="standard-directory-layout-auto-loader">Standard directory layout (auto-loader)</h3>
+<pre><code>/alice/
+  *.aiml
+  bot.properties          ← key:value
+  normal.txt              ← substitutions
+  person.txt
+  person2.txt
+  gender.txt
+  sets/
+    color.txt             ← one item per line
+    animal.txt
+</code></pre>
+<pre><code class="language-ts">await bot.loadDataDirectory(&#39;/alice&#39;);
+</code></pre>
+<h2 id="extends">Extends</h2>
+<ul>
+<li><a href="AIMLBot.md"><code>AIMLBot</code></a></li>
+</ul>
+<h2 id="accessors">Accessors</h2>
+<h3 id="categorycount">categoryCount</h3>
+<h4 id="get-signature">Get Signature</h4>
+<blockquote>
+<p><strong>get</strong> <strong>categoryCount</strong>(): <code>number</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:444</p>
+<p>Total number of loaded categories.</p>
+<h5 id="returns">Returns</h5>
+<p><code>number</code></p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#categorycount"><code>categoryCount</code></a></p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="constructor">Constructor</h3>
+<blockquote>
+<p><strong>new AIML1Bot</strong>(<code>options?</code>): <code>AIML1Bot</code></p>
+</blockquote>
+<p>Defined in: bots/AIML1Bot.ts:94</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="options">options?</h5>
+<p><a href="../interfaces/AIML1BotOptions.md"><code>AIML1BotOptions</code></a> = <code>{}</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>AIML1Bot</code></p>
+<h4 id="overrides">Overrides</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#constructor"><code>constructor</code></a></p>
+<h2 id="methods">Methods</h2>
+<h3 id="addcategory">addCategory()</h3>
+<blockquote>
+<p><strong>addCategory</strong>(<code>pattern</code>, <code>template</code>, <code>options?</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIML1Bot.ts:238</p>
+<p>Programmatically add an AIML 1.0 category.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="pattern">pattern</h5>
+<p><code>string</code></p>
+<p>AIML input pattern.</p>
+<h5 id="template">template</h5>
+<p><code>string</code></p>
+<p>AIML response template (XML tags are allowed).</p>
+<h5 id="options">options?</h5>
+<p>Optional <code>that</code> and <code>topic</code> constraints.</p>
+<h6 id="that">that?</h6>
+<p><code>string</code></p>
+<h6 id="topic">topic?</h6>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.addCategory(&#39;HELLO&#39;, &#39;Hi there!&#39;);
+bot.addCategory(&#39;ARE YOU *&#39;, &#39;I am &lt;star/&gt;!&#39;, { topic: &#39;ROBOTS&#39; });
+</code></pre>
+<h4 id="overrides">Overrides</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#addcategory"><code>addCategory</code></a></p>
+<hr>
+<h3 id="addsubstitution">addSubstitution()</h3>
+<blockquote>
+<p><strong>addSubstitution</strong>(<code>type</code>, <code>find</code>, <code>replace</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:363</p>
+<p>Append a single substitution rule to a table.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="type">type</h5>
+<p><code>&quot;normal&quot;</code> | <code>&quot;person&quot;</code> | <code>&quot;person2&quot;</code> | <code>&quot;gender&quot;</code> | <code>&quot;denormal&quot;</code></p>
+<p>Which table to extend.</p>
+<h5 id="find">find</h5>
+<p><code>string</code></p>
+<p>The text to find.</p>
+<h5 id="replace">replace</h5>
+<p><code>string</code></p>
+<p>The replacement.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.addSubstitution(&#39;normal&#39;, &quot;ain&#39;t&quot;, &#39;am not&#39;);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#addsubstitution"><code>addSubstitution</code></a></p>
+<hr>
+<h3 id="createsession">createSession()</h3>
+<blockquote>
+<p><strong>createSession</strong>(<code>sessionId?</code>): <a href="Session.md"><code>Session</code></a></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:464</p>
+<p>Create a new session.</p>
+<p>Sessions are created automatically by <a href="AIMLBot.md#talk">talk</a>, so you only need this
+if you want to pre-configure a session (set predicates, topic, etc.).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId?</h5>
+<p><code>string</code></p>
+<p>Optional explicit ID.  A unique ID is generated if omitted.</p>
+<h4 id="returns">Returns</h4>
+<p><a href="Session.md"><code>Session</code></a></p>
+<p>The new session.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const session = bot.createSession(&#39;user-42&#39;);
+session.setPredicate(&#39;name&#39;, &#39;Alice&#39;);
+const { response } = await bot.talkSession(&#39;hello&#39;, session);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#createsession"><code>createSession</code></a></p>
+<hr>
+<h3 id="deletesession">deleteSession()</h3>
+<blockquote>
+<p><strong>deleteSession</strong>(<code>sessionId</code>): <code>boolean</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:502</p>
+<p>Delete a session and free its memory.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId</h5>
+<p><code>string</code></p>
+<p>Session to delete.</p>
+<h4 id="returns">Returns</h4>
+<p><code>boolean</code></p>
+<p><code>true</code> if the session existed and was deleted.</p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#deletesession"><code>deleteSession</code></a></p>
+<hr>
+<h3 id="getorcreatesession">getOrCreateSession()</h3>
+<blockquote>
+<p><strong>getOrCreateSession</strong>(<code>sessionId?</code>): <a href="Session.md"><code>Session</code></a></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:489</p>
+<p>Get an existing session or create one if it does not exist.</p>
+<p>When <code>sessionId</code> is omitted a persistent default session (<code>__default__</code>)
+is used for all calls without an ID.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId?</h5>
+<p><code>string</code></p>
+<p>Optional session ID.</p>
+<h4 id="returns">Returns</h4>
+<p><a href="Session.md"><code>Session</code></a></p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#getorcreatesession"><code>getOrCreateSession</code></a></p>
+<hr>
+<h3 id="getproperty">getProperty()</h3>
+<blockquote>
+<p><strong>getProperty</strong>(<code>name</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:305</p>
+<p>Get a bot property value.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Property name (case-insensitive).</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<p>The property value, or <code>&quot;&quot;</code> if not set.</p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#getproperty"><code>getProperty</code></a></p>
+<hr>
+<h3 id="getsession">getSession()</h3>
+<blockquote>
+<p><strong>getSession</strong>(<code>sessionId</code>): <a href="Session.md"><code>Session</code></a> | <code>undefined</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:477</p>
+<p>Retrieve an existing session by ID.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId</h5>
+<p><code>string</code></p>
+<p>The session ID to look up.</p>
+<h4 id="returns">Returns</h4>
+<p><a href="Session.md"><code>Session</code></a> | <code>undefined</code></p>
+<p>The session, or <code>undefined</code> if not found.</p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#getsession"><code>getSession</code></a></p>
+<hr>
+<h3 id="handlegossip">handleGossip()</h3>
+<blockquote>
+<p><code>protected</code> <strong>handleGossip</strong>(<code>_text</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:705</p>
+<p>Called whenever a <code>&lt;gossip&gt;</code> tag is encountered.
+Override to log or store gossip messages.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="text">\_text</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#handlegossip"><code>handleGossip</code></a></p>
+<hr>
+<h3 id="handlenomatch">handleNoMatch()</h3>
+<blockquote>
+<p><code>protected</code> <strong>handleNoMatch</strong>(<code>_input</code>, <code>_session</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:586</p>
+<p>Called when no category matches the user&#39;s input.</p>
+<p>Override in a subclass to provide a custom fallback response.
+The default implementation returns <code>&quot;&quot;</code>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="input">\_input</h5>
+<p><code>string</code></p>
+<h5 id="session">\_session</h5>
+<p><a href="Session.md"><code>Session</code></a></p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>string</code>&gt;</p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#handlenomatch"><code>handleNoMatch</code></a></p>
+<hr>
+<h3 id="loadallserializedsessions">loadAllSerializedSessions()</h3>
+<blockquote>
+<p><strong>loadAllSerializedSessions</strong>(<code>data</code>): <code>string</code>[]</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:669</p>
+<p>Restore all sessions from a JSON string produced by <a href="AIMLBot.md#serializeallsessions">serializeAllSessions</a>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="data">data</h5>
+<p><code>string</code></p>
+<p>Serialised sessions JSON.</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code>[]</p>
+<p>Array of restored session IDs.</p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadallserializedsessions"><code>loadAllSerializedSessions</code></a></p>
+<hr>
+<h3 id="loaddatadirectory">loadDataDirectory()</h3>
+<blockquote>
+<p><strong>loadDataDirectory</strong>(<code>dirPath</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIML1Bot.ts:119</p>
+<p>Load a complete AIML 1.0 data directory using the standard layout.</p>
+<p>Automatically discovers and loads (in order):</p>
+<ol>
+<li><code>bot.properties</code> / <code>properties.txt</code> / <code>properties</code></li>
+<li><code>normal.txt</code>, <code>person.txt</code>, <code>person2.txt</code>, <code>gender.txt</code>
+(also looks in <code>substitutions/</code> subdirectory)</li>
+<li>All <code>*.txt</code> files from a <code>sets/</code> subdirectory</li>
+<li>All <code>*.aiml</code> files (recursively)</li>
+</ol>
+<p><strong>Node.js only.</strong></p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="dirpath">dirPath</h5>
+<p><code>string</code></p>
+<p>Absolute or relative path to the data directory.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const bot = new AIML1Bot();
+await bot.loadDataDirectory(&#39;./alice-aiml&#39;);
+</code></pre>
+<hr>
+<h3 id="loaddirectory">loadDirectory()</h3>
+<blockquote>
+<p><strong>loadDirectory</strong>(<code>dirPath</code>, <code>recursive?</code>, <code>extensions?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:265</p>
+<p>Recursively load all <code>.aiml</code> files from a directory.</p>
+<p><strong>Node.js only.</strong> Throws in browser environments.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="dirpath">dirPath</h5>
+<p><code>string</code></p>
+<p>Absolute or relative path to the directory.</p>
+<h5 id="recursive">recursive?</h5>
+<p><code>boolean</code> = <code>true</code></p>
+<p>Whether to descend into subdirectories. Default <code>true</code>.</p>
+<h5 id="extensions">extensions?</h5>
+<p><code>string</code>[] = <code>...</code></p>
+<p>File extensions to include. Default <code>[&#39;.aiml&#39;]</code>.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadDirectory(&#39;./knowledge-base&#39;);
+await bot.loadDirectory(&#39;./kb&#39;, true, [&#39;.aiml&#39;, &#39;.xml&#39;]);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loaddirectory"><code>loadDirectory</code></a></p>
+<hr>
+<h3 id="loadfile">loadFile()</h3>
+<blockquote>
+<p><strong>loadFile</strong>(<code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:227</p>
+<p>Load a single AIML file from any <a href="../type-aliases/FileSource.md">FileSource</a>.</p>
+<p>Works on both Node.js (string path) and in the browser (File object or
+pre-loaded <code>{ name, content }</code> object).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="source">source</h5>
+<p><a href="../type-aliases/FileSource.md"><code>FileSource</code></a></p>
+<p>The file to load.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">// Node.js
+await bot.loadFile(&#39;/path/to/greetings.aiml&#39;);
+
+// Browser (from &lt;input type=&quot;file&quot;&gt;)
+const [file] = inputElement.files;
+await bot.loadFile(file);
+
+// Pre-loaded content (both platforms)
+await bot.loadFile({ name: &#39;greeting.aiml&#39;, content: xmlString });
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadfile"><code>loadFile</code></a></p>
+<hr>
+<h3 id="loadfiles">loadFiles()</h3>
+<blockquote>
+<p><strong>loadFiles</strong>(<code>sources</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:246</p>
+<p>Load multiple AIML files concurrently.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sources">sources</h5>
+<p><a href="../type-aliases/FileSource.md"><code>FileSource</code></a>[]</p>
+<p>Array of <a href="../type-aliases/FileSource.md">FileSource</a> values.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadFiles([
+  &#39;/path/to/greetings.aiml&#39;,
+  &#39;/path/to/personality.aiml&#39;,
+  { name: &#39;custom.aiml&#39;, content: inlineXml },
+]);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadfiles"><code>loadFiles</code></a></p>
+<hr>
+<h3 id="loadmap">loadMap()</h3>
+<blockquote>
+<p><strong>loadMap</strong>(<code>name</code>, <code>data</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:404</p>
+<p>Register a named map for use in <code>&lt;map name=&quot;...&quot;&gt;</code> template tags.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Map name (case-insensitive).</p>
+<h5 id="data">data</h5>
+<p><code>string</code> | <code>Map</code>&lt;<code>string</code>, <code>string</code>&gt; | <code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;</p>
+<p>Map content: plain object, <code>Map&lt;string, string&gt;</code>, JSON object, or <code>key:value</code> text.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.loadMap(&#39;capitals&#39;, { france: &#39;Paris&#39;, japan: &#39;Tokyo&#39; });
+bot.loadMap(&#39;colors&#39;, &#39;red : #FF0000\ngreen : #00FF00&#39;);
+bot.loadMap(&#39;scores&#39;, &#39;{&quot;alice&quot;:&quot;100&quot;,&quot;bob&quot;:&quot;200&quot;}&#39;);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadmap"><code>loadMap</code></a></p>
+<hr>
+<h3 id="loadproperties">loadProperties()</h3>
+<blockquote>
+<p><strong>loadProperties</strong>(<code>data</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:322</p>
+<p>Load bot properties from a text or JSON data source.</p>
+<p>Accepts the same formats as <a href="../functions/parseProperties.md">parseProperties</a>:</p>
+<ul>
+<li>Plain object</li>
+<li>JSON string (<code>{ &quot;key&quot;: &quot;value&quot; }</code>)</li>
+<li>Text file (<code>key:value</code> or <code>key=value</code>, one per line)</li>
+</ul>
+<h4 id="parameters">Parameters</h4>
+<h5 id="data">data</h5>
+<p><code>string</code> | <code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.loadProperties(&#39;name:Alice\nversion:2.0&#39;);
+bot.loadProperties({ name: &#39;Alice&#39;, version: &#39;2.0&#39; });
+bot.loadProperties(&#39;{&quot;name&quot;:&quot;Alice&quot;}&#39;);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadproperties"><code>loadProperties</code></a></p>
+<hr>
+<h3 id="loadpropertiesfile">loadPropertiesFile()</h3>
+<blockquote>
+<p><strong>loadPropertiesFile</strong>(<code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIML1Bot.ts:189</p>
+<p>Load bot properties from a file.</p>
+<p>The file may use <code>key:value</code>, <code>key=value</code>, or JSON <code>{ &quot;key&quot;: &quot;value&quot; }</code> format.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="source">source</h5>
+<p><a href="../type-aliases/FileSource.md"><code>FileSource</code></a></p>
+<p>A <a href="../type-aliases/FileSource.md">FileSource</a> (path, File, or preloaded content).</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadPropertiesFile(&#39;/path/to/bot.properties&#39;);
+await bot.loadPropertiesFile({ name: &#39;bot.properties&#39;, content: &#39;name:Alice&#39; });
+</code></pre>
+<hr>
+<h3 id="loadserializedsession">loadSerializedSession()</h3>
+<blockquote>
+<p><strong>loadSerializedSession</strong>(<code>data</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:643</p>
+<p>Restore a session from a JSON string produced by <a href="AIMLBot.md#serializesession">serializeSession</a>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="data">data</h5>
+<p><code>string</code></p>
+<p>Serialised session JSON.</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<p>The restored session&#39;s ID.</p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadserializedsession"><code>loadSerializedSession</code></a></p>
+<hr>
+<h3 id="loadset">loadSet()</h3>
+<blockquote>
+<p><strong>loadSet</strong>(<code>name</code>, <code>data</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:387</p>
+<p>Register a named set for use in pattern matching.</p>
+<p>Sets enable patterns like <code>I LIKE &lt;set&gt;color&lt;/set&gt;</code> to match any member
+of the named set.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Set name (case-insensitive).</p>
+<h5 id="data">data</h5>
+<p><code>string</code> | <code>string</code>[] | <code>Set</code>&lt;<code>string</code>&gt;</p>
+<p>Set content: string array, <code>Set&lt;string&gt;</code>, JSON array, or one-per-line text.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.loadSet(&#39;color&#39;, [&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;]);
+bot.loadSet(&#39;animal&#39;, &#39;cat\ndog\nbird&#39;);
+bot.loadSet(&#39;fruit&#39;, &#39;[&quot;apple&quot;,&quot;banana&quot;,&quot;cherry&quot;]&#39;);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadset"><code>loadSet</code></a></p>
+<hr>
+<h3 id="loadsetfile">loadSetFile()</h3>
+<blockquote>
+<p><strong>loadSetFile</strong>(<code>name</code>, <code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIML1Bot.ts:222</p>
+<p>Load a named set from a file (one item per line).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Set name used in patterns (e.g. <code>color</code> for <code>&lt;set&gt;color&lt;/set&gt;</code>).</p>
+<h5 id="source">source</h5>
+<p><a href="../type-aliases/FileSource.md"><code>FileSource</code></a></p>
+<p>A <a href="../type-aliases/FileSource.md">FileSource</a>.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadSetFile(&#39;color&#39;, &#39;/path/to/colors.txt&#39;);
+</code></pre>
+<hr>
+<h3 id="loadsubstitutionfile">loadSubstitutionFile()</h3>
+<blockquote>
+<p><strong>loadSubstitutionFile</strong>(<code>type</code>, <code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIML1Bot.ts:205</p>
+<p>Load a substitution table from a file.</p>
+<p>The file uses <code>find : replace</code> text format (one rule per line).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="type">type</h5>
+<p><code>&quot;normal&quot;</code> | <code>&quot;person&quot;</code> | <code>&quot;person2&quot;</code> | <code>&quot;gender&quot;</code></p>
+<p>Which substitution table to replace (<code>&#39;normal&#39;</code>, <code>&#39;person&#39;</code>, etc.).</p>
+<h5 id="source">source</h5>
+<p><a href="../type-aliases/FileSource.md"><code>FileSource</code></a></p>
+<p>A <a href="../type-aliases/FileSource.md">FileSource</a>.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadSubstitutionFile(&#39;normal&#39;, &#39;/path/to/normal.txt&#39;);
+</code></pre>
+<hr>
+<h3 id="loadsubstitutions">loadSubstitutions()</h3>
+<blockquote>
+<p><strong>loadSubstitutions</strong>(<code>type</code>, <code>data</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:345</p>
+<p>Replace a substitution table entirely.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="type">type</h5>
+<p><code>&quot;normal&quot;</code> | <code>&quot;person&quot;</code> | <code>&quot;person2&quot;</code> | <code>&quot;gender&quot;</code> | <code>&quot;denormal&quot;</code></p>
+<p>Which table to replace (<code>&#39;normal&#39;</code>, <code>&#39;person&#39;</code>, etc.).</p>
+<h5 id="data">data</h5>
+<p><code>string</code> | <a href="../interfaces/SubstitutionPair.md"><code>SubstitutionPair</code></a>[]</p>
+<p>Text, JSON, or already-parsed pairs.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">// Load contractions from text
+bot.loadSubstitutions(&#39;normal&#39;, &quot;can&#39;t : cannot\nwon&#39;t : will not&quot;);
+// Load from JSON array
+bot.loadSubstitutions(&#39;person&#39;, &#39;[{&quot;find&quot;:&quot;I&quot;,&quot;replace&quot;:&quot;he or she&quot;}]&#39;);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadsubstitutions"><code>loadSubstitutions</code></a></p>
+<hr>
+<h3 id="loadxmlstring">loadXMLString()</h3>
+<blockquote>
+<p><strong>loadXMLString</strong>(<code>xml</code>, <code>fileName?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:197</p>
+<p>Parse and load an AIML XML string directly.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="xml">xml</h5>
+<p><code>string</code></p>
+<p>AIML XML content.</p>
+<h5 id="filename">fileName?</h5>
+<p><code>string</code></p>
+<p>Optional name shown in validation error messages.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="throws">Throws</h4>
+<p>If the XML contains parse errors.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadXMLString(`
+  &lt;aiml version=&quot;1.0&quot;&gt;
+    &lt;category&gt;
+      &lt;pattern&gt;HELLO&lt;/pattern&gt;
+      &lt;template&gt;Hi!&lt;/template&gt;
+    &lt;/category&gt;
+  &lt;/aiml&gt;
+`);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadxmlstring"><code>loadXMLString</code></a></p>
+<hr>
+<h3 id="serializeallsessions">serializeAllSessions()</h3>
+<blockquote>
+<p><strong>serializeAllSessions</strong>(): <code>string</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:655</p>
+<p>Serialise <strong>all</strong> active sessions to a single JSON string.</p>
+<p>Useful for persisting a multi-user application&#39;s full state.
+Restore with <a href="AIMLBot.md#loadallserializedsessions">loadAllSerializedSessions</a>.</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#serializeallsessions"><code>serializeAllSessions</code></a></p>
+<hr>
+<h3 id="serializesession">serializeSession()</h3>
+<blockquote>
+<p><strong>serializeSession</strong>(<code>sessionId</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:631</p>
+<p>Serialise a single session to a JSON string.</p>
+<p>Store the result and pass it to <a href="AIMLBot.md#loadserializedsession">loadSerializedSession</a> later to
+resume the conversation.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId</h5>
+<p><code>string</code></p>
+<p>The session to serialise.</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<h4 id="throws">Throws</h4>
+<p>If the session does not exist.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const json = bot.serializeSession(sessionId);
+localStorage.setItem(&#39;mySession&#39;, json);
+
+// Later…
+const saved = localStorage.getItem(&#39;mySession&#39;)!;
+const id = bot.loadSerializedSession(saved);
+const { response } = await bot.talk(&#39;hello again&#39;, id);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#serializesession"><code>serializeSession</code></a></p>
+<hr>
+<h3 id="setproperty">setProperty()</h3>
+<blockquote>
+<p><strong>setProperty</strong>(<code>name</code>, <code>value</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:293</p>
+<p>Set a single bot property.</p>
+<p>Bot properties are accessed in AIML templates via <code>&lt;bot name=&quot;...&quot;/&gt;</code>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Property name (case-insensitive).</p>
+<h5 id="value">value</h5>
+<p><code>string</code></p>
+<p>Property value.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.setProperty(&#39;name&#39;, &#39;Alice&#39;);
+// In AIML: &lt;bot name=&quot;name&quot;/&gt; → &quot;Alice&quot;
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#setproperty"><code>setProperty</code></a></p>
+<hr>
+<h3 id="talk">talk()</h3>
+<blockquote>
+<p><strong>talk</strong>(<code>input</code>, <code>sessionId?</code>): <code>Promise</code>&lt;<a href="../interfaces/TalkResult.md"><code>TalkResult</code></a>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:532</p>
+<p>Send a message to the bot and get a response.</p>
+<p>If <code>sessionId</code> is omitted, a shared default session (<code>__default__</code>) is used
+so that consecutive calls without a session ID maintain conversational state.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="input">input</h5>
+<p><code>string</code></p>
+<p>The user&#39;s message.</p>
+<h5 id="sessionid">sessionId?</h5>
+<p><code>string</code></p>
+<p>Optional session ID.  Pass the <code>sessionId</code> from a previous
+                 result to continue that conversation.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<a href="../interfaces/TalkResult.md"><code>TalkResult</code></a>&gt;</p>
+<p>An object with the bot&#39;s <code>response</code> and the <code>sessionId</code> used.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const r1 = await bot.talk(&#39;my name is Alice&#39;);
+// r1.sessionId is &#39;__default__&#39; (or whatever was used)
+
+const r2 = await bot.talk(&#39;what is my name&#39;, r1.sessionId);
+console.log(r2.response); // &quot;Your name is Alice.&quot;
+
+// Multi-user: pass explicit session IDs
+await bot.talk(&#39;hello&#39;, &#39;user-1&#39;);
+await bot.talk(&#39;hello&#39;, &#39;user-2&#39;);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#talk"><code>talk</code></a></p>
+<hr>
+<h3 id="talksession">talkSession()</h3>
+<blockquote>
+<p><strong>talkSession</strong>(<code>input</code>, <code>session</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:547</p>
+<p>Send a message using an explicit <a href="Session.md">Session</a> object.</p>
+<p>Useful when you manage sessions yourself rather than by ID.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="input">input</h5>
+<p><code>string</code></p>
+<p>The user&#39;s message.</p>
+<h5 id="session">session</h5>
+<p><a href="Session.md"><code>Session</code></a></p>
+<p>The session to use.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>string</code>&gt;</p>
+<p>The bot&#39;s response string.</p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#talksession"><code>talkSession</code></a></p>
+<hr>
+<h3 id="validatexml">validateXML()</h3>
+<blockquote>
+<p><strong>validateXML</strong>(<code>xml</code>, <code>fileName?</code>): <a href="../interfaces/ValidationResult.md"><code>ValidationResult</code></a></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:605</p>
+<p>Validate an AIML XML string without loading it.</p>
+<p>Returns a <a href="../interfaces/ValidationResult.md">ValidationResult</a> with <code>valid</code>, <code>errors</code>, and <code>warnings</code>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="xml">xml</h5>
+<p><code>string</code></p>
+<h5 id="filename">fileName?</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><a href="../interfaces/ValidationResult.md"><code>ValidationResult</code></a></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const result = bot.validateXML(xmlString, &#39;mybot.aiml&#39;);
+if (!result.valid) {
+  result.errors.forEach(e =&gt; console.error(e.message));
+}
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#validatexml"><code>validateXML</code></a></p>
+
+<hr/>
+<p><a href="../globals.md">aimljs</a> / AIML2Bot</p>
+<h1 id="class-aiml2bot">Class: AIML2Bot</h1>
+<p>Defined in: bots/AIML2Bot.ts:89</p>
+<p>AIML 2.0 bot.</p>
+<p>Extends <a href="AIMLBot.md">AIMLBot</a> with the full AIML 2.0 feature set:</p>
+<p><strong>Additional wildcards</strong></p>
+<ul>
+<li><code>#</code> — zero or more words (highest priority)</li>
+<li><code>^</code> — zero or more words (lower priority than <code>*</code>)</li>
+</ul>
+<p><strong>Additional template tags</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;sraix service=&quot;...&quot;&gt;</code></td>
+<td>Call an external service</td>
+</tr>
+<tr>
+<td><code>&lt;map name=&quot;...&quot;&gt;</code></td>
+<td>Look up a value in a named map</td>
+</tr>
+<tr>
+<td><code>&lt;normalize&gt;</code> / <code>&lt;denormalize&gt;</code></td>
+<td>Apply normalisation transforms</td>
+</tr>
+<tr>
+<td><code>&lt;explode&gt;</code></td>
+<td>Insert spaces between each character</td>
+</tr>
+<tr>
+<td><code>&lt;first&gt;</code> / <code>&lt;rest&gt;</code></td>
+<td>First word / remaining words of a string</td>
+</tr>
+<tr>
+<td><code>&lt;request index=&quot;N&quot;&gt;</code></td>
+<td>Nth previous user input</td>
+</tr>
+<tr>
+<td><code>&lt;response index=&quot;N&quot;&gt;</code></td>
+<td>Nth previous bot response</td>
+</tr>
+<tr>
+<td><code>&lt;learn&gt;</code> / <code>&lt;learnf&gt;</code></td>
+<td>Teach the bot new categories at runtime</td>
+</tr>
+<tr>
+<td><code>&lt;eval&gt;</code></td>
+<td>Evaluate AIML inside <code>&lt;learn&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;loop/&gt;</code></td>
+<td>Loop a <code>&lt;condition&gt;</code> branch</td>
+</tr>
+<tr>
+<td><code>&lt;oob&gt;</code></td>
+<td>Pass out-of-band instructions to the caller</td>
+</tr>
+<tr>
+<td><code>&lt;addtriple&gt;</code> / <code>&lt;deletetriple&gt;</code></td>
+<td>Manage the session triple store</td>
+</tr>
+<tr>
+<td><code>&lt;select&gt;</code> / <code>&lt;uniq&gt;</code></td>
+<td>Query the triple store</td>
+</tr>
+</tbody></table>
+<p><strong>Data file formats</strong>
+Properties, substitutions, sets, and maps are all accepted as either
+plain text <strong>or</strong> JSON — the format is auto-detected.</p>
+<hr>
+<h3 id="basic-usage">Basic usage</h3>
+<pre><code class="language-ts">import { AIML2Bot } from &#39;aimljs&#39;;
+
+const bot = new AIML2Bot({
+  properties: { name: &#39;Rosie&#39; },
+  sraixHandler: async (service, input) =&gt; fetchExternalBot(service, input),
+});
+await bot.loadDataDirectory(&#39;./rosie&#39;);
+
+const { response } = await bot.talk(&#39;hello&#39;);
+</code></pre>
+<h3 id="triple-store">Triple store</h3>
+<pre><code class="language-ts">// AIML:  &lt;addtriple&gt;&lt;subj&gt;&lt;star/&gt;&lt;/subj&gt;&lt;pred&gt;likes&lt;/pred&gt;&lt;obj&gt;&lt;star index=&quot;2&quot;/&gt;&lt;/obj&gt;&lt;/addtriple&gt;
+await bot.talk(&#39;Alice likes cats&#39;);
+const session = bot.getSession(sessionId)!;
+session.queryTriples(&#39;alice&#39;, &#39;likes&#39;); // → [{ subject:&#39;alice&#39;, predicate:&#39;likes&#39;, object:&#39;cats&#39; }]
+</code></pre>
+<h2 id="extends">Extends</h2>
+<ul>
+<li><a href="AIMLBot.md"><code>AIMLBot</code></a></li>
+</ul>
+<h2 id="accessors">Accessors</h2>
+<h3 id="categorycount">categoryCount</h3>
+<h4 id="get-signature">Get Signature</h4>
+<blockquote>
+<p><strong>get</strong> <strong>categoryCount</strong>(): <code>number</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:444</p>
+<p>Total number of loaded categories.</p>
+<h5 id="returns">Returns</h5>
+<p><code>number</code></p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#categorycount"><code>categoryCount</code></a></p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="constructor">Constructor</h3>
+<blockquote>
+<p><strong>new AIML2Bot</strong>(<code>options?</code>): <code>AIML2Bot</code></p>
+</blockquote>
+<p>Defined in: bots/AIML2Bot.ts:92</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="options">options?</h5>
+<p><a href="../interfaces/AIML2BotOptions.md"><code>AIML2BotOptions</code></a> = <code>{}</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>AIML2Bot</code></p>
+<h4 id="overrides">Overrides</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#constructor"><code>constructor</code></a></p>
+<h2 id="methods">Methods</h2>
+<h3 id="addcategory">addCategory()</h3>
+<blockquote>
+<p><strong>addCategory</strong>(<code>pattern</code>, <code>template</code>, <code>options?</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIML2Bot.ts:295</p>
+<p>Programmatically add an AIML 2.0 category.</p>
+<p>AIML 2.0 wildcards (<code>#</code>, <code>^</code>) are supported in the pattern.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="pattern">pattern</h5>
+<p><code>string</code></p>
+<p>AIML 2.0 input pattern.</p>
+<h5 id="template">template</h5>
+<p><code>string</code></p>
+<p>AIML 2.0 response template.</p>
+<h5 id="options">options?</h5>
+<p>Optional <code>that</code> constraint.</p>
+<h6 id="that">that?</h6>
+<p><code>string</code></p>
+<h6 id="topic">topic?</h6>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.addCategory(&#39;# HELLO ^&#39;, &#39;Hello yourself!&#39;);
+bot.addCategory(&#39;MY NAME IS *&#39;, &#39;Nice to meet you, &lt;set name=&quot;name&quot;&gt;&lt;star/&gt;&lt;/set&gt;!&#39;);
+</code></pre>
+<h4 id="overrides">Overrides</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#addcategory"><code>addCategory</code></a></p>
+<hr>
+<h3 id="addsubstitution">addSubstitution()</h3>
+<blockquote>
+<p><strong>addSubstitution</strong>(<code>type</code>, <code>find</code>, <code>replace</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:363</p>
+<p>Append a single substitution rule to a table.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="type">type</h5>
+<p><code>&quot;normal&quot;</code> | <code>&quot;person&quot;</code> | <code>&quot;person2&quot;</code> | <code>&quot;gender&quot;</code> | <code>&quot;denormal&quot;</code></p>
+<p>Which table to extend.</p>
+<h5 id="find">find</h5>
+<p><code>string</code></p>
+<p>The text to find.</p>
+<h5 id="replace">replace</h5>
+<p><code>string</code></p>
+<p>The replacement.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.addSubstitution(&#39;normal&#39;, &quot;ain&#39;t&quot;, &#39;am not&#39;);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#addsubstitution"><code>addSubstitution</code></a></p>
+<hr>
+<h3 id="createsession">createSession()</h3>
+<blockquote>
+<p><strong>createSession</strong>(<code>sessionId?</code>): <a href="Session.md"><code>Session</code></a></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:464</p>
+<p>Create a new session.</p>
+<p>Sessions are created automatically by <a href="AIMLBot.md#talk">talk</a>, so you only need this
+if you want to pre-configure a session (set predicates, topic, etc.).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId?</h5>
+<p><code>string</code></p>
+<p>Optional explicit ID.  A unique ID is generated if omitted.</p>
+<h4 id="returns">Returns</h4>
+<p><a href="Session.md"><code>Session</code></a></p>
+<p>The new session.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const session = bot.createSession(&#39;user-42&#39;);
+session.setPredicate(&#39;name&#39;, &#39;Alice&#39;);
+const { response } = await bot.talkSession(&#39;hello&#39;, session);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#createsession"><code>createSession</code></a></p>
+<hr>
+<h3 id="deletesession">deleteSession()</h3>
+<blockquote>
+<p><strong>deleteSession</strong>(<code>sessionId</code>): <code>boolean</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:502</p>
+<p>Delete a session and free its memory.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId</h5>
+<p><code>string</code></p>
+<p>Session to delete.</p>
+<h4 id="returns">Returns</h4>
+<p><code>boolean</code></p>
+<p><code>true</code> if the session existed and was deleted.</p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#deletesession"><code>deleteSession</code></a></p>
+<hr>
+<h3 id="getorcreatesession">getOrCreateSession()</h3>
+<blockquote>
+<p><strong>getOrCreateSession</strong>(<code>sessionId?</code>): <a href="Session.md"><code>Session</code></a></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:489</p>
+<p>Get an existing session or create one if it does not exist.</p>
+<p>When <code>sessionId</code> is omitted a persistent default session (<code>__default__</code>)
+is used for all calls without an ID.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId?</h5>
+<p><code>string</code></p>
+<p>Optional session ID.</p>
+<h4 id="returns">Returns</h4>
+<p><a href="Session.md"><code>Session</code></a></p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#getorcreatesession"><code>getOrCreateSession</code></a></p>
+<hr>
+<h3 id="getproperty">getProperty()</h3>
+<blockquote>
+<p><strong>getProperty</strong>(<code>name</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:305</p>
+<p>Get a bot property value.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Property name (case-insensitive).</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<p>The property value, or <code>&quot;&quot;</code> if not set.</p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#getproperty"><code>getProperty</code></a></p>
+<hr>
+<h3 id="getsession">getSession()</h3>
+<blockquote>
+<p><strong>getSession</strong>(<code>sessionId</code>): <a href="Session.md"><code>Session</code></a> | <code>undefined</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:477</p>
+<p>Retrieve an existing session by ID.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId</h5>
+<p><code>string</code></p>
+<p>The session ID to look up.</p>
+<h4 id="returns">Returns</h4>
+<p><a href="Session.md"><code>Session</code></a> | <code>undefined</code></p>
+<p>The session, or <code>undefined</code> if not found.</p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#getsession"><code>getSession</code></a></p>
+<hr>
+<h3 id="handlegossip">handleGossip()</h3>
+<blockquote>
+<p><code>protected</code> <strong>handleGossip</strong>(<code>_text</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:705</p>
+<p>Called whenever a <code>&lt;gossip&gt;</code> tag is encountered.
+Override to log or store gossip messages.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="text">\_text</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#handlegossip"><code>handleGossip</code></a></p>
+<hr>
+<h3 id="handlenomatch">handleNoMatch()</h3>
+<blockquote>
+<p><code>protected</code> <strong>handleNoMatch</strong>(<code>_input</code>, <code>_session</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:586</p>
+<p>Called when no category matches the user&#39;s input.</p>
+<p>Override in a subclass to provide a custom fallback response.
+The default implementation returns <code>&quot;&quot;</code>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="input">\_input</h5>
+<p><code>string</code></p>
+<h5 id="session">\_session</h5>
+<p><a href="Session.md"><code>Session</code></a></p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>string</code>&gt;</p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#handlenomatch"><code>handleNoMatch</code></a></p>
+<hr>
+<h3 id="loadallserializedsessions">loadAllSerializedSessions()</h3>
+<blockquote>
+<p><strong>loadAllSerializedSessions</strong>(<code>data</code>): <code>string</code>[]</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:669</p>
+<p>Restore all sessions from a JSON string produced by <a href="AIMLBot.md#serializeallsessions">serializeAllSessions</a>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="data">data</h5>
+<p><code>string</code></p>
+<p>Serialised sessions JSON.</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code>[]</p>
+<p>Array of restored session IDs.</p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadallserializedsessions"><code>loadAllSerializedSessions</code></a></p>
+<hr>
+<h3 id="loaddatadirectory">loadDataDirectory()</h3>
+<blockquote>
+<p><strong>loadDataDirectory</strong>(<code>dirPath</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIML2Bot.ts:219</p>
+<p>Load a complete AIML 2.0 data directory using the standard layout.</p>
+<p>Expected structure (all optional):</p>
+<pre><code>&lt;dir&gt;/
+  *.aiml                          ← AIML files (non-recursive)
+  properties.json | properties.txt
+  substitutions/
+    normal.json | normal.txt
+    person.json | person.txt
+    person2.json | person2.txt
+    gender.json | gender.txt
+    denormal.json | denormal.txt
+  sets/
+    &lt;name&gt;.json | &lt;name&gt;.txt      ← set name = file basename
+  maps/
+    &lt;name&gt;.json | &lt;name&gt;.txt      ← map name = file basename
+</code></pre>
+<p><strong>Node.js only.</strong></p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="dirpath">dirPath</h5>
+<p><code>string</code></p>
+<p>Absolute or relative path to the data directory.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const bot = new AIML2Bot();
+await bot.loadDataDirectory(&#39;./rosie&#39;);
+</code></pre>
+<hr>
+<h3 id="loaddirectory">loadDirectory()</h3>
+<blockquote>
+<p><strong>loadDirectory</strong>(<code>dirPath</code>, <code>recursive?</code>, <code>extensions?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:265</p>
+<p>Recursively load all <code>.aiml</code> files from a directory.</p>
+<p><strong>Node.js only.</strong> Throws in browser environments.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="dirpath">dirPath</h5>
+<p><code>string</code></p>
+<p>Absolute or relative path to the directory.</p>
+<h5 id="recursive">recursive?</h5>
+<p><code>boolean</code> = <code>true</code></p>
+<p>Whether to descend into subdirectories. Default <code>true</code>.</p>
+<h5 id="extensions">extensions?</h5>
+<p><code>string</code>[] = <code>...</code></p>
+<p>File extensions to include. Default <code>[&#39;.aiml&#39;]</code>.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadDirectory(&#39;./knowledge-base&#39;);
+await bot.loadDirectory(&#39;./kb&#39;, true, [&#39;.aiml&#39;, &#39;.xml&#39;]);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loaddirectory"><code>loadDirectory</code></a></p>
+<hr>
+<h3 id="loadfile">loadFile()</h3>
+<blockquote>
+<p><strong>loadFile</strong>(<code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:227</p>
+<p>Load a single AIML file from any <a href="../type-aliases/FileSource.md">FileSource</a>.</p>
+<p>Works on both Node.js (string path) and in the browser (File object or
+pre-loaded <code>{ name, content }</code> object).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="source">source</h5>
+<p><a href="../type-aliases/FileSource.md"><code>FileSource</code></a></p>
+<p>The file to load.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">// Node.js
+await bot.loadFile(&#39;/path/to/greetings.aiml&#39;);
+
+// Browser (from &lt;input type=&quot;file&quot;&gt;)
+const [file] = inputElement.files;
+await bot.loadFile(file);
+
+// Pre-loaded content (both platforms)
+await bot.loadFile({ name: &#39;greeting.aiml&#39;, content: xmlString });
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadfile"><code>loadFile</code></a></p>
+<hr>
+<h3 id="loadfiles">loadFiles()</h3>
+<blockquote>
+<p><strong>loadFiles</strong>(<code>sources</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:246</p>
+<p>Load multiple AIML files concurrently.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sources">sources</h5>
+<p><a href="../type-aliases/FileSource.md"><code>FileSource</code></a>[]</p>
+<p>Array of <a href="../type-aliases/FileSource.md">FileSource</a> values.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadFiles([
+  &#39;/path/to/greetings.aiml&#39;,
+  &#39;/path/to/personality.aiml&#39;,
+  { name: &#39;custom.aiml&#39;, content: inlineXml },
+]);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadfiles"><code>loadFiles</code></a></p>
+<hr>
+<h3 id="loadmap">loadMap()</h3>
+<blockquote>
+<p><strong>loadMap</strong>(<code>name</code>, <code>data</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:404</p>
+<p>Register a named map for use in <code>&lt;map name=&quot;...&quot;&gt;</code> template tags.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Map name (case-insensitive).</p>
+<h5 id="data">data</h5>
+<p><code>string</code> | <code>Map</code>&lt;<code>string</code>, <code>string</code>&gt; | <code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;</p>
+<p>Map content: plain object, <code>Map&lt;string, string&gt;</code>, JSON object, or <code>key:value</code> text.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.loadMap(&#39;capitals&#39;, { france: &#39;Paris&#39;, japan: &#39;Tokyo&#39; });
+bot.loadMap(&#39;colors&#39;, &#39;red : #FF0000\ngreen : #00FF00&#39;);
+bot.loadMap(&#39;scores&#39;, &#39;{&quot;alice&quot;:&quot;100&quot;,&quot;bob&quot;:&quot;200&quot;}&#39;);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadmap"><code>loadMap</code></a></p>
+<hr>
+<h3 id="loadmapfile">loadMapFile()</h3>
+<blockquote>
+<p><strong>loadMapFile</strong>(<code>name</code>, <code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIML2Bot.ts:184</p>
+<p>Load a named map from a file (JSON object or text, auto-detected).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Map name.</p>
+<h5 id="source">source</h5>
+<p><a href="../type-aliases/FileSource.md"><code>FileSource</code></a></p>
+<p>A <a href="../type-aliases/FileSource.md">FileSource</a>.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadMapFile(&#39;capitals&#39;, &#39;/path/to/capitals.json&#39;);  // {&quot;france&quot;:&quot;Paris&quot;}
+await bot.loadMapFile(&#39;capitals&#39;, &#39;/path/to/capitals.txt&#39;);   // france : Paris
+</code></pre>
+<hr>
+<h3 id="loadproperties">loadProperties()</h3>
+<blockquote>
+<p><strong>loadProperties</strong>(<code>data</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:322</p>
+<p>Load bot properties from a text or JSON data source.</p>
+<p>Accepts the same formats as <a href="../functions/parseProperties.md">parseProperties</a>:</p>
+<ul>
+<li>Plain object</li>
+<li>JSON string (<code>{ &quot;key&quot;: &quot;value&quot; }</code>)</li>
+<li>Text file (<code>key:value</code> or <code>key=value</code>, one per line)</li>
+</ul>
+<h4 id="parameters">Parameters</h4>
+<h5 id="data">data</h5>
+<p><code>string</code> | <code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.loadProperties(&#39;name:Alice\nversion:2.0&#39;);
+bot.loadProperties({ name: &#39;Alice&#39;, version: &#39;2.0&#39; });
+bot.loadProperties(&#39;{&quot;name&quot;:&quot;Alice&quot;}&#39;);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadproperties"><code>loadProperties</code></a></p>
+<hr>
+<h3 id="loadpropertiesfile">loadPropertiesFile()</h3>
+<blockquote>
+<p><strong>loadPropertiesFile</strong>(<code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIML2Bot.ts:133</p>
+<p>Load bot properties from a file (JSON or <code>key:value</code> text, auto-detected).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="source">source</h5>
+<p><a href="../type-aliases/FileSource.md"><code>FileSource</code></a></p>
+<p>A <a href="../type-aliases/FileSource.md">FileSource</a>.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadPropertiesFile(&#39;/path/to/properties.json&#39;);
+await bot.loadPropertiesFile(&#39;/path/to/properties.txt&#39;);
+</code></pre>
+<hr>
+<h3 id="loadserializedsession">loadSerializedSession()</h3>
+<blockquote>
+<p><strong>loadSerializedSession</strong>(<code>data</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:643</p>
+<p>Restore a session from a JSON string produced by <a href="AIMLBot.md#serializesession">serializeSession</a>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="data">data</h5>
+<p><code>string</code></p>
+<p>Serialised session JSON.</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<p>The restored session&#39;s ID.</p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadserializedsession"><code>loadSerializedSession</code></a></p>
+<hr>
+<h3 id="loadset">loadSet()</h3>
+<blockquote>
+<p><strong>loadSet</strong>(<code>name</code>, <code>data</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:387</p>
+<p>Register a named set for use in pattern matching.</p>
+<p>Sets enable patterns like <code>I LIKE &lt;set&gt;color&lt;/set&gt;</code> to match any member
+of the named set.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Set name (case-insensitive).</p>
+<h5 id="data">data</h5>
+<p><code>string</code> | <code>string</code>[] | <code>Set</code>&lt;<code>string</code>&gt;</p>
+<p>Set content: string array, <code>Set&lt;string&gt;</code>, JSON array, or one-per-line text.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.loadSet(&#39;color&#39;, [&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;]);
+bot.loadSet(&#39;animal&#39;, &#39;cat\ndog\nbird&#39;);
+bot.loadSet(&#39;fruit&#39;, &#39;[&quot;apple&quot;,&quot;banana&quot;,&quot;cherry&quot;]&#39;);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadset"><code>loadSet</code></a></p>
+<hr>
+<h3 id="loadsetfile">loadSetFile()</h3>
+<blockquote>
+<p><strong>loadSetFile</strong>(<code>name</code>, <code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIML2Bot.ts:169</p>
+<p>Load a named set from a file (JSON array or text, auto-detected).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Set name.</p>
+<h5 id="source">source</h5>
+<p><a href="../type-aliases/FileSource.md"><code>FileSource</code></a></p>
+<p>A <a href="../type-aliases/FileSource.md">FileSource</a>.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadSetFile(&#39;color&#39;, &#39;/path/to/colors.json&#39;);  // [&quot;red&quot;,&quot;green&quot;,&quot;blue&quot;]
+await bot.loadSetFile(&#39;color&#39;, &#39;/path/to/colors.txt&#39;);   // one per line
+</code></pre>
+<hr>
+<h3 id="loadsubstitutionfile">loadSubstitutionFile()</h3>
+<blockquote>
+<p><strong>loadSubstitutionFile</strong>(<code>type</code>, <code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIML2Bot.ts:151</p>
+<p>Load a substitution table from a file (JSON or text, auto-detected).</p>
+<p>JSON array format: <code>[{ &quot;find&quot;: &quot;...&quot;, &quot;replace&quot;: &quot;...&quot; }]</code>
+JSON object format: <code>{ &quot;find&quot;: &quot;replace&quot; }</code>
+Text format: <code>find : replace</code> (one per line)</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="type">type</h5>
+<p><code>&quot;normal&quot;</code> | <code>&quot;person&quot;</code> | <code>&quot;person2&quot;</code> | <code>&quot;gender&quot;</code> | <code>&quot;denormal&quot;</code></p>
+<p>Which table to replace.</p>
+<h5 id="source">source</h5>
+<p><a href="../type-aliases/FileSource.md"><code>FileSource</code></a></p>
+<p>A <a href="../type-aliases/FileSource.md">FileSource</a>.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadSubstitutionFile(&#39;normal&#39;, &#39;/path/to/normal.json&#39;);
+</code></pre>
+<hr>
+<h3 id="loadsubstitutions">loadSubstitutions()</h3>
+<blockquote>
+<p><strong>loadSubstitutions</strong>(<code>type</code>, <code>data</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:345</p>
+<p>Replace a substitution table entirely.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="type">type</h5>
+<p><code>&quot;normal&quot;</code> | <code>&quot;person&quot;</code> | <code>&quot;person2&quot;</code> | <code>&quot;gender&quot;</code> | <code>&quot;denormal&quot;</code></p>
+<p>Which table to replace (<code>&#39;normal&#39;</code>, <code>&#39;person&#39;</code>, etc.).</p>
+<h5 id="data">data</h5>
+<p><code>string</code> | <a href="../interfaces/SubstitutionPair.md"><code>SubstitutionPair</code></a>[]</p>
+<p>Text, JSON, or already-parsed pairs.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">// Load contractions from text
+bot.loadSubstitutions(&#39;normal&#39;, &quot;can&#39;t : cannot\nwon&#39;t : will not&quot;);
+// Load from JSON array
+bot.loadSubstitutions(&#39;person&#39;, &#39;[{&quot;find&quot;:&quot;I&quot;,&quot;replace&quot;:&quot;he or she&quot;}]&#39;);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadsubstitutions"><code>loadSubstitutions</code></a></p>
+<hr>
+<h3 id="loadxmlstring">loadXMLString()</h3>
+<blockquote>
+<p><strong>loadXMLString</strong>(<code>xml</code>, <code>fileName?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:197</p>
+<p>Parse and load an AIML XML string directly.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="xml">xml</h5>
+<p><code>string</code></p>
+<p>AIML XML content.</p>
+<h5 id="filename">fileName?</h5>
+<p><code>string</code></p>
+<p>Optional name shown in validation error messages.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<h4 id="throws">Throws</h4>
+<p>If the XML contains parse errors.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">await bot.loadXMLString(`
+  &lt;aiml version=&quot;1.0&quot;&gt;
+    &lt;category&gt;
+      &lt;pattern&gt;HELLO&lt;/pattern&gt;
+      &lt;template&gt;Hi!&lt;/template&gt;
+    &lt;/category&gt;
+  &lt;/aiml&gt;
+`);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#loadxmlstring"><code>loadXMLString</code></a></p>
+<hr>
+<h3 id="serializeallsessions">serializeAllSessions()</h3>
+<blockquote>
+<p><strong>serializeAllSessions</strong>(): <code>string</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:655</p>
+<p>Serialise <strong>all</strong> active sessions to a single JSON string.</p>
+<p>Useful for persisting a multi-user application&#39;s full state.
+Restore with <a href="AIMLBot.md#loadallserializedsessions">loadAllSerializedSessions</a>.</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#serializeallsessions"><code>serializeAllSessions</code></a></p>
+<hr>
+<h3 id="serializesession">serializeSession()</h3>
+<blockquote>
+<p><strong>serializeSession</strong>(<code>sessionId</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:631</p>
+<p>Serialise a single session to a JSON string.</p>
+<p>Store the result and pass it to <a href="AIMLBot.md#loadserializedsession">loadSerializedSession</a> later to
+resume the conversation.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="sessionid">sessionId</h5>
+<p><code>string</code></p>
+<p>The session to serialise.</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<h4 id="throws">Throws</h4>
+<p>If the session does not exist.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const json = bot.serializeSession(sessionId);
+localStorage.setItem(&#39;mySession&#39;, json);
+
+// Later…
+const saved = localStorage.getItem(&#39;mySession&#39;)!;
+const id = bot.loadSerializedSession(saved);
+const { response } = await bot.talk(&#39;hello again&#39;, id);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#serializesession"><code>serializeSession</code></a></p>
+<hr>
+<h3 id="setproperty">setProperty()</h3>
+<blockquote>
+<p><strong>setProperty</strong>(<code>name</code>, <code>value</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:293</p>
+<p>Set a single bot property.</p>
+<p>Bot properties are accessed in AIML templates via <code>&lt;bot name=&quot;...&quot;/&gt;</code>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Property name (case-insensitive).</p>
+<h5 id="value">value</h5>
+<p><code>string</code></p>
+<p>Property value.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.setProperty(&#39;name&#39;, &#39;Alice&#39;);
+// In AIML: &lt;bot name=&quot;name&quot;/&gt; → &quot;Alice&quot;
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#setproperty"><code>setProperty</code></a></p>
+<hr>
+<h3 id="setsraixhandler">setSraixHandler()</h3>
+<blockquote>
+<p><strong>setSraixHandler</strong>(<code>handler</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: bots/AIML2Bot.ts:120</p>
+<p>Set or replace the <code>&lt;sraix&gt;</code> handler after construction.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="handler">handler</h5>
+<p>(<code>service</code>, <code>input</code>) =&gt; <code>Promise</code>&lt;<code>string</code>&gt;</p>
+<p>A function that receives the service name and input text
+  and returns the service&#39;s response.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">bot.setSraixHandler(async (service, input) =&gt; {
+  const res = await fetch(`https://api.example.com/${service}?q=${input}`);
+  return res.text();
+});
+</code></pre>
+<hr>
+<h3 id="talk">talk()</h3>
+<blockquote>
+<p><strong>talk</strong>(<code>input</code>, <code>sessionId?</code>): <code>Promise</code>&lt;<a href="../interfaces/TalkResult.md"><code>TalkResult</code></a>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:532</p>
+<p>Send a message to the bot and get a response.</p>
+<p>If <code>sessionId</code> is omitted, a shared default session (<code>__default__</code>) is used
+so that consecutive calls without a session ID maintain conversational state.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="input">input</h5>
+<p><code>string</code></p>
+<p>The user&#39;s message.</p>
+<h5 id="sessionid">sessionId?</h5>
+<p><code>string</code></p>
+<p>Optional session ID.  Pass the <code>sessionId</code> from a previous
+                 result to continue that conversation.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<a href="../interfaces/TalkResult.md"><code>TalkResult</code></a>&gt;</p>
+<p>An object with the bot&#39;s <code>response</code> and the <code>sessionId</code> used.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const r1 = await bot.talk(&#39;my name is Alice&#39;);
+// r1.sessionId is &#39;__default__&#39; (or whatever was used)
+
+const r2 = await bot.talk(&#39;what is my name&#39;, r1.sessionId);
+console.log(r2.response); // &quot;Your name is Alice.&quot;
+
+// Multi-user: pass explicit session IDs
+await bot.talk(&#39;hello&#39;, &#39;user-1&#39;);
+await bot.talk(&#39;hello&#39;, &#39;user-2&#39;);
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#talk"><code>talk</code></a></p>
+<hr>
+<h3 id="talksession">talkSession()</h3>
+<blockquote>
+<p><strong>talkSession</strong>(<code>input</code>, <code>session</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:547</p>
+<p>Send a message using an explicit <a href="Session.md">Session</a> object.</p>
+<p>Useful when you manage sessions yourself rather than by ID.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="input">input</h5>
+<p><code>string</code></p>
+<p>The user&#39;s message.</p>
+<h5 id="session">session</h5>
+<p><a href="Session.md"><code>Session</code></a></p>
+<p>The session to use.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Promise</code>&lt;<code>string</code>&gt;</p>
+<p>The bot&#39;s response string.</p>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#talksession"><code>talkSession</code></a></p>
+<hr>
+<h3 id="validatexml">validateXML()</h3>
+<blockquote>
+<p><strong>validateXML</strong>(<code>xml</code>, <code>fileName?</code>): <a href="../interfaces/ValidationResult.md"><code>ValidationResult</code></a></p>
+</blockquote>
+<p>Defined in: bots/AIMLBot.ts:605</p>
+<p>Validate an AIML XML string without loading it.</p>
+<p>Returns a <a href="../interfaces/ValidationResult.md">ValidationResult</a> with <code>valid</code>, <code>errors</code>, and <code>warnings</code>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="xml">xml</h5>
+<p><code>string</code></p>
+<h5 id="filename">fileName?</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><a href="../interfaces/ValidationResult.md"><code>ValidationResult</code></a></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const result = bot.validateXML(xmlString, &#39;mybot.aiml&#39;);
+if (!result.valid) {
+  result.errors.forEach(e =&gt; console.error(e.message));
+}
+</code></pre>
+<h4 id="inherited-from">Inherited from</h4>
+<p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#validatexml"><code>validateXML</code></a></p>
+
+<hr/>
+<p><a href="../globals.md">aimljs</a> / Session</p>
+<h1 id="class-session">Class: Session</h1>
+<p>Defined in: core/Session.ts:33</p>
+<p>Represents a single user&#39;s conversation state.</p>
+<p>A <code>Session</code> stores everything that makes one user&#39;s conversation distinct:
+named predicates (variables), conversation history, the current topic,
+and — for AIML 2.0 — a triple store for subject/predicate/object facts.</p>
+<p>Sessions are created automatically by <a href="AIMLBot.md#talk">AIMLBot.talk</a> when no
+<code>sessionId</code> is supplied, or explicitly via <a href="AIMLBot.md#createsession">AIMLBot.createSession</a>.
+They can be serialised to JSON and restored later to resume a conversation.</p>
+<h2 id="example">Example</h2>
+<pre><code class="language-ts">const bot = new AIML1Bot();
+await bot.loadFile(&#39;alice.aiml&#39;);
+
+// Start a named session
+const session = bot.createSession(&#39;user-42&#39;);
+session.setPredicate(&#39;name&#39;, &#39;Alice&#39;);
+
+const { response } = await bot.talkSession(&#39;hello&#39;, session);
+
+// Serialise and restore later
+const saved = session.toJSON();
+const restored = Session.fromJSON(saved);
+</code></pre>
+<h2 id="constructors">Constructors</h2>
+<h3 id="constructor">Constructor</h3>
+<blockquote>
+<p><strong>new Session</strong>(<code>id?</code>): <code>Session</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:45</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="id">id?</h5>
+<p><code>string</code></p>
+<p>Optional explicit session ID; a unique ID is generated if omitted.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Session</code></p>
+<h2 id="methods">Methods</h2>
+<h3 id="addtriple">addTriple()</h3>
+<blockquote>
+<p><strong>addTriple</strong>(<code>subject</code>, <code>predicate</code>, <code>object</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:194</p>
+<p>Add a subject/predicate/object triple.</p>
+<p>Called by <code>&lt;addtriple&gt;</code> template tags.  Keys are lower-cased;
+duplicate triples are silently ignored.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="subject">subject</h5>
+<p><code>string</code></p>
+<h5 id="predicate">predicate</h5>
+<p><code>string</code></p>
+<h5 id="object">object</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">session.addTriple(&#39;alice&#39;, &#39;likes&#39;, &#39;cats&#39;);
+session.queryTriples(&#39;alice&#39;, &#39;likes&#39;); // → [{ subject:&#39;alice&#39;, predicate:&#39;likes&#39;, object:&#39;cats&#39; }]
+</code></pre>
+<hr>
+<h3 id="addturn">addTurn()</h3>
+<blockquote>
+<p><strong>addTurn</strong>(<code>input</code>, <code>response</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:123</p>
+<p>Append a completed conversation turn to the history.
+Called automatically after each <a href="AIMLBot.md#talk">AIMLBot.talk</a> call.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="input">input</h5>
+<p><code>string</code></p>
+<h5 id="response">response</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3 id="clearhistory">clearHistory()</h3>
+<blockquote>
+<p><strong>clearHistory</strong>(): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:178</p>
+<p>Clear all conversation history.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3 id="deletepredicate">deletePredicate()</h3>
+<blockquote>
+<p><strong>deletePredicate</strong>(<code>name</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:85</p>
+<p>Delete a named predicate.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Predicate name.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3 id="deletetriple">deleteTriple()</h3>
+<blockquote>
+<p><strong>deleteTriple</strong>(<code>subject</code>, <code>predicate</code>, <code>object</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:209</p>
+<p>Delete a specific triple.  Called by <code>&lt;deletetriple&gt;</code>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="subject">subject</h5>
+<p><code>string</code></p>
+<h5 id="predicate">predicate</h5>
+<p><code>string</code></p>
+<h5 id="object">object</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3 id="getallpredicates">getAllPredicates()</h3>
+<blockquote>
+<p><strong>getAllPredicates</strong>(): <code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;</p>
+</blockquote>
+<p>Defined in: core/Session.ts:93</p>
+<p>Return all predicates as a plain object snapshot.
+Useful for debugging or serialisation.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;</p>
+<hr>
+<h3 id="gethistory">getHistory()</h3>
+<blockquote>
+<p><strong>getHistory</strong>(): <a href="../interfaces/ConversationTurn.md"><code>ConversationTurn</code></a>[]</p>
+</blockquote>
+<p>Defined in: core/Session.ts:173</p>
+<p>Return a copy of the full conversation history.</p>
+<h4 id="returns">Returns</h4>
+<p><a href="../interfaces/ConversationTurn.md"><code>ConversationTurn</code></a>[]</p>
+<hr>
+<h3 id="getinput">getInput()</h3>
+<blockquote>
+<p><strong>getInput</strong>(<code>index?</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:140</p>
+<p>Return the Nth previous user input (1-based, 1 = most recent).</p>
+<p>Used by the <code>&lt;input index=&quot;N&quot;/&gt;</code> template tag.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="index">index?</h5>
+<p><code>number</code> = <code>1</code></p>
+<p>1-based index into history (1 = last input).</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<hr>
+<h3 id="getpredicate">getPredicate()</h3>
+<blockquote>
+<p><strong>getPredicate</strong>(<code>name</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:61</p>
+<p>Read a named predicate value.</p>
+<p>Predicate names are case-insensitive.  Returns <code>&quot;&quot;</code> if the predicate
+has not been set (matching AIML semantics for <code>&lt;get name=&quot;...&quot;/&gt;</code>).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Predicate name (case-insensitive).</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<hr>
+<h3 id="getresponse">getResponse()</h3>
+<blockquote>
+<p><strong>getResponse</strong>(<code>index?</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:152</p>
+<p>Return the Nth previous bot response (1-based, 1 = most recent).</p>
+<p>Used by the <code>&lt;response index=&quot;N&quot;/&gt;</code> template tag (AIML 2.0).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="index">index?</h5>
+<p><code>number</code> = <code>1</code></p>
+<p>1-based index (1 = last response).</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<hr>
+<h3 id="getthat">getThat()</h3>
+<blockquote>
+<p><strong>getThat</strong>(<code>responseIndex?</code>, <code>sentenceIndex?</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:165</p>
+<p>Return the Mth sentence of the Nth previous bot response.</p>
+<p>Used by <code>&lt;that index=&quot;N,M&quot;/&gt;</code>.  Sentences are split on <code>.</code>, <code>!</code>, <code>?</code>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="responseindex">responseIndex?</h5>
+<p><code>number</code> = <code>1</code></p>
+<p>Response index (1 = most recent).</p>
+<h5 id="sentenceindex">sentenceIndex?</h5>
+<p><code>number</code> = <code>1</code></p>
+<p>Sentence index within that response (1 = first).</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<hr>
+<h3 id="gettopic">getTopic()</h3>
+<blockquote>
+<p><strong>getTopic</strong>(): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:103</p>
+<p>Return the current conversation topic.</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<h4 id="default">Default</h4>
+<pre><code class="language-ts">&quot;default&quot;
+</code></pre>
+<hr>
+<h3 id="querytriples">queryTriples()</h3>
+<blockquote>
+<p><strong>queryTriples</strong>(<code>subject?</code>, <code>predicate?</code>, <code>object?</code>): <a href="../interfaces/TripleEntry.md"><code>TripleEntry</code></a>[]</p>
+</blockquote>
+<p>Defined in: core/Session.ts:226</p>
+<p>Query the triple store.  Pass <code>undefined</code> to a field to act as a wildcard.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="subject">subject?</h5>
+<p><code>string</code></p>
+<p>Filter by subject (optional).</p>
+<h5 id="predicate">predicate?</h5>
+<p><code>string</code></p>
+<p>Filter by predicate (optional).</p>
+<h5 id="object">object?</h5>
+<p><code>string</code></p>
+<p>Filter by object (optional).</p>
+<h4 id="returns">Returns</h4>
+<p><a href="../interfaces/TripleEntry.md"><code>TripleEntry</code></a>[]</p>
+<p>Matching triples.</p>
+<hr>
+<h3 id="serialize">serialize()</h3>
+<blockquote>
+<p><strong>serialize</strong>(): <a href="../interfaces/SessionData.md"><code>SessionData</code></a></p>
+</blockquote>
+<p>Defined in: core/Session.ts:247</p>
+<p>Serialise the session to a plain <a href="../interfaces/SessionData.md">SessionData</a> object.</p>
+<p>Pass the result to <code>JSON.stringify()</code> and store it.
+Restore with <a href="#deserialize">Session.deserialize</a>.</p>
+<h4 id="returns">Returns</h4>
+<p><a href="../interfaces/SessionData.md"><code>SessionData</code></a></p>
+<hr>
+<h3 id="setpredicate">setPredicate()</h3>
+<blockquote>
+<p><strong>setPredicate</strong>(<code>name</code>, <code>value</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:76</p>
+<p>Set a named predicate.</p>
+<p>This is called automatically by <code>&lt;set name=&quot;...&quot;&gt;</code> template tags.
+Setting <code>&quot;topic&quot;</code> also updates the session topic.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Predicate name.</p>
+<h5 id="value">value</h5>
+<p><code>string</code></p>
+<p>New value.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3 id="settopic">setTopic()</h3>
+<blockquote>
+<p><strong>setTopic</strong>(<code>topic</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:111</p>
+<p>Set the current conversation topic.
+Also updates the <code>&quot;topic&quot;</code> predicate so <code>&lt;get name=&quot;topic&quot;/&gt;</code> works.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="topic">topic</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3 id="tojson">toJSON()</h3>
+<blockquote>
+<p><strong>toJSON</strong>(): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:288</p>
+<p>Serialise the session to a JSON string.</p>
+<p>Use <a href="#fromjson">Session.fromJSON</a> to restore.</p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">localStorage.setItem(&#39;session&#39;, session.toJSON());
+</code></pre>
+<hr>
+<h3 id="deserialize">deserialize()</h3>
+<blockquote>
+<p><code>static</code> <strong>deserialize</strong>(<code>data</code>): <code>Session</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:267</p>
+<p>Restore a session from a <a href="../interfaces/SessionData.md">SessionData</a> object.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="data">data</h5>
+<p><a href="../interfaces/SessionData.md"><code>SessionData</code></a></p>
+<h4 id="returns">Returns</h4>
+<p><code>Session</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const saved = session.serialize();
+// … store saved somewhere …
+const session2 = Session.deserialize(saved);
+</code></pre>
+<hr>
+<h3 id="fromjson">fromJSON()</h3>
+<blockquote>
+<p><code>static</code> <strong>fromJSON</strong>(<code>json</code>): <code>Session</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:298</p>
+<p>Restore a session from a JSON string produced by <a href="#tojson">Session.toJSON</a>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="json">json</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>Session</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const session = Session.fromJSON(localStorage.getItem(&#39;session&#39;)!);
+</code></pre>
+<h2 id="properties">Properties</h2>
+<h3 id="created">created</h3>
+<blockquote>
+<p><code>readonly</code> <strong>created</strong>: <code>number</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:41</p>
+<p>Unix timestamp (ms) when the session was created.</p>
+<hr>
+<h3 id="id">id</h3>
+<blockquote>
+<p><code>readonly</code> <strong>id</strong>: <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Session.ts:35</p>
+<p>Unique session identifier.</p>
+
+<hr/>
+<p><a href="../globals.md">aimljs</a> / PatternMatcher</p>
+<h1 id="class-patternmatcher">Class: PatternMatcher</h1>
+<p>Defined in: core/PatternMatcher.ts:145</p>
+<p>Low-level pattern matching engine.</p>
+<p>Stores a list of <a href="../interfaces/Category.md">Category</a> objects and efficiently finds the
+highest-priority match for a given (input, that, topic) triple.</p>
+<p>Priority follows the AIML specification:</p>
+<ul>
+<li>AIML 1.0: <code>_</code> &gt; exact &gt; <code>*</code></li>
+<li>AIML 2.0: <code>#</code> &gt; <code>_</code> &gt; exact/set &gt; <code>^</code> &gt; <code>*</code></li>
+</ul>
+<p>You do not normally need to use this class directly — the bot classes
+(<a href="AIMLBot.md">AIMLBot</a>, <a href="AIML1Bot.md">AIML1Bot</a>, <a href="AIML2Bot.md">AIML2Bot</a>) manage it internally.</p>
+<h2 id="example">Example</h2>
+<pre><code class="language-ts">const matcher = new PatternMatcher();
+matcher.addCategories(parseAIML(xml).categories);
+
+const result = matcher.match(&#39;hello world&#39;, &#39;*&#39;, &#39;*&#39;);
+if (result) {
+  console.log(&#39;stars:&#39;, result.stars); // wildcard captures
+}
+</code></pre>
+<h2 id="accessors">Accessors</h2>
+<h3 id="size">size</h3>
+<h4 id="get-signature">Get Signature</h4>
+<blockquote>
+<p><strong>get</strong> <strong>size</strong>(): <code>number</code></p>
+</blockquote>
+<p>Defined in: core/PatternMatcher.ts:205</p>
+<p>Total number of loaded categories.</p>
+<h5 id="returns">Returns</h5>
+<p><code>number</code></p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="constructor">Constructor</h3>
+<blockquote>
+<p><strong>new PatternMatcher</strong>(): <code>PatternMatcher</code></p>
+</blockquote>
+<h4 id="returns">Returns</h4>
+<p><code>PatternMatcher</code></p>
+<h2 id="methods">Methods</h2>
+<h3 id="addcategories">addCategories()</h3>
+<blockquote>
+<p><strong>addCategories</strong>(<code>cats</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/PatternMatcher.ts:164</p>
+<p>Add multiple categories at once.
+More efficient than calling <a href="#addcategory">addCategory</a> in a loop.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="cats">cats</h5>
+<p><a href="../interfaces/Category.md"><code>Category</code></a>[]</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3 id="addcategory">addCategory()</h3>
+<blockquote>
+<p><strong>addCategory</strong>(<code>cat</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/PatternMatcher.ts:155</p>
+<p>Add a single category to the matcher.
+Triggers a re-sort on the next <a href="#match">match</a> call.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="cat">cat</h5>
+<p><a href="../interfaces/Category.md"><code>Category</code></a></p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3 id="clear">clear()</h3>
+<blockquote>
+<p><strong>clear</strong>(): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/PatternMatcher.ts:181</p>
+<p>Remove all categories.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3 id="match">match()</h3>
+<blockquote>
+<p><strong>match</strong>(<code>input</code>, <code>that</code>, <code>topic</code>): <a href="../interfaces/MatchResult.md"><code>MatchResult</code></a> | <code>null</code></p>
+</blockquote>
+<p>Defined in: core/PatternMatcher.ts:234</p>
+<p>Find the highest-priority category that matches the given triple.</p>
+<p>All three strings are tokenised and matched against the stored patterns.
+Returns <code>null</code> if no category matches.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="input">input</h5>
+<p><code>string</code></p>
+<p>Normalised user input.</p>
+<h5 id="that">that</h5>
+<p><code>string</code></p>
+<p>Last bot sentence (use <code>&quot;*&quot;</code> if no prior response).</p>
+<h5 id="topic">topic</h5>
+<p><code>string</code></p>
+<p>Current conversation topic (use <code>&quot;default&quot;</code> if unset).</p>
+<h4 id="returns">Returns</h4>
+<p><a href="../interfaces/MatchResult.md"><code>MatchResult</code></a> | <code>null</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">const result = matcher.match(&#39;my name is Alice&#39;, &#39;*&#39;, &#39;default&#39;);
+// result.category → the matched Category
+// result.stars[0] → &#39;Alice&#39;
+</code></pre>
+<hr>
+<h3 id="removebyfile">removeByFile()</h3>
+<blockquote>
+<p><strong>removeByFile</strong>(<code>file</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/PatternMatcher.ts:175</p>
+<p>Remove all categories that were loaded from a specific file.
+Useful for hot-reloading individual AIML files.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="file">file</h5>
+<p><code>string</code></p>
+<p>The file name/path to remove categories from.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3 id="setbotproperties">setBotProperties()</h3>
+<blockquote>
+<p><strong>setBotProperties</strong>(<code>props</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/PatternMatcher.ts:200</p>
+<p>Provide the current bot properties so <code>&lt;bot name=&quot;...&quot;&gt;</code> pattern
+tokens can be evaluated during matching.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="props">props</h5>
+<p><code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3 id="setset">setSet()</h3>
+<blockquote>
+<p><strong>setSet</strong>(<code>name</code>, <code>set</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/PatternMatcher.ts:192</p>
+<p>Register a named set for use in <code>&lt;set name=&quot;...&quot;&gt;</code> pattern tokens.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="name">name</h5>
+<p><code>string</code></p>
+<p>Set name (case-insensitive).</p>
+<h5 id="set">set</h5>
+<p><a href="../type-aliases/AIMLSet.md"><code>AIMLSet</code></a></p>
+<p>Set of lower-cased strings.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+
+<hr/>
+<p><a href="../globals.md">aimljs</a> / Normalizer</p>
+<h1 id="class-normalizer">Class: Normalizer</h1>
+<p>Defined in: core/Normalizer.ts:122</p>
+<p>Text normalisation engine.</p>
+<p>The <code>Normalizer</code> applies ordered substitution tables to transform text
+before matching (input normalisation) and after generation (denormalisation).
+It also provides the pronoun-swap transforms used by AIML template tags
+(<code>&lt;person&gt;</code>, <code>&lt;person2&gt;</code>, <code>&lt;gender&gt;</code>) and string-case helpers.</p>
+<p>All substitutions are applied in a <strong>single pass</strong> (see <a href="../functions/applySubstitutions.md">applySubstitutions</a>),
+so rules cannot inadvertently match text introduced by earlier rules.</p>
+<h2 id="example">Example</h2>
+<pre><code class="language-ts">const norm = new Normalizer();
+norm.updateSubstitutions(&#39;normal&#39;, [
+  buildSubstitutionPair(&quot;can&#39;t&quot;, &#39;cannot&#39;),
+  buildSubstitutionPair(&quot;won&#39;t&quot;, &#39;will not&#39;),
+]);
+
+norm.normalize(&quot;I can&#39;t do it&quot;); // → &quot;I cannot do it&quot;
+norm.person(&quot;I am happy&quot;);       // → &quot;he or she is happy&quot;
+norm.gender(&quot;he called her&quot;);    // → &quot;she called him&quot;
+</code></pre>
+<h2 id="constructors">Constructors</h2>
+<h3 id="constructor">Constructor</h3>
+<blockquote>
+<p><strong>new Normalizer</strong>(<code>substitutions?</code>): <code>Normalizer</code></p>
+</blockquote>
+<p>Defined in: core/Normalizer.ts:129</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="substitutions">substitutions?</h5>
+<p><code>Partial</code>&lt;<a href="../interfaces/Substitutions.md"><code>Substitutions</code></a>&gt;</p>
+<p>Override any built-in table.  Omitted tables
+  fall back to <a href="../functions/createDefaultSubstitutions.md">createDefaultSubstitutions</a>.</p>
+<h4 id="returns">Returns</h4>
+<p><code>Normalizer</code></p>
+<h2 id="methods">Methods</h2>
+<h3 id="addsubstitutions">addSubstitutions()</h3>
+<blockquote>
+<p><strong>addSubstitutions</strong>(<code>type</code>, <code>pairs</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/Normalizer.ts:154</p>
+<p>Append rules to an existing substitution table.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="type">type</h5>
+<p>keyof <a href="../interfaces/Substitutions.md"><code>Substitutions</code></a></p>
+<p>Which table to extend.</p>
+<h5 id="pairs">pairs</h5>
+<p><a href="../interfaces/SubstitutionPair.md"><code>SubstitutionPair</code></a>[]</p>
+<p>Rules to append.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3 id="denormalize">denormalize()</h3>
+<blockquote>
+<p><strong>denormalize</strong>(<code>text</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Normalizer.ts:180</p>
+<p>Reverse normalisation applied to bot output.
+Uses the <code>denormal</code> substitution table.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="text">text</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<hr>
+<h3 id="explode">explode()</h3>
+<blockquote>
+<p><strong>explode</strong>(<code>text</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Normalizer.ts:231</p>
+<p>Insert a space between every character.
+Used by the <code>&lt;explode&gt;</code> template tag.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="text">text</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<h4 id="example">Example</h4>
+<pre><code class="language-ts">explode(&#39;abc&#39;) // → &#39;a b c&#39;
+</code></pre>
+<hr>
+<h3 id="formal">formal()</h3>
+<blockquote>
+<p><strong>formal</strong>(<code>text</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Normalizer.ts:215</p>
+<p>Capitalise the first letter of every word (<code>Title Case</code>).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="text">text</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<hr>
+<h3 id="gender">gender()</h3>
+<blockquote>
+<p><strong>gender</strong>(<code>text</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Normalizer.ts:204</p>
+<p>Apply gender pronoun substitution (he↔she, him↔her, …).
+Used by the <code>&lt;gender&gt;</code> template tag.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="text">text</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<hr>
+<h3 id="lowercase">lowercase()</h3>
+<blockquote>
+<p><strong>lowercase</strong>(<code>text</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Normalizer.ts:212</p>
+<p>Convert text to <code>lower case</code>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="text">text</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<hr>
+<h3 id="normalize">normalize()</h3>
+<blockquote>
+<p><strong>normalize</strong>(<code>text</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Normalizer.ts:164</p>
+<p>Normalise user input before pattern matching.</p>
+<p>Applies the <code>normal</code> substitution table (contractions, punctuation, etc.)
+and collapses multiple spaces.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="text">text</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<hr>
+<h3 id="person">person()</h3>
+<blockquote>
+<p><strong>person</strong>(<code>text</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Normalizer.ts:188</p>
+<p>Apply first↔third person pronoun substitution.
+Used by the <code>&lt;person&gt;</code> template tag.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="text">text</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<hr>
+<h3 id="person2">person2()</h3>
+<blockquote>
+<p><strong>person2</strong>(<code>text</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Normalizer.ts:196</p>
+<p>Apply first↔second person pronoun substitution.
+Used by the <code>&lt;person2&gt;</code> template tag.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="text">text</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<hr>
+<h3 id="sentence">sentence()</h3>
+<blockquote>
+<p><strong>sentence</strong>(<code>text</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Normalizer.ts:220</p>
+<p>Capitalise only the very first character (<code>Sentence case</code>).</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="text">text</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+<hr>
+<h3 id="updatesubstitutions">updateSubstitutions()</h3>
+<blockquote>
+<p><strong>updateSubstitutions</strong>(<code>type</code>, <code>pairs</code>): <code>void</code></p>
+</blockquote>
+<p>Defined in: core/Normalizer.ts:145</p>
+<p>Replace an entire substitution table.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="type">type</h5>
+<p>keyof <a href="../interfaces/Substitutions.md"><code>Substitutions</code></a></p>
+<p>Which table to replace.</p>
+<h5 id="pairs">pairs</h5>
+<p><a href="../interfaces/SubstitutionPair.md"><code>SubstitutionPair</code></a>[]</p>
+<p>New substitution rules.</p>
+<h4 id="returns">Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3 id="uppercase">uppercase()</h3>
+<blockquote>
+<p><strong>uppercase</strong>(<code>text</code>): <code>string</code></p>
+</blockquote>
+<p>Defined in: core/Normalizer.ts:209</p>
+<p>Convert text to <code>UPPER CASE</code>.</p>
+<h4 id="parameters">Parameters</h4>
+<h5 id="text">text</h5>
+<p><code>string</code></p>
+<h4 id="returns">Returns</h4>
+<p><code>string</code></p>
+</div></div>
+</div></main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with <strong>aimljs</strong> · MIT License ·
+         <a href="https://github.com/jesobreira/aimljs">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el));
+      document.querySelectorAll('pre').forEach(pre => {
+        const btn = document.createElement('button');
+        btn.className = 'copy-btn'; btn.textContent = 'Copy';
+        btn.onclick = () => {
+          navigator.clipboard.writeText(pre.querySelector('code')?.textContent ?? '');
+          btn.textContent = 'Copied!';
+          setTimeout(() => btn.textContent = 'Copy', 1500);
+        };
+        pre.appendChild(btn);
+      });
+      // Active sidebar link on scroll
+      const links = document.querySelectorAll('.sidebar-link[href^="#"]');
+      if (links.length) {
+        const obs = new IntersectionObserver(entries => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              links.forEach(l => l.classList.remove('active'));
+              const a = document.querySelector('.sidebar-link[href="#' + e.target.id + '"]');
+              if (a) a.classList.add('active');
+            }
+          });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+        document.querySelectorAll('[id]').forEach(el => obs.observe(el));
+      }
+    });
+  </script>
+</body>
+</html>

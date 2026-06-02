@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="aiml-validate and aiml-serve CLI tools for aimljs."/>
+  <title>CLI Reference — aimljs</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">🤖 aimljs</a>
+      <nav class="site-nav"><a href="index.html" class="nav-link">Home</a><a href="getting-started.html" class="nav-link">Getting Started</a><a href="cli.html" class="nav-link active">CLI Reference</a><a href="api.html" class="nav-link">API Docs</a></nav>
+      <a href="https://github.com/jesobreira/aimljs" class="gh-link" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.4-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 6.1 18 6.4 18 6.4c.6 1.6.2 2.7.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </header>
+
+  <main class="site-main">
+<div class="docs-layout">
+  <aside class="docs-sidebar">
+    <div class="sidebar-group">
+      <span class="sidebar-label">Tools</span>
+      <a href="#aiml-validate" class="sidebar-link">aiml-validate</a><a href="#install" class="sidebar-link h3">Install</a><a href="#usage" class="sidebar-link h3">Usage</a><a href="#examples" class="sidebar-link h3">Examples</a><a href="#sample-output" class="sidebar-link h3">Sample output</a><a href="#aiml-serve" class="sidebar-link">aiml-serve</a><a href="#install" class="sidebar-link h3">Install</a><a href="#usage" class="sidebar-link h3">Usage</a><a href="#examples" class="sidebar-link h3">Examples</a><a href="#endpoints" class="sidebar-link h3">Endpoints</a><a href="#request-response" class="sidebar-link h3">Request / response</a><a href="#streaming" class="sidebar-link h3">Streaming</a><a href="#use-with-the-openai-sdk" class="sidebar-link h3">Use with the OpenAI SDK</a><a href="#session-management" class="sidebar-link h3">Session management</a><a href="#opt-in-features" class="sidebar-link">Opt-in features</a>
+    </div>
+  </aside>
+  <div class="docs-content"><div class="prose"><h1 id="cli-reference">CLI Reference</h1>
+<p>aimljs ships two command-line tools.</p>
+<hr>
+<h2 id="aiml-validate">aiml-validate</h2>
+<p>Validate AIML files for syntax errors before loading them into your bot.</p>
+<h3 id="install">Install</h3>
+<pre><code class="language-bash">npm install -g aimljs          # global
+npx aimljs aiml-validate ...  # one-off, no install
+</code></pre>
+<h3 id="usage">Usage</h3>
+<pre><code>aiml-validate [options] &lt;file|directory&gt; [...]
+
+Options:
+  -r, --recursive    Recurse into subdirectories
+  -s, --stats        Show per-file category count and parse time
+  -q, --quiet        Only print errors (suppress warnings)
+  --json             Output results as JSON (for CI pipelines)
+  -v, --version      Show version
+  -h, --help         Show help
+</code></pre>
+<h3 id="examples">Examples</h3>
+<pre><code class="language-bash">aiml-validate greetings.aiml
+aiml-validate ./alice/
+aiml-validate -r --stats ./knowledge-base/
+aiml-validate --json -r ./aiml/ &gt; report.json   # exits 1 on errors
+</code></pre>
+<h3 id="sample-output">Sample output</h3>
+<pre><code>✓ greetings.aiml   (42 categories, 8ms)
+✓ personality.aiml (318 categories, 22ms)
+✗ broken.aiml
+  ✗ error   &lt;category&gt; missing &lt;template&gt; [category]
+
+Results: 3 files checked
+  360 categories loaded
+  2 valid
+  1 with errors (1 total)
+</code></pre>
+<hr>
+<h2 id="aiml-serve">aiml-serve</h2>
+<p>Expose any AIML bot as a <strong>ChatGPT-compatible REST API</strong> with a Swagger UI.</p>
+<h3 id="install">Install</h3>
+<pre><code class="language-bash">npm install -g aimljs
+</code></pre>
+<h3 id="usage">Usage</h3>
+<pre><code>aiml-serve [options] [file|directory ...]
+
+Options:
+  -p, --port &lt;n&gt;       Port (default: 8080)
+  -m, --model &lt;name&gt;   Model name in API responses (default: aiml-bot-1)
+  --api-key &lt;key&gt;      Require Bearer token in Authorization header
+  --v2                 Force AIML 2.0 parser
+  --rosie              Load bundled Rosie 2.0 bot (needs dev/rosie/)
+  --freeaiml           Load bundled Free-AIML bot (needs dev/freeaiml/)
+  -h, --help           Show help
+</code></pre>
+<h3 id="examples">Examples</h3>
+<pre><code class="language-bash">aiml-serve --port 8080 ./alice/
+aiml-serve --api-key mysecret ./alice/
+aiml-serve --model alice-v1 --rosie --freeaiml
+</code></pre>
+<h3 id="endpoints">Endpoints</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>GET</code></td>
+<td><code>/</code></td>
+<td>API info</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/v1/models</code></td>
+<td>List models</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/v1/chat/completions</code></td>
+<td>Chat — ChatGPT-compatible</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/docs</code></td>
+<td>Swagger UI</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/openapi.json</code></td>
+<td>OpenAPI 3.0 spec</td>
+</tr>
+</tbody></table>
+<h3 id="request-response">Request / response</h3>
+<pre><code class="language-bash">curl http://localhost:8080/v1/chat/completions \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#39;{&quot;messages&quot;:[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;hello&quot;}],&quot;user&quot;:&quot;alice&quot;}&#39;
+</code></pre>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;chatcmpl-aimljs-4s49pq3j&quot;,
+  &quot;object&quot;: &quot;chat.completion&quot;,
+  &quot;created&quot;: 1700000000,
+  &quot;model&quot;: &quot;aiml-bot-1&quot;,
+  &quot;choices&quot;: [{
+    &quot;index&quot;: 0,
+    &quot;message&quot;: { &quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: &quot;Hi there!&quot; },
+    &quot;finish_reason&quot;: &quot;stop&quot;
+  }],
+  &quot;usage&quot;: { &quot;prompt_tokens&quot;: 3, &quot;completion_tokens&quot;: 3, &quot;total_tokens&quot;: 6 }
+}
+</code></pre>
+<h3 id="streaming">Streaming</h3>
+<p>Pass <code>&quot;stream&quot;: true</code> to receive SSE word-by-word — works with any ChatGPT-compatible client:</p>
+<pre><code class="language-bash">curl http://localhost:8080/v1/chat/completions \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#39;{&quot;messages&quot;:[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;hello&quot;}],&quot;stream&quot;:true}&#39;
+</code></pre>
+<h3 id="use-with-the-openai-sdk">Use with the OpenAI SDK</h3>
+<pre><code class="language-typescript">import OpenAI from &#39;openai&#39;;
+
+const client = new OpenAI({
+  baseURL: &#39;http://localhost:8080/v1&#39;,
+  apiKey: &#39;none&#39;,  // or your --api-key value
+});
+
+const res = await client.chat.completions.create({
+  model: &#39;aiml-bot-1&#39;,
+  messages: [{ role: &#39;user&#39;, content: &#39;hello&#39; }],
+  user: &#39;my-session&#39;,  // session ID — bot remembers predicates
+});
+console.log(res.choices[0].message.content);
+</code></pre>
+<h3 id="session-management">Session management</h3>
+<p>The <code>user</code> field is used as the <strong>session ID</strong>. Conversations with the same <code>user</code> value share predicate state — the bot remembers names, topics, etc. across requests.</p>
+<hr>
+<h2 id="opt-in-features">Opt-in features</h2>
+<p>Two template tags are <strong>disabled by default</strong> for security. Enable them explicitly per bot:</p>
+<h3 id="shell-execution-nodejs-only">`<system>` — shell execution (Node.js only)</h3>
+<p>Runs a shell command and inserts stdout into the response.</p>
+<pre><code class="language-typescript">const bot = new AIML1Bot({ enableSystem: true });
+</code></pre>
+<pre><code class="language-xml">&lt;category&gt;
+  &lt;pattern&gt;WHAT TIME IS IT&lt;/pattern&gt;
+  &lt;template&gt;The time is &lt;system&gt;date +%H:%M:%S&lt;/system&gt;.&lt;/template&gt;
+&lt;/category&gt;
+</code></pre>
+<blockquote>
+<p>⚠️ Only enable for AIML files you fully trust. Disabling it (the default)
+causes <code>&lt;system&gt;</code> to produce empty output rather than throwing.</p>
+</blockquote>
+<h3 id="inline-js">`<javascript>` — inline JS</h3>
+<p>Evaluates a JS expression with <code>new Function()</code> and returns the result as a string.</p>
+<pre><code class="language-typescript">const bot = new AIML1Bot({ enableJavaScript: true });
+</code></pre>
+<pre><code class="language-xml">&lt;category&gt;
+  &lt;pattern&gt;CALCULATE *&lt;/pattern&gt;
+  &lt;template&gt;&lt;javascript&gt;
+    var expr = &#39;&lt;star/&gt;&#39;;
+    if (/^[0-9+\-*/.() ]+$/.test(expr)) return String(eval(expr));
+    return &#39;Invalid expression.&#39;;
+  &lt;/javascript&gt;&lt;/template&gt;
+&lt;/category&gt;
+</code></pre>
+<h3 id="silent-logging-via-subclass">`<gossip>` — silent logging via subclass</h3>
+<p><code>&lt;gossip&gt;</code> fires <code>handleGossip(text)</code> without producing any output. Override it by subclassing:</p>
+<pre><code class="language-typescript">class LoggingBot extends AIML1Bot {
+  protected handleGossip(text: string): void {
+    console.log(&#39;[gossip]&#39;, text);
+  }
+}
+</code></pre>
+</div></div>
+</div></main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with <strong>aimljs</strong> · MIT License ·
+         <a href="https://github.com/jesobreira/aimljs">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el));
+      document.querySelectorAll('pre').forEach(pre => {
+        const btn = document.createElement('button');
+        btn.className = 'copy-btn'; btn.textContent = 'Copy';
+        btn.onclick = () => {
+          navigator.clipboard.writeText(pre.querySelector('code')?.textContent ?? '');
+          btn.textContent = 'Copied!';
+          setTimeout(() => btn.textContent = 'Copy', 1500);
+        };
+        pre.appendChild(btn);
+      });
+      // Active sidebar link on scroll
+      const links = document.querySelectorAll('.sidebar-link[href^="#"]');
+      if (links.length) {
+        const obs = new IntersectionObserver(entries => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              links.forEach(l => l.classList.remove('active'));
+              const a = document.querySelector('.sidebar-link[href="#' + e.target.id + '"]');
+              if (a) a.classList.add('active');
+            }
+          });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+        document.querySelectorAll('[id]').forEach(el => obs.observe(el));
+      }
+    });
+  </script>
+</body>
+</html>
