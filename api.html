@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <meta name="description" content="Full API reference for aimljs classes, methods, and types."/>
-  <title>API Reference — aimljs</title>
+  <meta name="description" content="Full API reference for aiml.js classes, methods, and types."/>
+  <title>API Reference — aiml.js</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>"/>
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"/>
@@ -12,7 +12,7 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">🤖 aimljs</a>
+      <a href="index.html" class="logo">🤖 aiml.js</a>
       <nav class="site-nav"><a href="index.html" class="nav-link">Home</a><a href="getting-started.html" class="nav-link">Getting Started</a><a href="cli.html" class="nav-link">CLI Reference</a><a href="api.html" class="nav-link active">API Docs</a></nav>
       <a href="https://github.com/jesobreira/aimljs" class="gh-link" target="_blank" rel="noopener">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -31,7 +31,7 @@
       <a href="#classes" class="sidebar-link">Classes</a><a href="#bots" class="sidebar-link h3">Bots</a><a href="#core" class="sidebar-link h3">Core</a><a href="#interfaces" class="sidebar-link">Interfaces</a><a href="#type-aliases" class="sidebar-link">Type Aliases</a><a href="#functions" class="sidebar-link">Functions</a><a href="#parsers" class="sidebar-link h3">Parsers</a><a href="#other" class="sidebar-link h3">Other</a><a href="#quick-start-nodejs" class="sidebar-link h3">Quick-start (Node.js)</a><a href="#quick-start-browser" class="sidebar-link h3">Quick-start (browser)</a><a href="#session-continuity" class="sidebar-link h3">Session continuity</a><a href="#extended-by" class="sidebar-link">Extended by</a><a href="#accessors" class="sidebar-link">Accessors</a><a href="#categorycount" class="sidebar-link h3">categoryCount</a><a href="#constructors" class="sidebar-link">Constructors</a><a href="#constructor" class="sidebar-link h3">Constructor</a><a href="#methods" class="sidebar-link">Methods</a><a href="#addcategory" class="sidebar-link h3">addCategory()</a><a href="#addsubstitution" class="sidebar-link h3">addSubstitution()</a><a href="#createsession" class="sidebar-link h3">createSession()</a><a href="#deletesession" class="sidebar-link h3">deleteSession()</a><a href="#getorcreatesession" class="sidebar-link h3">getOrCreateSession()</a><a href="#getproperty" class="sidebar-link h3">getProperty()</a><a href="#getsession" class="sidebar-link h3">getSession()</a><a href="#handlegossip" class="sidebar-link h3">handleGossip()</a><a href="#handlenomatch" class="sidebar-link h3">handleNoMatch()</a><a href="#loadallserializedsessions" class="sidebar-link h3">loadAllSerializedSessions()</a><a href="#loaddirectory" class="sidebar-link h3">loadDirectory()</a><a href="#loadfile" class="sidebar-link h3">loadFile()</a><a href="#loadfiles" class="sidebar-link h3">loadFiles()</a><a href="#loadmap" class="sidebar-link h3">loadMap()</a><a href="#loadproperties" class="sidebar-link h3">loadProperties()</a><a href="#loadserializedsession" class="sidebar-link h3">loadSerializedSession()</a><a href="#loadset" class="sidebar-link h3">loadSet()</a><a href="#loadsubstitutions" class="sidebar-link h3">loadSubstitutions()</a><a href="#loadxmlstring" class="sidebar-link h3">loadXMLString()</a><a href="#serializeallsessions" class="sidebar-link h3">serializeAllSessions()</a><a href="#serializesession" class="sidebar-link h3">serializeSession()</a><a href="#setproperty" class="sidebar-link h3">setProperty()</a><a href="#talk" class="sidebar-link h3">talk()</a><a href="#talksession" class="sidebar-link h3">talkSession()</a><a href="#validatexml" class="sidebar-link h3">validateXML()</a><a href="#basic-usage" class="sidebar-link h3">Basic usage</a><a href="#loading-individual-files" class="sidebar-link h3">Loading individual files</a><a href="#standard-directory-layout-auto-loader" class="sidebar-link h3">Standard directory layout (auto-loader)</a><a href="#extends" class="sidebar-link">Extends</a><a href="#accessors" class="sidebar-link">Accessors</a><a href="#categorycount" class="sidebar-link h3">categoryCount</a><a href="#constructors" class="sidebar-link">Constructors</a><a href="#constructor" class="sidebar-link h3">Constructor</a><a href="#methods" class="sidebar-link">Methods</a><a href="#addcategory" class="sidebar-link h3">addCategory()</a><a href="#addsubstitution" class="sidebar-link h3">addSubstitution()</a><a href="#createsession" class="sidebar-link h3">createSession()</a><a href="#deletesession" class="sidebar-link h3">deleteSession()</a><a href="#getorcreatesession" class="sidebar-link h3">getOrCreateSession()</a><a href="#getproperty" class="sidebar-link h3">getProperty()</a><a href="#getsession" class="sidebar-link h3">getSession()</a><a href="#handlegossip" class="sidebar-link h3">handleGossip()</a><a href="#handlenomatch" class="sidebar-link h3">handleNoMatch()</a>
     </div>
   </aside>
-  <div class="docs-content"><div class="prose"><h1 id="aimljs-v100">aimljs v1.0.0</h1>
+  <div class="docs-content"><div class="prose"><h1 id="aimljs-v101">aiml.js v1.0.1</h1>
 <h2 id="classes">Classes</h2>
 <h3 id="bots">Bots</h3>
 <ul>
@@ -103,9 +103,9 @@
 </ul>
 
 <hr/>
-<p><a href="../globals.md">aimljs</a> / AIMLBot</p>
+<p><a href="../globals.md">aiml.js</a> / AIMLBot</p>
 <h1 id="class-aimlbot">Class: AIMLBot</h1>
-<p>Defined in: bots/AIMLBot.ts:101</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L101">bots/AIMLBot.ts:101</a></p>
 <p>Base class for all AIML bots.</p>
 <p><code>AIMLBot</code> provides the complete bot runtime: pattern matching, template
 evaluation, session management, file loading, and serialisation.  The
@@ -113,7 +113,7 @@ two specialised subclasses (<a href="AIML1Bot.md">AIML1Bot</a> and <a href="AIML
 version-specific helpers but share this API.</p>
 <hr>
 <h3 id="quick-start-nodejs">Quick-start (Node.js)</h3>
-<pre><code class="language-ts">import { AIML1Bot } from &#39;aimljs&#39;;
+<pre><code class="language-ts">import { AIML1Bot } from &#39;aiml.js&#39;;
 
 const bot = new AIML1Bot({ properties: { name: &#39;Alice&#39; } });
 await bot.loadDirectory(&#39;./aiml&#39;);          // load all .aiml files
@@ -122,7 +122,7 @@ const { response } = await bot.talk(&#39;hello&#39;);
 console.log(response); // &quot;Hi there!&quot;
 </code></pre>
 <h3 id="quick-start-browser">Quick-start (browser)</h3>
-<pre><code class="language-ts">import { AIML1Bot } from &#39;aimljs&#39;;
+<pre><code class="language-ts">import { AIML1Bot } from &#39;aiml.js&#39;;
 
 const bot = new AIML1Bot();
 // Pass File objects from &lt;input type=&quot;file&quot;&gt; or pre-loaded content:
@@ -149,7 +149,7 @@ console.log(r2.response); // &quot;Your name is Alice.&quot;
 <blockquote>
 <p><strong>get</strong> <strong>categoryCount</strong>(): <code>number</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:444</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L444">bots/AIMLBot.ts:444</a></p>
 <p>Total number of loaded categories.</p>
 <h5 id="returns">Returns</h5>
 <p><code>number</code></p>
@@ -158,7 +158,7 @@ console.log(r2.response); // &quot;Your name is Alice.&quot;
 <blockquote>
 <p><strong>new AIMLBot</strong>(<code>options?</code>): <code>AIMLBot</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:127</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L127">bots/AIMLBot.ts:127</a></p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="options">options?</h5>
 <p><a href="../interfaces/AIMLBotOptions.md"><code>AIMLBotOptions</code></a> = <code>{}</code></p>
@@ -169,7 +169,7 @@ console.log(r2.response); // &quot;Your name is Alice.&quot;
 <blockquote>
 <p><strong>addCategory</strong>(<code>pattern</code>, <code>template</code>, <code>options?</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:431</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L431">bots/AIMLBot.ts:431</a></p>
 <p>Programmatically add a single AIML category.</p>
 <p>The pattern and template strings use AIML XML syntax (tags are allowed).</p>
 <h4 id="parameters">Parameters</h4>
@@ -196,7 +196,7 @@ bot.addCategory(&#39;DO YOU LIKE *&#39;, &#39;I love &lt;star/&gt;!&#39;, { topi
 <blockquote>
 <p><strong>addSubstitution</strong>(<code>type</code>, <code>find</code>, <code>replace</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:363</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L363">bots/AIMLBot.ts:363</a></p>
 <p>Append a single substitution rule to a table.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="type">type</h5>
@@ -218,7 +218,7 @@ bot.addCategory(&#39;DO YOU LIKE *&#39;, &#39;I love &lt;star/&gt;!&#39;, { topi
 <blockquote>
 <p><strong>createSession</strong>(<code>sessionId?</code>): <a href="Session.md"><code>Session</code></a></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:464</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L464">bots/AIMLBot.ts:464</a></p>
 <p>Create a new session.</p>
 <p>Sessions are created automatically by <a href="#talk">talk</a>, so you only need this
 if you want to pre-configure a session (set predicates, topic, etc.).</p>
@@ -239,7 +239,7 @@ const { response } = await bot.talkSession(&#39;hello&#39;, session);
 <blockquote>
 <p><strong>deleteSession</strong>(<code>sessionId</code>): <code>boolean</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:502</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L502">bots/AIMLBot.ts:502</a></p>
 <p>Delete a session and free its memory.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="sessionid">sessionId</h5>
@@ -253,7 +253,7 @@ const { response } = await bot.talkSession(&#39;hello&#39;, session);
 <blockquote>
 <p><strong>getOrCreateSession</strong>(<code>sessionId?</code>): <a href="Session.md"><code>Session</code></a></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:489</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L489">bots/AIMLBot.ts:489</a></p>
 <p>Get an existing session or create one if it does not exist.</p>
 <p>When <code>sessionId</code> is omitted a persistent default session (<code>__default__</code>)
 is used for all calls without an ID.</p>
@@ -268,7 +268,7 @@ is used for all calls without an ID.</p>
 <blockquote>
 <p><strong>getProperty</strong>(<code>name</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:305</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L305">bots/AIMLBot.ts:305</a></p>
 <p>Get a bot property value.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="name">name</h5>
@@ -282,7 +282,7 @@ is used for all calls without an ID.</p>
 <blockquote>
 <p><strong>getSession</strong>(<code>sessionId</code>): <a href="Session.md"><code>Session</code></a> | <code>undefined</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:477</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L477">bots/AIMLBot.ts:477</a></p>
 <p>Retrieve an existing session by ID.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="sessionid">sessionId</h5>
@@ -296,7 +296,7 @@ is used for all calls without an ID.</p>
 <blockquote>
 <p><code>protected</code> <strong>handleGossip</strong>(<code>_text</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:705</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L705">bots/AIMLBot.ts:705</a></p>
 <p>Called whenever a <code>&lt;gossip&gt;</code> tag is encountered.
 Override to log or store gossip messages.</p>
 <h4 id="parameters">Parameters</h4>
@@ -309,7 +309,7 @@ Override to log or store gossip messages.</p>
 <blockquote>
 <p><code>protected</code> <strong>handleNoMatch</strong>(<code>_input</code>, <code>_session</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:586</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L586">bots/AIMLBot.ts:586</a></p>
 <p>Called when no category matches the user&#39;s input.</p>
 <p>Override in a subclass to provide a custom fallback response.
 The default implementation returns <code>&quot;&quot;</code>.</p>
@@ -325,7 +325,7 @@ The default implementation returns <code>&quot;&quot;</code>.</p>
 <blockquote>
 <p><strong>loadAllSerializedSessions</strong>(<code>data</code>): <code>string</code>[]</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:669</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L669">bots/AIMLBot.ts:669</a></p>
 <p>Restore all sessions from a JSON string produced by <a href="#serializeallsessions">serializeAllSessions</a>.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="data">data</h5>
@@ -339,7 +339,7 @@ The default implementation returns <code>&quot;&quot;</code>.</p>
 <blockquote>
 <p><strong>loadDirectory</strong>(<code>dirPath</code>, <code>recursive?</code>, <code>extensions?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:265</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L265">bots/AIMLBot.ts:265</a></p>
 <p>Recursively load all <code>.aiml</code> files from a directory.</p>
 <p><strong>Node.js only.</strong> Throws in browser environments.</p>
 <h4 id="parameters">Parameters</h4>
@@ -363,7 +363,7 @@ await bot.loadDirectory(&#39;./kb&#39;, true, [&#39;.aiml&#39;, &#39;.xml&#39;])
 <blockquote>
 <p><strong>loadFile</strong>(<code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:227</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L227">bots/AIMLBot.ts:227</a></p>
 <p>Load a single AIML file from any <a href="../type-aliases/FileSource.md">FileSource</a>.</p>
 <p>Works on both Node.js (string path) and in the browser (File object or
 pre-loaded <code>{ name, content }</code> object).</p>
@@ -389,7 +389,7 @@ await bot.loadFile({ name: &#39;greeting.aiml&#39;, content: xmlString });
 <blockquote>
 <p><strong>loadFiles</strong>(<code>sources</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:246</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L246">bots/AIMLBot.ts:246</a></p>
 <p>Load multiple AIML files concurrently.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="sources">sources</h5>
@@ -409,7 +409,7 @@ await bot.loadFile({ name: &#39;greeting.aiml&#39;, content: xmlString });
 <blockquote>
 <p><strong>loadMap</strong>(<code>name</code>, <code>data</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:404</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L404">bots/AIMLBot.ts:404</a></p>
 <p>Register a named map for use in <code>&lt;map name=&quot;...&quot;&gt;</code> template tags.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="name">name</h5>
@@ -430,7 +430,7 @@ bot.loadMap(&#39;scores&#39;, &#39;{&quot;alice&quot;:&quot;100&quot;,&quot;bob&
 <blockquote>
 <p><strong>loadProperties</strong>(<code>data</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:322</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L322">bots/AIMLBot.ts:322</a></p>
 <p>Load bot properties from a text or JSON data source.</p>
 <p>Accepts the same formats as <a href="../functions/parseProperties.md">parseProperties</a>:</p>
 <ul>
@@ -453,7 +453,7 @@ bot.loadProperties(&#39;{&quot;name&quot;:&quot;Alice&quot;}&#39;);
 <blockquote>
 <p><strong>loadSerializedSession</strong>(<code>data</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:643</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L643">bots/AIMLBot.ts:643</a></p>
 <p>Restore a session from a JSON string produced by <a href="#serializesession">serializeSession</a>.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="data">data</h5>
@@ -467,7 +467,7 @@ bot.loadProperties(&#39;{&quot;name&quot;:&quot;Alice&quot;}&#39;);
 <blockquote>
 <p><strong>loadSet</strong>(<code>name</code>, <code>data</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:387</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L387">bots/AIMLBot.ts:387</a></p>
 <p>Register a named set for use in pattern matching.</p>
 <p>Sets enable patterns like <code>I LIKE &lt;set&gt;color&lt;/set&gt;</code> to match any member
 of the named set.</p>
@@ -490,7 +490,7 @@ bot.loadSet(&#39;fruit&#39;, &#39;[&quot;apple&quot;,&quot;banana&quot;,&quot;ch
 <blockquote>
 <p><strong>loadSubstitutions</strong>(<code>type</code>, <code>data</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:345</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L345">bots/AIMLBot.ts:345</a></p>
 <p>Replace a substitution table entirely.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="type">type</h5>
@@ -512,7 +512,7 @@ bot.loadSubstitutions(&#39;person&#39;, &#39;[{&quot;find&quot;:&quot;I&quot;,&q
 <blockquote>
 <p><strong>loadXMLString</strong>(<code>xml</code>, <code>fileName?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:197</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L197">bots/AIMLBot.ts:197</a></p>
 <p>Parse and load an AIML XML string directly.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="xml">xml</h5>
@@ -540,7 +540,7 @@ bot.loadSubstitutions(&#39;person&#39;, &#39;[{&quot;find&quot;:&quot;I&quot;,&q
 <blockquote>
 <p><strong>serializeAllSessions</strong>(): <code>string</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:655</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L655">bots/AIMLBot.ts:655</a></p>
 <p>Serialise <strong>all</strong> active sessions to a single JSON string.</p>
 <p>Useful for persisting a multi-user application&#39;s full state.
 Restore with <a href="#loadallserializedsessions">loadAllSerializedSessions</a>.</p>
@@ -551,7 +551,7 @@ Restore with <a href="#loadallserializedsessions">loadAllSerializedSessions</a>.
 <blockquote>
 <p><strong>serializeSession</strong>(<code>sessionId</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:631</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L631">bots/AIMLBot.ts:631</a></p>
 <p>Serialise a single session to a JSON string.</p>
 <p>Store the result and pass it to <a href="#loadserializedsession">loadSerializedSession</a> later to
 resume the conversation.</p>
@@ -577,7 +577,7 @@ const { response } = await bot.talk(&#39;hello again&#39;, id);
 <blockquote>
 <p><strong>setProperty</strong>(<code>name</code>, <code>value</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:293</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L293">bots/AIMLBot.ts:293</a></p>
 <p>Set a single bot property.</p>
 <p>Bot properties are accessed in AIML templates via <code>&lt;bot name=&quot;...&quot;/&gt;</code>.</p>
 <h4 id="parameters">Parameters</h4>
@@ -598,7 +598,7 @@ const { response } = await bot.talk(&#39;hello again&#39;, id);
 <blockquote>
 <p><strong>talk</strong>(<code>input</code>, <code>sessionId?</code>): <code>Promise</code>&lt;<a href="../interfaces/TalkResult.md"><code>TalkResult</code></a>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:532</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L532">bots/AIMLBot.ts:532</a></p>
 <p>Send a message to the bot and get a response.</p>
 <p>If <code>sessionId</code> is omitted, a shared default session (<code>__default__</code>) is used
 so that consecutive calls without a session ID maintain conversational state.</p>
@@ -629,7 +629,7 @@ await bot.talk(&#39;hello&#39;, &#39;user-2&#39;);
 <blockquote>
 <p><strong>talkSession</strong>(<code>input</code>, <code>session</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:547</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L547">bots/AIMLBot.ts:547</a></p>
 <p>Send a message using an explicit <a href="Session.md">Session</a> object.</p>
 <p>Useful when you manage sessions yourself rather than by ID.</p>
 <h4 id="parameters">Parameters</h4>
@@ -647,7 +647,7 @@ await bot.talk(&#39;hello&#39;, &#39;user-2&#39;);
 <blockquote>
 <p><strong>validateXML</strong>(<code>xml</code>, <code>fileName?</code>): <a href="../interfaces/ValidationResult.md"><code>ValidationResult</code></a></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:605</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L605">bots/AIMLBot.ts:605</a></p>
 <p>Validate an AIML XML string without loading it.</p>
 <p>Returns a <a href="../interfaces/ValidationResult.md">ValidationResult</a> with <code>valid</code>, <code>errors</code>, and <code>warnings</code>.</p>
 <h4 id="parameters">Parameters</h4>
@@ -665,9 +665,9 @@ if (!result.valid) {
 </code></pre>
 
 <hr/>
-<p><a href="../globals.md">aimljs</a> / AIML1Bot</p>
+<p><a href="../globals.md">aiml.js</a> / AIML1Bot</p>
 <h1 id="class-aiml1bot">Class: AIML1Bot</h1>
-<p>Defined in: bots/AIML1Bot.ts:93</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L93">bots/AIML1Bot.ts:93</a></p>
 <p>AIML 1.0 bot.</p>
 <p>Extends <a href="AIMLBot.md">AIMLBot</a> with helpers tailored to the AIML 1.0 ecosystem:</p>
 <ul>
@@ -684,7 +684,7 @@ if (!result.valid) {
 <code>&lt;javascript&gt;</code>, <code>&lt;date&gt;</code>, <code>&lt;version&gt;</code>, <code>&lt;size&gt;</code>, <code>&lt;id&gt;</code>, <code>&lt;br&gt;</code>.</p>
 <hr>
 <h3 id="basic-usage">Basic usage</h3>
-<pre><code class="language-ts">import { AIML1Bot } from &#39;aimljs&#39;;
+<pre><code class="language-ts">import { AIML1Bot } from &#39;aiml.js&#39;;
 
 const bot = new AIML1Bot({ properties: { name: &#39;Alice&#39; } });
 await bot.loadDirectory(&#39;./alice&#39;);
@@ -722,7 +722,7 @@ await bot.loadSetFile(&#39;color&#39;, &#39;/path/to/colors.txt&#39;);
 <blockquote>
 <p><strong>get</strong> <strong>categoryCount</strong>(): <code>number</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:444</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L444">bots/AIMLBot.ts:444</a></p>
 <p>Total number of loaded categories.</p>
 <h5 id="returns">Returns</h5>
 <p><code>number</code></p>
@@ -733,7 +733,7 @@ await bot.loadSetFile(&#39;color&#39;, &#39;/path/to/colors.txt&#39;);
 <blockquote>
 <p><strong>new AIML1Bot</strong>(<code>options?</code>): <code>AIML1Bot</code></p>
 </blockquote>
-<p>Defined in: bots/AIML1Bot.ts:94</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L94">bots/AIML1Bot.ts:94</a></p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="options">options?</h5>
 <p><a href="../interfaces/AIML1BotOptions.md"><code>AIML1BotOptions</code></a> = <code>{}</code></p>
@@ -746,7 +746,7 @@ await bot.loadSetFile(&#39;color&#39;, &#39;/path/to/colors.txt&#39;);
 <blockquote>
 <p><strong>addCategory</strong>(<code>pattern</code>, <code>template</code>, <code>options?</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIML1Bot.ts:238</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L238">bots/AIML1Bot.ts:238</a></p>
 <p>Programmatically add an AIML 1.0 category.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="pattern">pattern</h5>
@@ -774,7 +774,7 @@ bot.addCategory(&#39;ARE YOU *&#39;, &#39;I am &lt;star/&gt;!&#39;, { topic: &#3
 <blockquote>
 <p><strong>addSubstitution</strong>(<code>type</code>, <code>find</code>, <code>replace</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:363</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L363">bots/AIMLBot.ts:363</a></p>
 <p>Append a single substitution rule to a table.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="type">type</h5>
@@ -798,7 +798,7 @@ bot.addCategory(&#39;ARE YOU *&#39;, &#39;I am &lt;star/&gt;!&#39;, { topic: &#3
 <blockquote>
 <p><strong>createSession</strong>(<code>sessionId?</code>): <a href="Session.md"><code>Session</code></a></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:464</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L464">bots/AIMLBot.ts:464</a></p>
 <p>Create a new session.</p>
 <p>Sessions are created automatically by <a href="AIMLBot.md#talk">talk</a>, so you only need this
 if you want to pre-configure a session (set predicates, topic, etc.).</p>
@@ -821,7 +821,7 @@ const { response } = await bot.talkSession(&#39;hello&#39;, session);
 <blockquote>
 <p><strong>deleteSession</strong>(<code>sessionId</code>): <code>boolean</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:502</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L502">bots/AIMLBot.ts:502</a></p>
 <p>Delete a session and free its memory.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="sessionid">sessionId</h5>
@@ -837,7 +837,7 @@ const { response } = await bot.talkSession(&#39;hello&#39;, session);
 <blockquote>
 <p><strong>getOrCreateSession</strong>(<code>sessionId?</code>): <a href="Session.md"><code>Session</code></a></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:489</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L489">bots/AIMLBot.ts:489</a></p>
 <p>Get an existing session or create one if it does not exist.</p>
 <p>When <code>sessionId</code> is omitted a persistent default session (<code>__default__</code>)
 is used for all calls without an ID.</p>
@@ -854,7 +854,7 @@ is used for all calls without an ID.</p>
 <blockquote>
 <p><strong>getProperty</strong>(<code>name</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:305</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L305">bots/AIMLBot.ts:305</a></p>
 <p>Get a bot property value.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="name">name</h5>
@@ -870,7 +870,7 @@ is used for all calls without an ID.</p>
 <blockquote>
 <p><strong>getSession</strong>(<code>sessionId</code>): <a href="Session.md"><code>Session</code></a> | <code>undefined</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:477</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L477">bots/AIMLBot.ts:477</a></p>
 <p>Retrieve an existing session by ID.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="sessionid">sessionId</h5>
@@ -886,7 +886,7 @@ is used for all calls without an ID.</p>
 <blockquote>
 <p><code>protected</code> <strong>handleGossip</strong>(<code>_text</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:705</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L705">bots/AIMLBot.ts:705</a></p>
 <p>Called whenever a <code>&lt;gossip&gt;</code> tag is encountered.
 Override to log or store gossip messages.</p>
 <h4 id="parameters">Parameters</h4>
@@ -901,7 +901,7 @@ Override to log or store gossip messages.</p>
 <blockquote>
 <p><code>protected</code> <strong>handleNoMatch</strong>(<code>_input</code>, <code>_session</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:586</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L586">bots/AIMLBot.ts:586</a></p>
 <p>Called when no category matches the user&#39;s input.</p>
 <p>Override in a subclass to provide a custom fallback response.
 The default implementation returns <code>&quot;&quot;</code>.</p>
@@ -919,7 +919,7 @@ The default implementation returns <code>&quot;&quot;</code>.</p>
 <blockquote>
 <p><strong>loadAllSerializedSessions</strong>(<code>data</code>): <code>string</code>[]</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:669</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L669">bots/AIMLBot.ts:669</a></p>
 <p>Restore all sessions from a JSON string produced by <a href="AIMLBot.md#serializeallsessions">serializeAllSessions</a>.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="data">data</h5>
@@ -935,7 +935,7 @@ The default implementation returns <code>&quot;&quot;</code>.</p>
 <blockquote>
 <p><strong>loadDataDirectory</strong>(<code>dirPath</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIML1Bot.ts:119</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L119">bots/AIML1Bot.ts:119</a></p>
 <p>Load a complete AIML 1.0 data directory using the standard layout.</p>
 <p>Automatically discovers and loads (in order):</p>
 <ol>
@@ -961,7 +961,7 @@ await bot.loadDataDirectory(&#39;./alice-aiml&#39;);
 <blockquote>
 <p><strong>loadDirectory</strong>(<code>dirPath</code>, <code>recursive?</code>, <code>extensions?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:265</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L265">bots/AIMLBot.ts:265</a></p>
 <p>Recursively load all <code>.aiml</code> files from a directory.</p>
 <p><strong>Node.js only.</strong> Throws in browser environments.</p>
 <h4 id="parameters">Parameters</h4>
@@ -987,7 +987,7 @@ await bot.loadDirectory(&#39;./kb&#39;, true, [&#39;.aiml&#39;, &#39;.xml&#39;])
 <blockquote>
 <p><strong>loadFile</strong>(<code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:227</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L227">bots/AIMLBot.ts:227</a></p>
 <p>Load a single AIML file from any <a href="../type-aliases/FileSource.md">FileSource</a>.</p>
 <p>Works on both Node.js (string path) and in the browser (File object or
 pre-loaded <code>{ name, content }</code> object).</p>
@@ -1015,7 +1015,7 @@ await bot.loadFile({ name: &#39;greeting.aiml&#39;, content: xmlString });
 <blockquote>
 <p><strong>loadFiles</strong>(<code>sources</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:246</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L246">bots/AIMLBot.ts:246</a></p>
 <p>Load multiple AIML files concurrently.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="sources">sources</h5>
@@ -1037,7 +1037,7 @@ await bot.loadFile({ name: &#39;greeting.aiml&#39;, content: xmlString });
 <blockquote>
 <p><strong>loadMap</strong>(<code>name</code>, <code>data</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:404</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L404">bots/AIMLBot.ts:404</a></p>
 <p>Register a named map for use in <code>&lt;map name=&quot;...&quot;&gt;</code> template tags.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="name">name</h5>
@@ -1060,7 +1060,7 @@ bot.loadMap(&#39;scores&#39;, &#39;{&quot;alice&quot;:&quot;100&quot;,&quot;bob&
 <blockquote>
 <p><strong>loadProperties</strong>(<code>data</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:322</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L322">bots/AIMLBot.ts:322</a></p>
 <p>Load bot properties from a text or JSON data source.</p>
 <p>Accepts the same formats as <a href="../functions/parseProperties.md">parseProperties</a>:</p>
 <ul>
@@ -1085,7 +1085,7 @@ bot.loadProperties(&#39;{&quot;name&quot;:&quot;Alice&quot;}&#39;);
 <blockquote>
 <p><strong>loadPropertiesFile</strong>(<code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIML1Bot.ts:189</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L189">bots/AIML1Bot.ts:189</a></p>
 <p>Load bot properties from a file.</p>
 <p>The file may use <code>key:value</code>, <code>key=value</code>, or JSON <code>{ &quot;key&quot;: &quot;value&quot; }</code> format.</p>
 <h4 id="parameters">Parameters</h4>
@@ -1103,7 +1103,7 @@ await bot.loadPropertiesFile({ name: &#39;bot.properties&#39;, content: &#39;nam
 <blockquote>
 <p><strong>loadSerializedSession</strong>(<code>data</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:643</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L643">bots/AIMLBot.ts:643</a></p>
 <p>Restore a session from a JSON string produced by <a href="AIMLBot.md#serializesession">serializeSession</a>.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="data">data</h5>
@@ -1119,7 +1119,7 @@ await bot.loadPropertiesFile({ name: &#39;bot.properties&#39;, content: &#39;nam
 <blockquote>
 <p><strong>loadSet</strong>(<code>name</code>, <code>data</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:387</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L387">bots/AIMLBot.ts:387</a></p>
 <p>Register a named set for use in pattern matching.</p>
 <p>Sets enable patterns like <code>I LIKE &lt;set&gt;color&lt;/set&gt;</code> to match any member
 of the named set.</p>
@@ -1144,7 +1144,7 @@ bot.loadSet(&#39;fruit&#39;, &#39;[&quot;apple&quot;,&quot;banana&quot;,&quot;ch
 <blockquote>
 <p><strong>loadSetFile</strong>(<code>name</code>, <code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIML1Bot.ts:222</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L222">bots/AIML1Bot.ts:222</a></p>
 <p>Load a named set from a file (one item per line).</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="name">name</h5>
@@ -1163,7 +1163,7 @@ bot.loadSet(&#39;fruit&#39;, &#39;[&quot;apple&quot;,&quot;banana&quot;,&quot;ch
 <blockquote>
 <p><strong>loadSubstitutionFile</strong>(<code>type</code>, <code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIML1Bot.ts:205</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L205">bots/AIML1Bot.ts:205</a></p>
 <p>Load a substitution table from a file.</p>
 <p>The file uses <code>find : replace</code> text format (one rule per line).</p>
 <h4 id="parameters">Parameters</h4>
@@ -1183,7 +1183,7 @@ bot.loadSet(&#39;fruit&#39;, &#39;[&quot;apple&quot;,&quot;banana&quot;,&quot;ch
 <blockquote>
 <p><strong>loadSubstitutions</strong>(<code>type</code>, <code>data</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:345</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L345">bots/AIMLBot.ts:345</a></p>
 <p>Replace a substitution table entirely.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="type">type</h5>
@@ -1207,7 +1207,7 @@ bot.loadSubstitutions(&#39;person&#39;, &#39;[{&quot;find&quot;:&quot;I&quot;,&q
 <blockquote>
 <p><strong>loadXMLString</strong>(<code>xml</code>, <code>fileName?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:197</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L197">bots/AIMLBot.ts:197</a></p>
 <p>Parse and load an AIML XML string directly.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="xml">xml</h5>
@@ -1237,7 +1237,7 @@ bot.loadSubstitutions(&#39;person&#39;, &#39;[{&quot;find&quot;:&quot;I&quot;,&q
 <blockquote>
 <p><strong>serializeAllSessions</strong>(): <code>string</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:655</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L655">bots/AIMLBot.ts:655</a></p>
 <p>Serialise <strong>all</strong> active sessions to a single JSON string.</p>
 <p>Useful for persisting a multi-user application&#39;s full state.
 Restore with <a href="AIMLBot.md#loadallserializedsessions">loadAllSerializedSessions</a>.</p>
@@ -1250,7 +1250,7 @@ Restore with <a href="AIMLBot.md#loadallserializedsessions">loadAllSerializedSes
 <blockquote>
 <p><strong>serializeSession</strong>(<code>sessionId</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:631</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L631">bots/AIMLBot.ts:631</a></p>
 <p>Serialise a single session to a JSON string.</p>
 <p>Store the result and pass it to <a href="AIMLBot.md#loadserializedsession">loadSerializedSession</a> later to
 resume the conversation.</p>
@@ -1278,7 +1278,7 @@ const { response } = await bot.talk(&#39;hello again&#39;, id);
 <blockquote>
 <p><strong>setProperty</strong>(<code>name</code>, <code>value</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:293</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L293">bots/AIMLBot.ts:293</a></p>
 <p>Set a single bot property.</p>
 <p>Bot properties are accessed in AIML templates via <code>&lt;bot name=&quot;...&quot;/&gt;</code>.</p>
 <h4 id="parameters">Parameters</h4>
@@ -1301,7 +1301,7 @@ const { response } = await bot.talk(&#39;hello again&#39;, id);
 <blockquote>
 <p><strong>talk</strong>(<code>input</code>, <code>sessionId?</code>): <code>Promise</code>&lt;<a href="../interfaces/TalkResult.md"><code>TalkResult</code></a>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:532</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L532">bots/AIMLBot.ts:532</a></p>
 <p>Send a message to the bot and get a response.</p>
 <p>If <code>sessionId</code> is omitted, a shared default session (<code>__default__</code>) is used
 so that consecutive calls without a session ID maintain conversational state.</p>
@@ -1334,7 +1334,7 @@ await bot.talk(&#39;hello&#39;, &#39;user-2&#39;);
 <blockquote>
 <p><strong>talkSession</strong>(<code>input</code>, <code>session</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:547</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L547">bots/AIMLBot.ts:547</a></p>
 <p>Send a message using an explicit <a href="Session.md">Session</a> object.</p>
 <p>Useful when you manage sessions yourself rather than by ID.</p>
 <h4 id="parameters">Parameters</h4>
@@ -1354,7 +1354,7 @@ await bot.talk(&#39;hello&#39;, &#39;user-2&#39;);
 <blockquote>
 <p><strong>validateXML</strong>(<code>xml</code>, <code>fileName?</code>): <a href="../interfaces/ValidationResult.md"><code>ValidationResult</code></a></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:605</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L605">bots/AIMLBot.ts:605</a></p>
 <p>Validate an AIML XML string without loading it.</p>
 <p>Returns a <a href="../interfaces/ValidationResult.md">ValidationResult</a> with <code>valid</code>, <code>errors</code>, and <code>warnings</code>.</p>
 <h4 id="parameters">Parameters</h4>
@@ -1374,9 +1374,9 @@ if (!result.valid) {
 <p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#validatexml"><code>validateXML</code></a></p>
 
 <hr/>
-<p><a href="../globals.md">aimljs</a> / AIML2Bot</p>
+<p><a href="../globals.md">aiml.js</a> / AIML2Bot</p>
 <h1 id="class-aiml2bot">Class: AIML2Bot</h1>
-<p>Defined in: bots/AIML2Bot.ts:89</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML2Bot.ts#L89">bots/AIML2Bot.ts:89</a></p>
 <p>AIML 2.0 bot.</p>
 <p>Extends <a href="AIMLBot.md">AIMLBot</a> with the full AIML 2.0 feature set:</p>
 <p><strong>Additional wildcards</strong></p>
@@ -1450,7 +1450,7 @@ Properties, substitutions, sets, and maps are all accepted as either
 plain text <strong>or</strong> JSON — the format is auto-detected.</p>
 <hr>
 <h3 id="basic-usage">Basic usage</h3>
-<pre><code class="language-ts">import { AIML2Bot } from &#39;aimljs&#39;;
+<pre><code class="language-ts">import { AIML2Bot } from &#39;aiml.js&#39;;
 
 const bot = new AIML2Bot({
   properties: { name: &#39;Rosie&#39; },
@@ -1476,7 +1476,7 @@ session.queryTriples(&#39;alice&#39;, &#39;likes&#39;); // → [{ subject:&#39;a
 <blockquote>
 <p><strong>get</strong> <strong>categoryCount</strong>(): <code>number</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:444</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L444">bots/AIMLBot.ts:444</a></p>
 <p>Total number of loaded categories.</p>
 <h5 id="returns">Returns</h5>
 <p><code>number</code></p>
@@ -1487,7 +1487,7 @@ session.queryTriples(&#39;alice&#39;, &#39;likes&#39;); // → [{ subject:&#39;a
 <blockquote>
 <p><strong>new AIML2Bot</strong>(<code>options?</code>): <code>AIML2Bot</code></p>
 </blockquote>
-<p>Defined in: bots/AIML2Bot.ts:92</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML2Bot.ts#L92">bots/AIML2Bot.ts:92</a></p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="options">options?</h5>
 <p><a href="../interfaces/AIML2BotOptions.md"><code>AIML2BotOptions</code></a> = <code>{}</code></p>
@@ -1500,7 +1500,7 @@ session.queryTriples(&#39;alice&#39;, &#39;likes&#39;); // → [{ subject:&#39;a
 <blockquote>
 <p><strong>addCategory</strong>(<code>pattern</code>, <code>template</code>, <code>options?</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIML2Bot.ts:295</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML2Bot.ts#L295">bots/AIML2Bot.ts:295</a></p>
 <p>Programmatically add an AIML 2.0 category.</p>
 <p>AIML 2.0 wildcards (<code>#</code>, <code>^</code>) are supported in the pattern.</p>
 <h4 id="parameters">Parameters</h4>
@@ -1529,7 +1529,7 @@ bot.addCategory(&#39;MY NAME IS *&#39;, &#39;Nice to meet you, &lt;set name=&quo
 <blockquote>
 <p><strong>addSubstitution</strong>(<code>type</code>, <code>find</code>, <code>replace</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:363</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L363">bots/AIMLBot.ts:363</a></p>
 <p>Append a single substitution rule to a table.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="type">type</h5>
@@ -1553,7 +1553,7 @@ bot.addCategory(&#39;MY NAME IS *&#39;, &#39;Nice to meet you, &lt;set name=&quo
 <blockquote>
 <p><strong>createSession</strong>(<code>sessionId?</code>): <a href="Session.md"><code>Session</code></a></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:464</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L464">bots/AIMLBot.ts:464</a></p>
 <p>Create a new session.</p>
 <p>Sessions are created automatically by <a href="AIMLBot.md#talk">talk</a>, so you only need this
 if you want to pre-configure a session (set predicates, topic, etc.).</p>
@@ -1576,7 +1576,7 @@ const { response } = await bot.talkSession(&#39;hello&#39;, session);
 <blockquote>
 <p><strong>deleteSession</strong>(<code>sessionId</code>): <code>boolean</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:502</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L502">bots/AIMLBot.ts:502</a></p>
 <p>Delete a session and free its memory.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="sessionid">sessionId</h5>
@@ -1592,7 +1592,7 @@ const { response } = await bot.talkSession(&#39;hello&#39;, session);
 <blockquote>
 <p><strong>getOrCreateSession</strong>(<code>sessionId?</code>): <a href="Session.md"><code>Session</code></a></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:489</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L489">bots/AIMLBot.ts:489</a></p>
 <p>Get an existing session or create one if it does not exist.</p>
 <p>When <code>sessionId</code> is omitted a persistent default session (<code>__default__</code>)
 is used for all calls without an ID.</p>
@@ -1609,7 +1609,7 @@ is used for all calls without an ID.</p>
 <blockquote>
 <p><strong>getProperty</strong>(<code>name</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:305</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L305">bots/AIMLBot.ts:305</a></p>
 <p>Get a bot property value.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="name">name</h5>
@@ -1625,7 +1625,7 @@ is used for all calls without an ID.</p>
 <blockquote>
 <p><strong>getSession</strong>(<code>sessionId</code>): <a href="Session.md"><code>Session</code></a> | <code>undefined</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:477</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L477">bots/AIMLBot.ts:477</a></p>
 <p>Retrieve an existing session by ID.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="sessionid">sessionId</h5>
@@ -1641,7 +1641,7 @@ is used for all calls without an ID.</p>
 <blockquote>
 <p><code>protected</code> <strong>handleGossip</strong>(<code>_text</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:705</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L705">bots/AIMLBot.ts:705</a></p>
 <p>Called whenever a <code>&lt;gossip&gt;</code> tag is encountered.
 Override to log or store gossip messages.</p>
 <h4 id="parameters">Parameters</h4>
@@ -1656,7 +1656,7 @@ Override to log or store gossip messages.</p>
 <blockquote>
 <p><code>protected</code> <strong>handleNoMatch</strong>(<code>_input</code>, <code>_session</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:586</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L586">bots/AIMLBot.ts:586</a></p>
 <p>Called when no category matches the user&#39;s input.</p>
 <p>Override in a subclass to provide a custom fallback response.
 The default implementation returns <code>&quot;&quot;</code>.</p>
@@ -1674,7 +1674,7 @@ The default implementation returns <code>&quot;&quot;</code>.</p>
 <blockquote>
 <p><strong>loadAllSerializedSessions</strong>(<code>data</code>): <code>string</code>[]</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:669</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L669">bots/AIMLBot.ts:669</a></p>
 <p>Restore all sessions from a JSON string produced by <a href="AIMLBot.md#serializeallsessions">serializeAllSessions</a>.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="data">data</h5>
@@ -1690,7 +1690,7 @@ The default implementation returns <code>&quot;&quot;</code>.</p>
 <blockquote>
 <p><strong>loadDataDirectory</strong>(<code>dirPath</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIML2Bot.ts:219</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML2Bot.ts#L219">bots/AIML2Bot.ts:219</a></p>
 <p>Load a complete AIML 2.0 data directory using the standard layout.</p>
 <p>Expected structure (all optional):</p>
 <pre><code>&lt;dir&gt;/
@@ -1723,7 +1723,7 @@ await bot.loadDataDirectory(&#39;./rosie&#39;);
 <blockquote>
 <p><strong>loadDirectory</strong>(<code>dirPath</code>, <code>recursive?</code>, <code>extensions?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:265</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L265">bots/AIMLBot.ts:265</a></p>
 <p>Recursively load all <code>.aiml</code> files from a directory.</p>
 <p><strong>Node.js only.</strong> Throws in browser environments.</p>
 <h4 id="parameters">Parameters</h4>
@@ -1749,7 +1749,7 @@ await bot.loadDirectory(&#39;./kb&#39;, true, [&#39;.aiml&#39;, &#39;.xml&#39;])
 <blockquote>
 <p><strong>loadFile</strong>(<code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:227</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L227">bots/AIMLBot.ts:227</a></p>
 <p>Load a single AIML file from any <a href="../type-aliases/FileSource.md">FileSource</a>.</p>
 <p>Works on both Node.js (string path) and in the browser (File object or
 pre-loaded <code>{ name, content }</code> object).</p>
@@ -1777,7 +1777,7 @@ await bot.loadFile({ name: &#39;greeting.aiml&#39;, content: xmlString });
 <blockquote>
 <p><strong>loadFiles</strong>(<code>sources</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:246</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L246">bots/AIMLBot.ts:246</a></p>
 <p>Load multiple AIML files concurrently.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="sources">sources</h5>
@@ -1799,7 +1799,7 @@ await bot.loadFile({ name: &#39;greeting.aiml&#39;, content: xmlString });
 <blockquote>
 <p><strong>loadMap</strong>(<code>name</code>, <code>data</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:404</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L404">bots/AIMLBot.ts:404</a></p>
 <p>Register a named map for use in <code>&lt;map name=&quot;...&quot;&gt;</code> template tags.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="name">name</h5>
@@ -1822,7 +1822,7 @@ bot.loadMap(&#39;scores&#39;, &#39;{&quot;alice&quot;:&quot;100&quot;,&quot;bob&
 <blockquote>
 <p><strong>loadMapFile</strong>(<code>name</code>, <code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIML2Bot.ts:184</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML2Bot.ts#L184">bots/AIML2Bot.ts:184</a></p>
 <p>Load a named map from a file (JSON object or text, auto-detected).</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="name">name</h5>
@@ -1842,7 +1842,7 @@ await bot.loadMapFile(&#39;capitals&#39;, &#39;/path/to/capitals.txt&#39;);   //
 <blockquote>
 <p><strong>loadProperties</strong>(<code>data</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:322</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L322">bots/AIMLBot.ts:322</a></p>
 <p>Load bot properties from a text or JSON data source.</p>
 <p>Accepts the same formats as <a href="../functions/parseProperties.md">parseProperties</a>:</p>
 <ul>
@@ -1867,7 +1867,7 @@ bot.loadProperties(&#39;{&quot;name&quot;:&quot;Alice&quot;}&#39;);
 <blockquote>
 <p><strong>loadPropertiesFile</strong>(<code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIML2Bot.ts:133</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML2Bot.ts#L133">bots/AIML2Bot.ts:133</a></p>
 <p>Load bot properties from a file (JSON or <code>key:value</code> text, auto-detected).</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="source">source</h5>
@@ -1884,7 +1884,7 @@ await bot.loadPropertiesFile(&#39;/path/to/properties.txt&#39;);
 <blockquote>
 <p><strong>loadSerializedSession</strong>(<code>data</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:643</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L643">bots/AIMLBot.ts:643</a></p>
 <p>Restore a session from a JSON string produced by <a href="AIMLBot.md#serializesession">serializeSession</a>.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="data">data</h5>
@@ -1900,7 +1900,7 @@ await bot.loadPropertiesFile(&#39;/path/to/properties.txt&#39;);
 <blockquote>
 <p><strong>loadSet</strong>(<code>name</code>, <code>data</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:387</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L387">bots/AIMLBot.ts:387</a></p>
 <p>Register a named set for use in pattern matching.</p>
 <p>Sets enable patterns like <code>I LIKE &lt;set&gt;color&lt;/set&gt;</code> to match any member
 of the named set.</p>
@@ -1925,7 +1925,7 @@ bot.loadSet(&#39;fruit&#39;, &#39;[&quot;apple&quot;,&quot;banana&quot;,&quot;ch
 <blockquote>
 <p><strong>loadSetFile</strong>(<code>name</code>, <code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIML2Bot.ts:169</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML2Bot.ts#L169">bots/AIML2Bot.ts:169</a></p>
 <p>Load a named set from a file (JSON array or text, auto-detected).</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="name">name</h5>
@@ -1945,7 +1945,7 @@ await bot.loadSetFile(&#39;color&#39;, &#39;/path/to/colors.txt&#39;);   // one 
 <blockquote>
 <p><strong>loadSubstitutionFile</strong>(<code>type</code>, <code>source</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIML2Bot.ts:151</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML2Bot.ts#L151">bots/AIML2Bot.ts:151</a></p>
 <p>Load a substitution table from a file (JSON or text, auto-detected).</p>
 <p>JSON array format: <code>[{ &quot;find&quot;: &quot;...&quot;, &quot;replace&quot;: &quot;...&quot; }]</code>
 JSON object format: <code>{ &quot;find&quot;: &quot;replace&quot; }</code>
@@ -1967,7 +1967,7 @@ Text format: <code>find : replace</code> (one per line)</p>
 <blockquote>
 <p><strong>loadSubstitutions</strong>(<code>type</code>, <code>data</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:345</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L345">bots/AIMLBot.ts:345</a></p>
 <p>Replace a substitution table entirely.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="type">type</h5>
@@ -1991,7 +1991,7 @@ bot.loadSubstitutions(&#39;person&#39;, &#39;[{&quot;find&quot;:&quot;I&quot;,&q
 <blockquote>
 <p><strong>loadXMLString</strong>(<code>xml</code>, <code>fileName?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:197</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L197">bots/AIMLBot.ts:197</a></p>
 <p>Parse and load an AIML XML string directly.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="xml">xml</h5>
@@ -2021,7 +2021,7 @@ bot.loadSubstitutions(&#39;person&#39;, &#39;[{&quot;find&quot;:&quot;I&quot;,&q
 <blockquote>
 <p><strong>serializeAllSessions</strong>(): <code>string</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:655</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L655">bots/AIMLBot.ts:655</a></p>
 <p>Serialise <strong>all</strong> active sessions to a single JSON string.</p>
 <p>Useful for persisting a multi-user application&#39;s full state.
 Restore with <a href="AIMLBot.md#loadallserializedsessions">loadAllSerializedSessions</a>.</p>
@@ -2034,7 +2034,7 @@ Restore with <a href="AIMLBot.md#loadallserializedsessions">loadAllSerializedSes
 <blockquote>
 <p><strong>serializeSession</strong>(<code>sessionId</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:631</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L631">bots/AIMLBot.ts:631</a></p>
 <p>Serialise a single session to a JSON string.</p>
 <p>Store the result and pass it to <a href="AIMLBot.md#loadserializedsession">loadSerializedSession</a> later to
 resume the conversation.</p>
@@ -2062,7 +2062,7 @@ const { response } = await bot.talk(&#39;hello again&#39;, id);
 <blockquote>
 <p><strong>setProperty</strong>(<code>name</code>, <code>value</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:293</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L293">bots/AIMLBot.ts:293</a></p>
 <p>Set a single bot property.</p>
 <p>Bot properties are accessed in AIML templates via <code>&lt;bot name=&quot;...&quot;/&gt;</code>.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2085,7 +2085,7 @@ const { response } = await bot.talk(&#39;hello again&#39;, id);
 <blockquote>
 <p><strong>setSraixHandler</strong>(<code>handler</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: bots/AIML2Bot.ts:120</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML2Bot.ts#L120">bots/AIML2Bot.ts:120</a></p>
 <p>Set or replace the <code>&lt;sraix&gt;</code> handler after construction.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="handler">handler</h5>
@@ -2105,7 +2105,7 @@ const { response } = await bot.talk(&#39;hello again&#39;, id);
 <blockquote>
 <p><strong>talk</strong>(<code>input</code>, <code>sessionId?</code>): <code>Promise</code>&lt;<a href="../interfaces/TalkResult.md"><code>TalkResult</code></a>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:532</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L532">bots/AIMLBot.ts:532</a></p>
 <p>Send a message to the bot and get a response.</p>
 <p>If <code>sessionId</code> is omitted, a shared default session (<code>__default__</code>) is used
 so that consecutive calls without a session ID maintain conversational state.</p>
@@ -2138,7 +2138,7 @@ await bot.talk(&#39;hello&#39;, &#39;user-2&#39;);
 <blockquote>
 <p><strong>talkSession</strong>(<code>input</code>, <code>session</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:547</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L547">bots/AIMLBot.ts:547</a></p>
 <p>Send a message using an explicit <a href="Session.md">Session</a> object.</p>
 <p>Useful when you manage sessions yourself rather than by ID.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2158,7 +2158,7 @@ await bot.talk(&#39;hello&#39;, &#39;user-2&#39;);
 <blockquote>
 <p><strong>validateXML</strong>(<code>xml</code>, <code>fileName?</code>): <a href="../interfaces/ValidationResult.md"><code>ValidationResult</code></a></p>
 </blockquote>
-<p>Defined in: bots/AIMLBot.ts:605</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L605">bots/AIMLBot.ts:605</a></p>
 <p>Validate an AIML XML string without loading it.</p>
 <p>Returns a <a href="../interfaces/ValidationResult.md">ValidationResult</a> with <code>valid</code>, <code>errors</code>, and <code>warnings</code>.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2178,9 +2178,9 @@ if (!result.valid) {
 <p><a href="AIMLBot.md"><code>AIMLBot</code></a>.<a href="AIMLBot.md#validatexml"><code>validateXML</code></a></p>
 
 <hr/>
-<p><a href="../globals.md">aimljs</a> / Session</p>
+<p><a href="../globals.md">aiml.js</a> / Session</p>
 <h1 id="class-session">Class: Session</h1>
-<p>Defined in: core/Session.ts:33</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L33">core/Session.ts:33</a></p>
 <p>Represents a single user&#39;s conversation state.</p>
 <p>A <code>Session</code> stores everything that makes one user&#39;s conversation distinct:
 named predicates (variables), conversation history, the current topic,
@@ -2207,7 +2207,7 @@ const restored = Session.fromJSON(saved);
 <blockquote>
 <p><strong>new Session</strong>(<code>id?</code>): <code>Session</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:45</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L45">core/Session.ts:45</a></p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="id">id?</h5>
 <p><code>string</code></p>
@@ -2219,7 +2219,7 @@ const restored = Session.fromJSON(saved);
 <blockquote>
 <p><strong>addTriple</strong>(<code>subject</code>, <code>predicate</code>, <code>object</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:194</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L194">core/Session.ts:194</a></p>
 <p>Add a subject/predicate/object triple.</p>
 <p>Called by <code>&lt;addtriple&gt;</code> template tags.  Keys are lower-cased;
 duplicate triples are silently ignored.</p>
@@ -2241,7 +2241,7 @@ session.queryTriples(&#39;alice&#39;, &#39;likes&#39;); // → [{ subject:&#39;a
 <blockquote>
 <p><strong>addTurn</strong>(<code>input</code>, <code>response</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:123</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L123">core/Session.ts:123</a></p>
 <p>Append a completed conversation turn to the history.
 Called automatically after each <a href="AIMLBot.md#talk">AIMLBot.talk</a> call.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2256,7 +2256,7 @@ Called automatically after each <a href="AIMLBot.md#talk">AIMLBot.talk</a> call.
 <blockquote>
 <p><strong>clearHistory</strong>(): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:178</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L178">core/Session.ts:178</a></p>
 <p>Clear all conversation history.</p>
 <h4 id="returns">Returns</h4>
 <p><code>void</code></p>
@@ -2265,7 +2265,7 @@ Called automatically after each <a href="AIMLBot.md#talk">AIMLBot.talk</a> call.
 <blockquote>
 <p><strong>deletePredicate</strong>(<code>name</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:85</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L85">core/Session.ts:85</a></p>
 <p>Delete a named predicate.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="name">name</h5>
@@ -2278,7 +2278,7 @@ Called automatically after each <a href="AIMLBot.md#talk">AIMLBot.talk</a> call.
 <blockquote>
 <p><strong>deleteTriple</strong>(<code>subject</code>, <code>predicate</code>, <code>object</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:209</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L209">core/Session.ts:209</a></p>
 <p>Delete a specific triple.  Called by <code>&lt;deletetriple&gt;</code>.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="subject">subject</h5>
@@ -2294,7 +2294,7 @@ Called automatically after each <a href="AIMLBot.md#talk">AIMLBot.talk</a> call.
 <blockquote>
 <p><strong>getAllPredicates</strong>(): <code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;</p>
 </blockquote>
-<p>Defined in: core/Session.ts:93</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L93">core/Session.ts:93</a></p>
 <p>Return all predicates as a plain object snapshot.
 Useful for debugging or serialisation.</p>
 <h4 id="returns">Returns</h4>
@@ -2304,7 +2304,7 @@ Useful for debugging or serialisation.</p>
 <blockquote>
 <p><strong>getHistory</strong>(): <a href="../interfaces/ConversationTurn.md"><code>ConversationTurn</code></a>[]</p>
 </blockquote>
-<p>Defined in: core/Session.ts:173</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L173">core/Session.ts:173</a></p>
 <p>Return a copy of the full conversation history.</p>
 <h4 id="returns">Returns</h4>
 <p><a href="../interfaces/ConversationTurn.md"><code>ConversationTurn</code></a>[]</p>
@@ -2313,7 +2313,7 @@ Useful for debugging or serialisation.</p>
 <blockquote>
 <p><strong>getInput</strong>(<code>index?</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:140</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L140">core/Session.ts:140</a></p>
 <p>Return the Nth previous user input (1-based, 1 = most recent).</p>
 <p>Used by the <code>&lt;input index=&quot;N&quot;/&gt;</code> template tag.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2327,7 +2327,7 @@ Useful for debugging or serialisation.</p>
 <blockquote>
 <p><strong>getPredicate</strong>(<code>name</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:61</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L61">core/Session.ts:61</a></p>
 <p>Read a named predicate value.</p>
 <p>Predicate names are case-insensitive.  Returns <code>&quot;&quot;</code> if the predicate
 has not been set (matching AIML semantics for <code>&lt;get name=&quot;...&quot;/&gt;</code>).</p>
@@ -2342,7 +2342,7 @@ has not been set (matching AIML semantics for <code>&lt;get name=&quot;...&quot;
 <blockquote>
 <p><strong>getResponse</strong>(<code>index?</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:152</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L152">core/Session.ts:152</a></p>
 <p>Return the Nth previous bot response (1-based, 1 = most recent).</p>
 <p>Used by the <code>&lt;response index=&quot;N&quot;/&gt;</code> template tag (AIML 2.0).</p>
 <h4 id="parameters">Parameters</h4>
@@ -2356,7 +2356,7 @@ has not been set (matching AIML semantics for <code>&lt;get name=&quot;...&quot;
 <blockquote>
 <p><strong>getThat</strong>(<code>responseIndex?</code>, <code>sentenceIndex?</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:165</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L165">core/Session.ts:165</a></p>
 <p>Return the Mth sentence of the Nth previous bot response.</p>
 <p>Used by <code>&lt;that index=&quot;N,M&quot;/&gt;</code>.  Sentences are split on <code>.</code>, <code>!</code>, <code>?</code>.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2373,7 +2373,7 @@ has not been set (matching AIML semantics for <code>&lt;get name=&quot;...&quot;
 <blockquote>
 <p><strong>getTopic</strong>(): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:103</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L103">core/Session.ts:103</a></p>
 <p>Return the current conversation topic.</p>
 <h4 id="returns">Returns</h4>
 <p><code>string</code></p>
@@ -2385,7 +2385,7 @@ has not been set (matching AIML semantics for <code>&lt;get name=&quot;...&quot;
 <blockquote>
 <p><strong>queryTriples</strong>(<code>subject?</code>, <code>predicate?</code>, <code>object?</code>): <a href="../interfaces/TripleEntry.md"><code>TripleEntry</code></a>[]</p>
 </blockquote>
-<p>Defined in: core/Session.ts:226</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L226">core/Session.ts:226</a></p>
 <p>Query the triple store.  Pass <code>undefined</code> to a field to act as a wildcard.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="subject">subject?</h5>
@@ -2405,7 +2405,7 @@ has not been set (matching AIML semantics for <code>&lt;get name=&quot;...&quot;
 <blockquote>
 <p><strong>serialize</strong>(): <a href="../interfaces/SessionData.md"><code>SessionData</code></a></p>
 </blockquote>
-<p>Defined in: core/Session.ts:247</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L247">core/Session.ts:247</a></p>
 <p>Serialise the session to a plain <a href="../interfaces/SessionData.md">SessionData</a> object.</p>
 <p>Pass the result to <code>JSON.stringify()</code> and store it.
 Restore with <a href="#deserialize">Session.deserialize</a>.</p>
@@ -2416,7 +2416,7 @@ Restore with <a href="#deserialize">Session.deserialize</a>.</p>
 <blockquote>
 <p><strong>setPredicate</strong>(<code>name</code>, <code>value</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:76</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L76">core/Session.ts:76</a></p>
 <p>Set a named predicate.</p>
 <p>This is called automatically by <code>&lt;set name=&quot;...&quot;&gt;</code> template tags.
 Setting <code>&quot;topic&quot;</code> also updates the session topic.</p>
@@ -2434,7 +2434,7 @@ Setting <code>&quot;topic&quot;</code> also updates the session topic.</p>
 <blockquote>
 <p><strong>setTopic</strong>(<code>topic</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:111</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L111">core/Session.ts:111</a></p>
 <p>Set the current conversation topic.
 Also updates the <code>&quot;topic&quot;</code> predicate so <code>&lt;get name=&quot;topic&quot;/&gt;</code> works.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2447,7 +2447,7 @@ Also updates the <code>&quot;topic&quot;</code> predicate so <code>&lt;get name=
 <blockquote>
 <p><strong>toJSON</strong>(): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:288</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L288">core/Session.ts:288</a></p>
 <p>Serialise the session to a JSON string.</p>
 <p>Use <a href="#fromjson">Session.fromJSON</a> to restore.</p>
 <h4 id="returns">Returns</h4>
@@ -2460,7 +2460,7 @@ Also updates the <code>&quot;topic&quot;</code> predicate so <code>&lt;get name=
 <blockquote>
 <p><code>static</code> <strong>deserialize</strong>(<code>data</code>): <code>Session</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:267</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L267">core/Session.ts:267</a></p>
 <p>Restore a session from a <a href="../interfaces/SessionData.md">SessionData</a> object.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="data">data</h5>
@@ -2477,7 +2477,7 @@ const session2 = Session.deserialize(saved);
 <blockquote>
 <p><code>static</code> <strong>fromJSON</strong>(<code>json</code>): <code>Session</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:298</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L298">core/Session.ts:298</a></p>
 <p>Restore a session from a JSON string produced by <a href="#tojson">Session.toJSON</a>.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="json">json</h5>
@@ -2492,20 +2492,20 @@ const session2 = Session.deserialize(saved);
 <blockquote>
 <p><code>readonly</code> <strong>created</strong>: <code>number</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:41</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L41">core/Session.ts:41</a></p>
 <p>Unix timestamp (ms) when the session was created.</p>
 <hr>
 <h3 id="id">id</h3>
 <blockquote>
 <p><code>readonly</code> <strong>id</strong>: <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Session.ts:35</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L35">core/Session.ts:35</a></p>
 <p>Unique session identifier.</p>
 
 <hr/>
-<p><a href="../globals.md">aimljs</a> / PatternMatcher</p>
+<p><a href="../globals.md">aiml.js</a> / PatternMatcher</p>
 <h1 id="class-patternmatcher">Class: PatternMatcher</h1>
-<p>Defined in: core/PatternMatcher.ts:145</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L145">core/PatternMatcher.ts:145</a></p>
 <p>Low-level pattern matching engine.</p>
 <p>Stores a list of <a href="../interfaces/Category.md">Category</a> objects and efficiently finds the
 highest-priority match for a given (input, that, topic) triple.</p>
@@ -2531,7 +2531,7 @@ if (result) {
 <blockquote>
 <p><strong>get</strong> <strong>size</strong>(): <code>number</code></p>
 </blockquote>
-<p>Defined in: core/PatternMatcher.ts:205</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L205">core/PatternMatcher.ts:205</a></p>
 <p>Total number of loaded categories.</p>
 <h5 id="returns">Returns</h5>
 <p><code>number</code></p>
@@ -2547,7 +2547,7 @@ if (result) {
 <blockquote>
 <p><strong>addCategories</strong>(<code>cats</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/PatternMatcher.ts:164</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L164">core/PatternMatcher.ts:164</a></p>
 <p>Add multiple categories at once.
 More efficient than calling <a href="#addcategory">addCategory</a> in a loop.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2560,7 +2560,7 @@ More efficient than calling <a href="#addcategory">addCategory</a> in a loop.</p
 <blockquote>
 <p><strong>addCategory</strong>(<code>cat</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/PatternMatcher.ts:155</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L155">core/PatternMatcher.ts:155</a></p>
 <p>Add a single category to the matcher.
 Triggers a re-sort on the next <a href="#match">match</a> call.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2573,7 +2573,7 @@ Triggers a re-sort on the next <a href="#match">match</a> call.</p>
 <blockquote>
 <p><strong>clear</strong>(): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/PatternMatcher.ts:181</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L181">core/PatternMatcher.ts:181</a></p>
 <p>Remove all categories.</p>
 <h4 id="returns">Returns</h4>
 <p><code>void</code></p>
@@ -2582,7 +2582,7 @@ Triggers a re-sort on the next <a href="#match">match</a> call.</p>
 <blockquote>
 <p><strong>match</strong>(<code>input</code>, <code>that</code>, <code>topic</code>): <a href="../interfaces/MatchResult.md"><code>MatchResult</code></a> | <code>null</code></p>
 </blockquote>
-<p>Defined in: core/PatternMatcher.ts:234</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L234">core/PatternMatcher.ts:234</a></p>
 <p>Find the highest-priority category that matches the given triple.</p>
 <p>All three strings are tokenised and matched against the stored patterns.
 Returns <code>null</code> if no category matches.</p>
@@ -2608,7 +2608,7 @@ Returns <code>null</code> if no category matches.</p>
 <blockquote>
 <p><strong>removeByFile</strong>(<code>file</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/PatternMatcher.ts:175</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L175">core/PatternMatcher.ts:175</a></p>
 <p>Remove all categories that were loaded from a specific file.
 Useful for hot-reloading individual AIML files.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2622,7 +2622,7 @@ Useful for hot-reloading individual AIML files.</p>
 <blockquote>
 <p><strong>setBotProperties</strong>(<code>props</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/PatternMatcher.ts:200</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L200">core/PatternMatcher.ts:200</a></p>
 <p>Provide the current bot properties so <code>&lt;bot name=&quot;...&quot;&gt;</code> pattern
 tokens can be evaluated during matching.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2635,7 +2635,7 @@ tokens can be evaluated during matching.</p>
 <blockquote>
 <p><strong>setSet</strong>(<code>name</code>, <code>set</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/PatternMatcher.ts:192</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L192">core/PatternMatcher.ts:192</a></p>
 <p>Register a named set for use in <code>&lt;set name=&quot;...&quot;&gt;</code> pattern tokens.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="name">name</h5>
@@ -2648,9 +2648,9 @@ tokens can be evaluated during matching.</p>
 <p><code>void</code></p>
 
 <hr/>
-<p><a href="../globals.md">aimljs</a> / Normalizer</p>
+<p><a href="../globals.md">aiml.js</a> / Normalizer</p>
 <h1 id="class-normalizer">Class: Normalizer</h1>
-<p>Defined in: core/Normalizer.ts:122</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L122">core/Normalizer.ts:122</a></p>
 <p>Text normalisation engine.</p>
 <p>The <code>Normalizer</code> applies ordered substitution tables to transform text
 before matching (input normalisation) and after generation (denormalisation).
@@ -2674,7 +2674,7 @@ norm.gender(&quot;he called her&quot;);    // → &quot;she called him&quot;
 <blockquote>
 <p><strong>new Normalizer</strong>(<code>substitutions?</code>): <code>Normalizer</code></p>
 </blockquote>
-<p>Defined in: core/Normalizer.ts:129</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L129">core/Normalizer.ts:129</a></p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="substitutions">substitutions?</h5>
 <p><code>Partial</code>&lt;<a href="../interfaces/Substitutions.md"><code>Substitutions</code></a>&gt;</p>
@@ -2687,7 +2687,7 @@ norm.gender(&quot;he called her&quot;);    // → &quot;she called him&quot;
 <blockquote>
 <p><strong>addSubstitutions</strong>(<code>type</code>, <code>pairs</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/Normalizer.ts:154</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L154">core/Normalizer.ts:154</a></p>
 <p>Append rules to an existing substitution table.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="type">type</h5>
@@ -2703,7 +2703,7 @@ norm.gender(&quot;he called her&quot;);    // → &quot;she called him&quot;
 <blockquote>
 <p><strong>denormalize</strong>(<code>text</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Normalizer.ts:180</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L180">core/Normalizer.ts:180</a></p>
 <p>Reverse normalisation applied to bot output.
 Uses the <code>denormal</code> substitution table.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2716,7 +2716,7 @@ Uses the <code>denormal</code> substitution table.</p>
 <blockquote>
 <p><strong>explode</strong>(<code>text</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Normalizer.ts:231</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L231">core/Normalizer.ts:231</a></p>
 <p>Insert a space between every character.
 Used by the <code>&lt;explode&gt;</code> template tag.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2732,7 +2732,7 @@ Used by the <code>&lt;explode&gt;</code> template tag.</p>
 <blockquote>
 <p><strong>formal</strong>(<code>text</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Normalizer.ts:215</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L215">core/Normalizer.ts:215</a></p>
 <p>Capitalise the first letter of every word (<code>Title Case</code>).</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="text">text</h5>
@@ -2744,7 +2744,7 @@ Used by the <code>&lt;explode&gt;</code> template tag.</p>
 <blockquote>
 <p><strong>gender</strong>(<code>text</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Normalizer.ts:204</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L204">core/Normalizer.ts:204</a></p>
 <p>Apply gender pronoun substitution (he↔she, him↔her, …).
 Used by the <code>&lt;gender&gt;</code> template tag.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2757,7 +2757,7 @@ Used by the <code>&lt;gender&gt;</code> template tag.</p>
 <blockquote>
 <p><strong>lowercase</strong>(<code>text</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Normalizer.ts:212</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L212">core/Normalizer.ts:212</a></p>
 <p>Convert text to <code>lower case</code>.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="text">text</h5>
@@ -2769,7 +2769,7 @@ Used by the <code>&lt;gender&gt;</code> template tag.</p>
 <blockquote>
 <p><strong>normalize</strong>(<code>text</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Normalizer.ts:164</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L164">core/Normalizer.ts:164</a></p>
 <p>Normalise user input before pattern matching.</p>
 <p>Applies the <code>normal</code> substitution table (contractions, punctuation, etc.)
 and collapses multiple spaces.</p>
@@ -2783,7 +2783,7 @@ and collapses multiple spaces.</p>
 <blockquote>
 <p><strong>person</strong>(<code>text</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Normalizer.ts:188</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L188">core/Normalizer.ts:188</a></p>
 <p>Apply first↔third person pronoun substitution.
 Used by the <code>&lt;person&gt;</code> template tag.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2796,7 +2796,7 @@ Used by the <code>&lt;person&gt;</code> template tag.</p>
 <blockquote>
 <p><strong>person2</strong>(<code>text</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Normalizer.ts:196</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L196">core/Normalizer.ts:196</a></p>
 <p>Apply first↔second person pronoun substitution.
 Used by the <code>&lt;person2&gt;</code> template tag.</p>
 <h4 id="parameters">Parameters</h4>
@@ -2809,7 +2809,7 @@ Used by the <code>&lt;person2&gt;</code> template tag.</p>
 <blockquote>
 <p><strong>sentence</strong>(<code>text</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Normalizer.ts:220</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L220">core/Normalizer.ts:220</a></p>
 <p>Capitalise only the very first character (<code>Sentence case</code>).</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="text">text</h5>
@@ -2821,7 +2821,7 @@ Used by the <code>&lt;person2&gt;</code> template tag.</p>
 <blockquote>
 <p><strong>updateSubstitutions</strong>(<code>type</code>, <code>pairs</code>): <code>void</code></p>
 </blockquote>
-<p>Defined in: core/Normalizer.ts:145</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L145">core/Normalizer.ts:145</a></p>
 <p>Replace an entire substitution table.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="type">type</h5>
@@ -2837,7 +2837,7 @@ Used by the <code>&lt;person2&gt;</code> template tag.</p>
 <blockquote>
 <p><strong>uppercase</strong>(<code>text</code>): <code>string</code></p>
 </blockquote>
-<p>Defined in: core/Normalizer.ts:209</p>
+<p>Defined in: <a href="https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L209">core/Normalizer.ts:209</a></p>
 <p>Convert text to <code>UPPER CASE</code>.</p>
 <h4 id="parameters">Parameters</h4>
 <h5 id="text">text</h5>
@@ -2849,7 +2849,7 @@ Used by the <code>&lt;person2&gt;</code> template tag.</p>
 
   <footer class="site-footer">
     <div class="container">
-      <p>Built with <strong>aimljs</strong> · MIT License ·
+      <p>MIT License ·
          <a href="https://github.com/jesobreira/aimljs">GitHub</a></p>
     </div>
   </footer>

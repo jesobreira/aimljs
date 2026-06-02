@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <meta name="description" content="Install aimljs and build your first AIML chatbot."/>
-  <title>Getting Started — aimljs</title>
+  <meta name="description" content="Install aiml.js and build your first AIML chatbot."/>
+  <title>Getting Started — aiml.js</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>"/>
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"/>
@@ -12,7 +12,7 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">🤖 aimljs</a>
+      <a href="index.html" class="logo">🤖 aiml.js</a>
       <nav class="site-nav"><a href="index.html" class="nav-link">Home</a><a href="getting-started.html" class="nav-link active">Getting Started</a><a href="cli.html" class="nav-link">CLI Reference</a><a href="api.html" class="nav-link">API Docs</a></nav>
       <a href="https://github.com/jesobreira/aimljs" class="gh-link" target="_blank" rel="noopener">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -100,11 +100,11 @@
 <h2 id="aiml-validate-cli">aiml-validate CLI</h2>
 <p>Validate AIML files from the command line.</p>
 <h3 id="run-without-installing-npx">Run without installing (npx)</h3>
-<pre><code class="language-bash">npx aimljs aiml-validate mybot.aiml
-npx aimljs aiml-validate -r ./knowledge-base
+<pre><code class="language-bash">npx aiml.js aiml-validate mybot.aiml
+npx aiml.js aiml-validate -r ./knowledge-base
 </code></pre>
 <h3 id="install-globally">Install globally</h3>
-<pre><code class="language-bash">npm install -g aimljs
+<pre><code class="language-bash">npm install -g aiml.js
 aiml-validate --help
 </code></pre>
 <h3 id="usage">Usage</h3>
@@ -146,11 +146,11 @@ Results: 3 files checked
 <h2 id="aiml-serve-cli">aiml-serve CLI</h2>
 <p>Expose any AIML bot as a <strong>ChatGPT-compatible REST API</strong> with Swagger UI — use it as a drop-in for the OpenAI API.</p>
 <h3 id="run-without-installing-npx">Run without installing (npx)</h3>
-<pre><code class="language-bash">npx aimljs aiml-serve ./alice/
-npx aimljs aiml-serve --rosie --freeaiml --port 8080
+<pre><code class="language-bash">npx aiml.js aiml-serve ./alice/
+npx aiml.js aiml-serve --rosie --freeaiml --port 8080
 </code></pre>
 <h3 id="install-globally">Install globally</h3>
-<pre><code class="language-bash">npm install -g aimljs
+<pre><code class="language-bash">npm install -g aiml.js
 aiml-serve --help
 </code></pre>
 <h3 id="usage">Usage</h3>
@@ -268,7 +268,7 @@ console.log(res.choices[0].message.content); // &quot;Nice to meet you, Alice!&q
 &lt;/category&gt;
 </code></pre>
 <blockquote>
-<p><strong>Backslash tip:</strong> When embedding AIML in a JS/TS template literal, write <code>\\s</code> (double backslash) for regex <code>\s</code> — a bare <code>\s</code> gets silently collapsed to <code>s</code> by the template-literal parser. This is a JS string-escaping concern, not an aimljs issue.</p>
+<p><strong>Backslash tip:</strong> When embedding AIML in a JS/TS template literal, write <code>\\s</code> (double backslash) for regex <code>\s</code> — a bare <code>\s</code> gets silently collapsed to <code>s</code> by the template-literal parser. This is a JS string-escaping concern, not an aiml.js issue.</p>
 </blockquote>
 <h3 id="silent-logging-via-subclass">`<gossip>` — silent logging via subclass</h3>
 <p><code>&lt;gossip&gt;</code> fires <code>handleGossip(text)</code> without producing any output. Override it by subclassing:</p>
@@ -300,7 +300,7 @@ console.log(res.choices[0].message.content); // &quot;Nice to meet you, Alice!&q
 <hr>
 <h2 id="quick-start">Quick start</h2>
 <h3 id="nodejs">Node.js</h3>
-<pre><code class="language-ts">import { AIML1Bot } from &#39;aimljs&#39;;
+<pre><code class="language-ts">import { AIML1Bot } from &#39;aiml.js&#39;;
 
 const bot = new AIML1Bot({ properties: { name: &#39;Alice&#39; } });
 await bot.loadDirectory(&#39;./aiml&#39;);          // load all *.aiml files
@@ -314,7 +314,7 @@ const r3 = await bot.talk(&#39;what is my name&#39;, sessionId);
 console.log(r3.response); // &quot;Your name is Bob.&quot;
 </code></pre>
 <h3 id="browser-with-a-bundler">Browser (with a bundler)</h3>
-<pre><code class="language-ts">import { AIML1Bot } from &#39;aimljs&#39;;
+<pre><code class="language-ts">import { AIML1Bot } from &#39;aiml.js&#39;;
 
 const bot = new AIML1Bot();
 
@@ -329,7 +329,7 @@ const { response } = await bot.talk(&#39;hello&#39;);
 </code></pre>
 <hr>
 <h2 id="aiml-10">AIML 1.0</h2>
-<pre><code class="language-ts">import { AIML1Bot } from &#39;aimljs&#39;;
+<pre><code class="language-ts">import { AIML1Bot } from &#39;aiml.js&#39;;
 
 const bot = new AIML1Bot({
   properties: { name: &#39;Alice&#39;, version: &#39;1.0&#39; },
@@ -354,7 +354,7 @@ await bot.loadDirectory(&#39;./alice/aiml&#39;);
 <code>&lt;size&gt;</code>, <code>&lt;id&gt;</code>, <code>&lt;br&gt;</code>.</p>
 <hr>
 <h2 id="aiml-20">AIML 2.0</h2>
-<pre><code class="language-ts">import { AIML2Bot } from &#39;aimljs&#39;;
+<pre><code class="language-ts">import { AIML2Bot } from &#39;aiml.js&#39;;
 
 const bot = new AIML2Bot({
   properties: { name: &#39;Rosie&#39; },
@@ -489,7 +489,7 @@ bot.addCategory(&#39;ARE YOU *&#39;, &#39;&lt;srai&gt;HELLO&lt;/srai&gt;&#39;, {
 </code></pre>
 <hr>
 <h2 id="validation">Validation</h2>
-<pre><code class="language-ts">import { validateAIML } from &#39;aimljs&#39;;
+<pre><code class="language-ts">import { validateAIML } from &#39;aiml.js&#39;;
 
 const result = validateAIML(xmlString, &#39;mybot.aiml&#39;);
 if (!result.valid) {
@@ -586,7 +586,7 @@ Categories without a <code>&lt;topic&gt;</code> element default to <code>topic=&
 
   <footer class="site-footer">
     <div class="container">
-      <p>Built with <strong>aimljs</strong> · MIT License ·
+      <p>MIT License ·
          <a href="https://github.com/jesobreira/aimljs">GitHub</a></p>
     </div>
   </footer>

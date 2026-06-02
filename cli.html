@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <meta name="description" content="aiml-validate and aiml-serve CLI tools for aimljs."/>
-  <title>CLI Reference — aimljs</title>
+  <meta name="description" content="aiml-validate and aiml-serve CLI tools for aiml.js."/>
+  <title>CLI Reference — aiml.js</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>"/>
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"/>
@@ -12,7 +12,7 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">🤖 aimljs</a>
+      <a href="index.html" class="logo">🤖 aiml.js</a>
       <nav class="site-nav"><a href="index.html" class="nav-link">Home</a><a href="getting-started.html" class="nav-link">Getting Started</a><a href="cli.html" class="nav-link active">CLI Reference</a><a href="api.html" class="nav-link">API Docs</a></nav>
       <a href="https://github.com/jesobreira/aimljs" class="gh-link" target="_blank" rel="noopener">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -32,13 +32,13 @@
     </div>
   </aside>
   <div class="docs-content"><div class="prose"><h1 id="cli-reference">CLI Reference</h1>
-<p>aimljs ships two command-line tools.</p>
+<p>aiml.js ships two command-line tools.</p>
 <hr>
 <h2 id="aiml-validate">aiml-validate</h2>
 <p>Validate AIML files for syntax errors before loading them into your bot.</p>
 <h3 id="install">Install</h3>
-<pre><code class="language-bash">npm install -g aimljs          # global
-npx aimljs aiml-validate ...  # one-off, no install
+<pre><code class="language-bash">npm install -g aiml.js          # global
+npx aiml.js aiml-validate ...  # one-off, no install
 </code></pre>
 <h3 id="usage">Usage</h3>
 <pre><code>aiml-validate [options] &lt;file|directory&gt; [...]
@@ -72,7 +72,7 @@ Results: 3 files checked
 <h2 id="aiml-serve">aiml-serve</h2>
 <p>Expose any AIML bot as a <strong>ChatGPT-compatible REST API</strong> with a Swagger UI.</p>
 <h3 id="install">Install</h3>
-<pre><code class="language-bash">npm install -g aimljs
+<pre><code class="language-bash">npm install -g aiml.js
 </code></pre>
 <h3 id="usage">Usage</h3>
 <pre><code>aiml-serve [options] [file|directory ...]
@@ -132,7 +132,7 @@ aiml-serve --model alice-v1 --rosie --freeaiml
   -d &#39;{&quot;messages&quot;:[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;hello&quot;}],&quot;user&quot;:&quot;alice&quot;}&#39;
 </code></pre>
 <pre><code class="language-json">{
-  &quot;id&quot;: &quot;chatcmpl-aimljs-4s49pq3j&quot;,
+  &quot;id&quot;: &quot;chatcmpl-aiml.js-4s49pq3j&quot;,
   &quot;object&quot;: &quot;chat.completion&quot;,
   &quot;created&quot;: 1700000000,
   &quot;model&quot;: &quot;aiml-bot-1&quot;,
@@ -209,7 +209,7 @@ causes <code>&lt;system&gt;</code> to produce empty output rather than throwing.
 
   <footer class="site-footer">
     <div class="container">
-      <p>Built with <strong>aimljs</strong> · MIT License ·
+      <p>MIT License ·
          <a href="https://github.com/jesobreira/aimljs">GitHub</a></p>
     </div>
   </footer>
