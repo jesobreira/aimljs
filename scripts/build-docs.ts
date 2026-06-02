@@ -740,6 +740,15 @@ async function build() {
 
   await writeFile(join(OUT, '.nojekyll'), '');
 
+  // Custom domain for GitHub Pages
+  await writeFile(join(OUT, 'CNAME'), 'aiml.js.org');
+
+  // Mirror .gitignore from main so the branch doesn't accidentally track temp files
+  try {
+    const gi = await readFile(join(ROOT, '.gitignore'), 'utf-8');
+    await writeFile(join(OUT, '.gitignore'), gi);
+  } catch { /* no .gitignore — skip */ }
+
   if (LOCAL) {
     console.log('\n✅ Site built →', OUT, '\n');
     return;
