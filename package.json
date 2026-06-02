@@ -1,5 +1,5 @@
 {
-  "name": "aimljs",
+  "name": "aiml.js",
   "version": "1.0.0",
   "description": "Full-featured AIML 1.0/2.0 parser, validator and runtime for Node.js and browser",
   "author": "jesobreira",

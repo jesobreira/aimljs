@@ -21,7 +21,7 @@ A full-featured TypeScript library for parsing, validating, and running **AIML (
 ## Installation
 
 ```bash
-npm install aimljs
+npm install aiml.js
 ```
 
 ---
@@ -35,9 +35,9 @@ npm install aimljs
 | `npm run test:coverage`      | Tests with coverage report                        |
 | `npm run docs`               | Generate Markdown API docs in `docs/`           |
 | `npm run typecheck`          | TypeScript type check (no emit)                   |
-| `npm run build:docs`         | Rebuild static docs site in `gh-pages/`          |
+| `npm run build:docs`         | Rebuild static docs site in `gh-pages/`         |
 | `npm run validate -- <path>` | Run `aiml-validate` on a file or directory      |
-| `npm run serve -- [args]`    | Run `aiml-serve` (ChatGPT-compatible API)        |
+| `npm run serve -- [args]`    | Run `aiml-serve` (ChatGPT-compatible API)       |
 | `npm run chat:freeaiml`      | Interactive terminal chat with Free-AIML bot      |
 | `npm run chat:rosie`         | Interactive terminal chat with Rosie AIML 2.0 bot |
 | `npm run app`                | Start the web chat app at http://localhost:3000   |
@@ -143,13 +143,13 @@ Options:
 
 ### Endpoints
 
-| Method | Path | Description |
-|---|---|---|
+| Method   | Path                     | Description                         |
+| -------- | ------------------------ | ----------------------------------- |
 | `GET`  | `/`                    | API info (categories, model, links) |
-| `GET`  | `/v1/models`           | List models |
-| `POST` | `/v1/chat/completions` | Chat — ChatGPT-compatible |
-| `GET`  | `/docs`                | Swagger UI (dark themed) |
-| `GET`  | `/openapi.json`        | OpenAPI 3.0 spec |
+| `GET`  | `/v1/models`           | List models                         |
+| `POST` | `/v1/chat/completions` | Chat — ChatGPT-compatible          |
+| `GET`  | `/docs`                | Swagger UI (dark themed)            |
+| `GET`  | `/openapi.json`        | OpenAPI 3.0 spec                    |
 
 ### Example request
 
@@ -520,7 +520,7 @@ npm run docs
 | [`examples/03-session-management.ts`](./examples/03-session-management.ts)       | Multi-user sessions and serialisation                             |
 | [`examples/04-validation-and-parser.ts`](./examples/04-validation-and-parser.ts) | Validation and low-level parser / PatternMatcher API              |
 | [`examples/05-browser-usage.ts`](./examples/05-browser-usage.ts)                 | Browser patterns (fetch, File API, localStorage)                  |
-| [`examples/06-opt-in-features.ts`](./examples/06-opt-in-features.ts)             | `<system>`, `<javascript>`, `<gossip>` opt-in tags                |
+| [`examples/06-opt-in-features.ts`](./examples/06-opt-in-features.ts)             | `<system>`, `<javascript>`, `<gossip>` opt-in tags          |
 
 Run an example:
 
