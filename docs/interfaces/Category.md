@@ -1,12 +1,12 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / Category
+[aiml.js](../globals.md) / Category
 
 # Interface: Category
 
-Defined in: types.ts:42
+Defined in: [types.ts:42](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L42)
 
 A single AIML category: the fundamental unit of an AIML knowledge base.
 
@@ -20,7 +20,7 @@ against `that`, and the current conversation topic against `topic`.
 
 > **aimlVersion**: `"1.0"` \| `"2.0"`
 
-Defined in: types.ts:56
+Defined in: [types.ts:56](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L56)
 
 AIML version this category was parsed under.
 
@@ -30,7 +30,7 @@ AIML version this category was parsed under.
 
 > `optional` **file?**: `string`
 
-Defined in: types.ts:54
+Defined in: [types.ts:54](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L54)
 
 Source file name (if loaded from a file).
 
@@ -40,7 +40,7 @@ Source file name (if loaded from a file).
 
 > **id**: `string`
 
-Defined in: types.ts:44
+Defined in: [types.ts:44](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L44)
 
 Unique identifier generated at parse time.
 
@@ -50,7 +50,7 @@ Unique identifier generated at parse time.
 
 > **pattern**: [`ParsedPattern`](ParsedPattern.md)
 
-Defined in: types.ts:46
+Defined in: [types.ts:46](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L46)
 
 The input pattern to match.
 
@@ -60,7 +60,7 @@ The input pattern to match.
 
 > **template**: `Node`
 
-Defined in: types.ts:52
+Defined in: [types.ts:52](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L52)
 
 The parsed XML template node.
 
@@ -70,7 +70,7 @@ The parsed XML template node.
 
 > **that**: [`ParsedPattern`](ParsedPattern.md)
 
-Defined in: types.ts:48
+Defined in: [types.ts:48](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L48)
 
 The `<that>` context pattern (defaults to `*`).
 
@@ -80,6 +80,6 @@ The `<that>` context pattern (defaults to `*`).
 
 > **topic**: [`ParsedPattern`](ParsedPattern.md)
 
-Defined in: types.ts:50
+Defined in: [types.ts:50](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L50)
 
 The `<topic>` pattern (defaults to `*`).

@@ -1,12 +1,12 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / ValidationResult
+[aiml.js](../globals.md) / ValidationResult
 
 # Interface: ValidationResult
 
-Defined in: types.ts:249
+Defined in: [types.ts:249](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L249)
 
 Result of [validateAIML](../functions/validateAIML.md) or [AIMLBot.validateXML](../classes/AIMLBot.md#validatexml).
 
@@ -25,7 +25,7 @@ if (!result.valid) {
 
 > **errors**: [`ValidationError`](ValidationError.md)[]
 
-Defined in: types.ts:251
+Defined in: [types.ts:251](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L251)
 
 ***
 
@@ -33,7 +33,7 @@ Defined in: types.ts:251
 
 > **valid**: `boolean`
 
-Defined in: types.ts:250
+Defined in: [types.ts:250](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L250)
 
 ***
 
@@ -41,4 +41,4 @@ Defined in: types.ts:250
 
 > **warnings**: [`ValidationError`](ValidationError.md)[]
 
-Defined in: types.ts:252
+Defined in: [types.ts:252](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L252)

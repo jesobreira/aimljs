@@ -1,14 +1,14 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / parseSetText
+[aiml.js](../globals.md) / parseSetText
 
 # Function: parseSetText()
 
 > **parseSetText**(`text`): [`AIMLSet`](../type-aliases/AIMLSet.md)
 
-Defined in: parsers/DataParser.ts:225
+Defined in: [parsers/DataParser.ts:225](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/parsers/DataParser.ts#L225)
 
 Parse a named set from a text file.
 

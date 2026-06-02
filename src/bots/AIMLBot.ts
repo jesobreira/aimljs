@@ -64,7 +64,7 @@ export interface AIMLBotOptions extends BotOptions {
  * ### Quick-start (Node.js)
  *
  * ```ts
- * import { AIML1Bot } from 'aimljs';
+ * import { AIML1Bot } from 'aiml.js';
  *
  * const bot = new AIML1Bot({ properties: { name: 'Alice' } });
  * await bot.loadDirectory('./aiml');          // load all .aiml files
@@ -76,7 +76,7 @@ export interface AIMLBotOptions extends BotOptions {
  * ### Quick-start (browser)
  *
  * ```ts
- * import { AIML1Bot } from 'aimljs';
+ * import { AIML1Bot } from 'aiml.js';
  *
  * const bot = new AIML1Bot();
  * // Pass File objects from <input type="file"> or pre-loaded content:

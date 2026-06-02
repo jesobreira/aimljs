@@ -64,7 +64,7 @@ export interface AIML2BotOptions extends AIMLBotOptions {
  * ### Basic usage
  *
  * ```ts
- * import { AIML2Bot } from 'aimljs';
+ * import { AIML2Bot } from 'aiml.js';
  *
  * const bot = new AIML2Bot({
  *   properties: { name: 'Rosie' },

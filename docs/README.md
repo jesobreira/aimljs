@@ -1,8 +1,8 @@
-**aimljs v1.0.0**
+**aiml.js v1.0.1**
 
 ***
 
-# aimljs
+# aiml.js
 
 A full-featured TypeScript library for parsing, validating, and running **AIML (Artificial Intelligence Markup Language)** bots on both Node.js and in the browser.
 
@@ -17,13 +17,15 @@ A full-featured TypeScript library for parsing, validating, and running **AIML (
 - **Serialisation** — freeze a session to JSON, restore it later to resume the conversation
 - **Validation API** — check AIML XML for errors without loading it into a bot
 - **`aiml-validate` CLI** — validate files from the command line or CI
+- **`aiml-serve` CLI** — expose any bot as a ChatGPT-compatible REST API with Swagger UI
+- **Opt-in features** — `<system>` and `<javascript>` tags disabled by default for security
 
 ---
 
 ## Installation
 
 ```bash
-npm install aimljs
+npm install aiml.js
 ```
 
 ---
@@ -37,7 +39,9 @@ npm install aimljs
 | `npm run test:coverage`      | Tests with coverage report                        |
 | `npm run docs`               | Generate Markdown API docs in `docs/`           |
 | `npm run typecheck`          | TypeScript type check (no emit)                   |
+| `npm run build:docs`         | Rebuild static docs site in `gh-pages/`         |
 | `npm run validate -- <path>` | Run `aiml-validate` on a file or directory      |
+| `npm run serve -- [args]`    | Run `aiml-serve` (ChatGPT-compatible API)       |
 | `npm run chat:freeaiml`      | Interactive terminal chat with Free-AIML bot      |
 | `npm run chat:rosie`         | Interactive terminal chat with Rosie AIML 2.0 bot |
 | `npm run app`                | Start the web chat app at http://localhost:3000   |
@@ -51,14 +55,14 @@ Validate AIML files from the command line.
 ### Run without installing (npx)
 
 ```bash
-npx aimljs aiml-validate mybot.aiml
-npx aimljs aiml-validate -r ./knowledge-base
+npx aiml.js aiml-validate mybot.aiml
+npx aiml.js aiml-validate -r ./knowledge-base
 ```
 
 ### Install globally
 
 ```bash
-npm install -g aimljs
+npm install -g aiml.js
 aiml-validate --help
 ```
 
@@ -108,6 +112,165 @@ Results: 3 files checked
 
 ---
 
+## aiml-serve CLI
+
+Expose any AIML bot as a **ChatGPT-compatible REST API** with Swagger UI — use it as a drop-in for the OpenAI API.
+
+### Run without installing (npx)
+
+```bash
+npx aiml.js aiml-serve ./alice/
+npx aiml.js aiml-serve --rosie --freeaiml --port 8080
+```
+
+### Install globally
+
+```bash
+npm install -g aiml.js
+aiml-serve --help
+```
+
+### Usage
+
+```
+aiml-serve [options] [file|directory ...]
+
+Options:
+  -p, --port <n>       Port (default: 8080)
+  -m, --model <name>   Model name in API responses (default: aiml-bot-1)
+  --api-key <key>      Require Bearer token in Authorization header
+  --v2                 Force AIML 2.0 parser
+  --rosie              Load bundled Rosie bot
+  --freeaiml           Load bundled Free-AIML bot
+  -h, --help           Show help
+```
+
+### Endpoints
+
+| Method   | Path                     | Description                         |
+| -------- | ------------------------ | ----------------------------------- |
+| `GET`  | `/`                    | API info (categories, model, links) |
+| `GET`  | `/v1/models`           | List models                         |
+| `POST` | `/v1/chat/completions` | Chat — ChatGPT-compatible          |
+| `GET`  | `/docs`                | Swagger UI (dark themed)            |
+| `GET`  | `/openapi.json`        | OpenAPI 3.0 spec                    |
+
+### Example request
+
+```bash
+curl http://localhost:8080/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "aiml-bot-1",
+    "messages": [{ "role": "user", "content": "hello" }],
+    "user": "session-42"
+  }'
+```
+
+The `user` field is used as the **session ID** — the bot remembers predicates (names, topics, etc.) across requests with the same value.
+
+### Streaming
+
+```bash
+curl http://localhost:8080/v1/chat/completions \
+  -d '{"messages":[{"role":"user","content":"hello"}],"stream":true}' \
+  -H "Content-Type: application/json"
+```
+
+### Use with the OpenAI SDK
+
+```ts
+import OpenAI from 'openai';
+
+const client = new OpenAI({
+  baseURL: 'http://localhost:8080/v1',
+  apiKey: 'none',
+});
+
+const res = await client.chat.completions.create({
+  model: 'aiml-bot-1',
+  messages: [{ role: 'user', content: 'my name is Alice' }],
+  user: 'session-1',
+});
+console.log(res.choices[0].message.content); // "Nice to meet you, Alice!"
+```
+
+---
+
+## Opt-in features
+
+Two template tags are **disabled by default** for security. Enable them explicitly for AIML files you trust.
+
+### `<system>` — shell execution (Node.js only)
+
+```ts
+const bot = new AIML1Bot({ enableSystem: true });
+```
+
+```xml
+<category>
+  <pattern>WHAT TIME IS IT</pattern>
+  <template>The time is <system>date +%H:%M:%S</system>.</template>
+</category>
+
+<category>
+  <pattern>HOW MANY LINES IN *</pattern>
+  <template><system>wc -l "<star/>"</system></template>
+</category>
+```
+
+When `enableSystem` is `false` (default), `<system>` tags produce empty output rather than throwing.
+
+### `<javascript>` — inline JS via `new Function()`
+
+```ts
+const bot = new AIML1Bot({ enableJavaScript: true });
+```
+
+```xml
+<category>
+  <pattern>REVERSE *</pattern>
+  <template><javascript>
+    return '<star/>'.split('').reverse().join('');
+  </javascript></template>
+</category>
+
+<category>
+  <pattern>CALCULATE *</pattern>
+  <template><javascript>
+    var e = '<star/>';
+    if (/^[0-9+\-*\/.() ]+$/.test(e))
+      return String(Function('return (' + e + ')')());
+    return 'Invalid expression.';
+  </javascript></template>
+</category>
+```
+
+> **Backslash tip:** When embedding AIML in a JS/TS template literal, write `\\s` (double backslash) for regex `\s` — a bare `\s` gets silently collapsed to `s` by the template-literal parser. This is a JS string-escaping concern, not an aiml.js issue.
+
+### `<gossip>` — silent logging via subclass
+
+`<gossip>` fires `handleGossip(text)` without producing any output. Override it by subclassing:
+
+```ts
+class LoggingBot extends AIML1Bot {
+  protected handleGossip(text: string): void {
+    console.log('[gossip]', text.trim());
+  }
+}
+```
+
+```xml
+<category>
+  <pattern>LOG *</pattern>
+  <template><gossip>User said: <star/></gossip>Noted!</template>
+</category>
+```
+
+See [`examples/06-opt-in-features.ts`](_media/06-opt-in-features.ts) for a full runnable demo.
+
+---
+
 ## Web Chat App
 
 A local Express.js web app with a **ChatGPT-like interface** that combines the [Rosie AIML 2.0 bot](https://github.com/pandorabots/rosie) and the [Free-AIML collection](https://github.com/pandorabots/Free-AIML) (credits: [Pandora Bots](https://github.com/pandorabots)) into a single bot named Alice.
@@ -131,7 +294,7 @@ Features:
 ### Node.js
 
 ```ts
-import { AIML1Bot } from 'aimljs';
+import { AIML1Bot } from 'aiml.js';
 
 const bot = new AIML1Bot({ properties: { name: 'Alice' } });
 await bot.loadDirectory('./aiml');          // load all *.aiml files
@@ -148,7 +311,7 @@ console.log(r3.response); // "Your name is Bob."
 ### Browser (with a bundler)
 
 ```ts
-import { AIML1Bot } from 'aimljs';
+import { AIML1Bot } from 'aiml.js';
 
 const bot = new AIML1Bot();
 
@@ -167,7 +330,7 @@ const { response } = await bot.talk('hello');
 ## AIML 1.0
 
 ```ts
-import { AIML1Bot } from 'aimljs';
+import { AIML1Bot } from 'aiml.js';
 
 const bot = new AIML1Bot({
   properties: { name: 'Alice', version: '1.0' },
@@ -198,7 +361,7 @@ await bot.loadDirectory('./alice/aiml');
 ## AIML 2.0
 
 ```ts
-import { AIML2Bot } from 'aimljs';
+import { AIML2Bot } from 'aiml.js';
 
 const bot = new AIML2Bot({
   properties: { name: 'Rosie' },
@@ -314,7 +477,7 @@ bot.addCategory('ARE YOU *', '<srai>HELLO</srai>', { that: 'HI THERE' });
 ## Validation
 
 ```ts
-import { validateAIML } from 'aimljs';
+import { validateAIML } from 'aiml.js';
 
 const result = validateAIML(xmlString, 'mybot.aiml');
 if (!result.valid) {
@@ -361,6 +524,7 @@ npm run docs
 | [`examples/03-session-management.ts`](_media/03-session-management.ts)       | Multi-user sessions and serialisation                             |
 | [`examples/04-validation-and-parser.ts`](_media/04-validation-and-parser.ts) | Validation and low-level parser / PatternMatcher API              |
 | [`examples/05-browser-usage.ts`](_media/05-browser-usage.ts)                 | Browser patterns (fetch, File API, localStorage)                  |
+| [`examples/06-opt-in-features.ts`](_media/06-opt-in-features.ts)             | `<system>`, `<javascript>`, `<gossip>` opt-in tags          |
 
 Run an example:
 

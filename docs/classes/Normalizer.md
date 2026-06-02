@@ -1,12 +1,12 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / Normalizer
+[aiml.js](../globals.md) / Normalizer
 
 # Class: Normalizer
 
-Defined in: core/Normalizer.ts:122
+Defined in: [core/Normalizer.ts:122](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L122)
 
 Text normalisation engine.
 
@@ -38,7 +38,7 @@ norm.gender("he called her");    // → "she called him"
 
 > **new Normalizer**(`substitutions?`): `Normalizer`
 
-Defined in: core/Normalizer.ts:129
+Defined in: [core/Normalizer.ts:129](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L129)
 
 #### Parameters
 
@@ -59,7 +59,7 @@ Override any built-in table.  Omitted tables
 
 > **addSubstitutions**(`type`, `pairs`): `void`
 
-Defined in: core/Normalizer.ts:154
+Defined in: [core/Normalizer.ts:154](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L154)
 
 Append rules to an existing substitution table.
 
@@ -87,7 +87,7 @@ Rules to append.
 
 > **denormalize**(`text`): `string`
 
-Defined in: core/Normalizer.ts:180
+Defined in: [core/Normalizer.ts:180](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L180)
 
 Reverse normalisation applied to bot output.
 Uses the `denormal` substitution table.
@@ -108,7 +108,7 @@ Uses the `denormal` substitution table.
 
 > **explode**(`text`): `string`
 
-Defined in: core/Normalizer.ts:231
+Defined in: [core/Normalizer.ts:231](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L231)
 
 Insert a space between every character.
 Used by the `<explode>` template tag.
@@ -135,7 +135,7 @@ explode('abc') // → 'a b c'
 
 > **formal**(`text`): `string`
 
-Defined in: core/Normalizer.ts:215
+Defined in: [core/Normalizer.ts:215](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L215)
 
 Capitalise the first letter of every word (`Title Case`).
 
@@ -155,7 +155,7 @@ Capitalise the first letter of every word (`Title Case`).
 
 > **gender**(`text`): `string`
 
-Defined in: core/Normalizer.ts:204
+Defined in: [core/Normalizer.ts:204](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L204)
 
 Apply gender pronoun substitution (he↔she, him↔her, …).
 Used by the `<gender>` template tag.
@@ -176,7 +176,7 @@ Used by the `<gender>` template tag.
 
 > **lowercase**(`text`): `string`
 
-Defined in: core/Normalizer.ts:212
+Defined in: [core/Normalizer.ts:212](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L212)
 
 Convert text to `lower case`.
 
@@ -196,7 +196,7 @@ Convert text to `lower case`.
 
 > **normalize**(`text`): `string`
 
-Defined in: core/Normalizer.ts:164
+Defined in: [core/Normalizer.ts:164](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L164)
 
 Normalise user input before pattern matching.
 
@@ -219,7 +219,7 @@ and collapses multiple spaces.
 
 > **person**(`text`): `string`
 
-Defined in: core/Normalizer.ts:188
+Defined in: [core/Normalizer.ts:188](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L188)
 
 Apply first↔third person pronoun substitution.
 Used by the `<person>` template tag.
@@ -240,7 +240,7 @@ Used by the `<person>` template tag.
 
 > **person2**(`text`): `string`
 
-Defined in: core/Normalizer.ts:196
+Defined in: [core/Normalizer.ts:196](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L196)
 
 Apply first↔second person pronoun substitution.
 Used by the `<person2>` template tag.
@@ -261,7 +261,7 @@ Used by the `<person2>` template tag.
 
 > **sentence**(`text`): `string`
 
-Defined in: core/Normalizer.ts:220
+Defined in: [core/Normalizer.ts:220](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L220)
 
 Capitalise only the very first character (`Sentence case`).
 
@@ -281,7 +281,7 @@ Capitalise only the very first character (`Sentence case`).
 
 > **updateSubstitutions**(`type`, `pairs`): `void`
 
-Defined in: core/Normalizer.ts:145
+Defined in: [core/Normalizer.ts:145](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L145)
 
 Replace an entire substitution table.
 
@@ -309,7 +309,7 @@ New substitution rules.
 
 > **uppercase**(`text`): `string`
 
-Defined in: core/Normalizer.ts:209
+Defined in: [core/Normalizer.ts:209](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L209)
 
 Convert text to `UPPER CASE`.
 

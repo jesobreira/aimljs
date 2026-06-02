@@ -167,7 +167,7 @@ const OPENAPI = {
   openapi: '3.0.3',
   info: {
     title: 'AIML Bot API',
-    description: 'ChatGPT-compatible API powered by **aimljs**.\n\nUse this API as a drop-in replacement for the OpenAI Chat Completions API.',
+    description: 'ChatGPT-compatible API powered by **aiml.js**.\n\nUse this API as a drop-in replacement for the OpenAI Chat Completions API.',
     version: require('../package.json').version,
     contact: { url: 'https://github.com/jesobreira/aimljs' },
   },
@@ -229,7 +229,7 @@ const OPENAPI = {
           id:       { type:'string', example: MODEL },
           object:   { type:'string', example:'model' },
           created:  { type:'integer', example: 1700000000 },
-          owned_by: { type:'string', example:'aimljs' },
+          owned_by: { type:'string', example:'aiml.js' },
         },
       },
       ChatMessage: {
@@ -272,7 +272,7 @@ const OPENAPI = {
       ChatCompletionResponse: {
         type:'object',
         properties: {
-          id:      { type:'string', example:'chatcmpl-aimljs-abc123' },
+          id:      { type:'string', example:'chatcmpl-aiml.js-abc123' },
           object:  { type:'string', example:'chat.completion' },
           created: { type:'integer', example:1700000000 },
           model:   { type:'string', example: MODEL },
@@ -333,7 +333,7 @@ function countTokens(text: string): number {
 }
 
 function newCompletionId(): string {
-  return `chatcmpl-aimljs-${Math.random().toString(36).slice(2,10)}`;
+  return `chatcmpl-aiml.js-${Math.random().toString(36).slice(2,10)}`;
 }
 
 // ─── Request handler ──────────────────────────────────────────────────────────
@@ -391,7 +391,7 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse) {
       data: [{
         id: MODEL, object:'model',
         created: Math.floor(Date.now() / 1000),
-        owned_by: 'aimljs',
+        owned_by: 'aiml.js',
       }],
     });
   }

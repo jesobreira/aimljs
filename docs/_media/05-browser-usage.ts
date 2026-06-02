@@ -1,7 +1,7 @@
 /**
  * Example 5 — Browser usage
  *
- * This file shows how to use aimljs in a browser environment.
+ * This file shows how to use aiml.js in a browser environment.
  * It is NOT a runnable Node.js file — it demonstrates browser-specific
  * patterns using the Web APIs (File, FileReader, fetch, localStorage).
  *
@@ -43,7 +43,7 @@ export async function initBotFromFileInput(
   const files = Array.from(fileInput.files ?? []);
   if (files.length === 0) throw new Error('No files selected');
 
-  // Pass File objects directly — aimljs reads them with FileReader
+  // Pass File objects directly — aiml.js reads them with FileReader
   await bot.loadFiles(files);
 
   return bot;

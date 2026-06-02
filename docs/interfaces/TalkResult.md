@@ -1,12 +1,12 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / TalkResult
+[aiml.js](../globals.md) / TalkResult
 
 # Interface: TalkResult
 
-Defined in: types.ts:208
+Defined in: [types.ts:208](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L208)
 
 The result returned by [AIMLBot.talk](../classes/AIMLBot.md#talk).
 
@@ -23,7 +23,7 @@ console.log(response); // "Hi there!"
 
 > **response**: `string`
 
-Defined in: types.ts:210
+Defined in: [types.ts:210](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L210)
 
 The bot's text response.
 
@@ -33,6 +33,6 @@ The bot's text response.
 
 > **sessionId**: `string`
 
-Defined in: types.ts:212
+Defined in: [types.ts:212](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L212)
 
 The session ID that was used (useful when none was passed).

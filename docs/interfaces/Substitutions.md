@@ -1,12 +1,12 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / Substitutions
+[aiml.js](../globals.md) / Substitutions
 
 # Interface: Substitutions
 
-Defined in: types.ts:81
+Defined in: [types.ts:81](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L81)
 
 The full set of substitution tables used by the normalizer.
 
@@ -24,7 +24,7 @@ The full set of substitution tables used by the normalizer.
 
 > **denormal**: [`SubstitutionPair`](SubstitutionPair.md)[]
 
-Defined in: types.ts:86
+Defined in: [types.ts:86](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L86)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types.ts:86
 
 > **gender**: [`SubstitutionPair`](SubstitutionPair.md)[]
 
-Defined in: types.ts:85
+Defined in: [types.ts:85](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L85)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types.ts:85
 
 > **normal**: [`SubstitutionPair`](SubstitutionPair.md)[]
 
-Defined in: types.ts:82
+Defined in: [types.ts:82](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L82)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: types.ts:82
 
 > **person**: [`SubstitutionPair`](SubstitutionPair.md)[]
 
-Defined in: types.ts:83
+Defined in: [types.ts:83](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L83)
 
 ***
 
@@ -56,4 +56,4 @@ Defined in: types.ts:83
 
 > **person2**: [`SubstitutionPair`](SubstitutionPair.md)[]
 
-Defined in: types.ts:84
+Defined in: [types.ts:84](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L84)

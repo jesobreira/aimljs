@@ -1,14 +1,14 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / tokenize
+[aiml.js](../globals.md) / tokenize
 
 # Function: tokenize()
 
 > **tokenize**(`text`): `string`[]
 
-Defined in: core/PatternMatcher.ts:289
+Defined in: [core/PatternMatcher.ts:289](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L289)
 
 Split text into an array of words (tokens) for pattern matching.
 

@@ -1,12 +1,12 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / ValidationError
+[aiml.js](../globals.md) / ValidationError
 
 # Interface: ValidationError
 
-Defined in: types.ts:233
+Defined in: [types.ts:233](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L233)
 
 A single parse/validation error or warning.
 
@@ -16,7 +16,7 @@ A single parse/validation error or warning.
 
 > `optional` **element?**: `string`
 
-Defined in: types.ts:237
+Defined in: [types.ts:237](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L237)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types.ts:237
 
 > `optional` **file?**: `string`
 
-Defined in: types.ts:235
+Defined in: [types.ts:235](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L235)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types.ts:235
 
 > `optional` **line?**: `number`
 
-Defined in: types.ts:236
+Defined in: [types.ts:236](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L236)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: types.ts:236
 
 > **message**: `string`
 
-Defined in: types.ts:234
+Defined in: [types.ts:234](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L234)

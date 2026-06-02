@@ -1,14 +1,14 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / parseSubstitutions
+[aiml.js](../globals.md) / parseSubstitutions
 
 # Function: parseSubstitutions()
 
 > **parseSubstitutions**(`data`): [`SubstitutionPair`](../interfaces/SubstitutionPair.md)[]
 
-Defined in: parsers/DataParser.ts:203
+Defined in: [parsers/DataParser.ts:203](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/parsers/DataParser.ts#L203)
 
 Parse substitution rules from any supported format (auto-detected).
 

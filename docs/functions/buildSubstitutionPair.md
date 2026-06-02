@@ -1,14 +1,14 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / buildSubstitutionPair
+[aiml.js](../globals.md) / buildSubstitutionPair
 
 # Function: buildSubstitutionPair()
 
 > **buildSubstitutionPair**(`find`, `replace`): [`SubstitutionPair`](../interfaces/SubstitutionPair.md)
 
-Defined in: core/Normalizer.ts:48
+Defined in: [core/Normalizer.ts:48](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L48)
 
 Compile a find/replace pair into a [SubstitutionPair](../interfaces/SubstitutionPair.md).
 

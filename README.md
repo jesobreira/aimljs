@@ -1,4 +1,4 @@
-# aimljs
+# aiml.js
 
 A full-featured TypeScript library for parsing, validating, and running **AIML (Artificial Intelligence Markup Language)** bots on both Node.js and in the browser.
 
@@ -51,14 +51,14 @@ Validate AIML files from the command line.
 ### Run without installing (npx)
 
 ```bash
-npx aimljs aiml-validate mybot.aiml
-npx aimljs aiml-validate -r ./knowledge-base
+npx aiml.js aiml-validate mybot.aiml
+npx aiml.js aiml-validate -r ./knowledge-base
 ```
 
 ### Install globally
 
 ```bash
-npm install -g aimljs
+npm install -g aiml.js
 aiml-validate --help
 ```
 
@@ -115,14 +115,14 @@ Expose any AIML bot as a **ChatGPT-compatible REST API** with Swagger UI — use
 ### Run without installing (npx)
 
 ```bash
-npx aimljs aiml-serve ./alice/
-npx aimljs aiml-serve --rosie --freeaiml --port 8080
+npx aiml.js aiml-serve ./alice/
+npx aiml.js aiml-serve --rosie --freeaiml --port 8080
 ```
 
 ### Install globally
 
 ```bash
-npm install -g aimljs
+npm install -g aiml.js
 aiml-serve --help
 ```
 
@@ -242,7 +242,7 @@ const bot = new AIML1Bot({ enableJavaScript: true });
 </category>
 ```
 
-> **Backslash tip:** When embedding AIML in a JS/TS template literal, write `\\s` (double backslash) for regex `\s` — a bare `\s` gets silently collapsed to `s` by the template-literal parser. This is a JS string-escaping concern, not an aimljs issue.
+> **Backslash tip:** When embedding AIML in a JS/TS template literal, write `\\s` (double backslash) for regex `\s` — a bare `\s` gets silently collapsed to `s` by the template-literal parser. This is a JS string-escaping concern, not an aiml.js issue.
 
 ### `<gossip>` — silent logging via subclass
 
@@ -290,7 +290,7 @@ Features:
 ### Node.js
 
 ```ts
-import { AIML1Bot } from 'aimljs';
+import { AIML1Bot } from 'aiml.js';
 
 const bot = new AIML1Bot({ properties: { name: 'Alice' } });
 await bot.loadDirectory('./aiml');          // load all *.aiml files
@@ -307,7 +307,7 @@ console.log(r3.response); // "Your name is Bob."
 ### Browser (with a bundler)
 
 ```ts
-import { AIML1Bot } from 'aimljs';
+import { AIML1Bot } from 'aiml.js';
 
 const bot = new AIML1Bot();
 
@@ -326,7 +326,7 @@ const { response } = await bot.talk('hello');
 ## AIML 1.0
 
 ```ts
-import { AIML1Bot } from 'aimljs';
+import { AIML1Bot } from 'aiml.js';
 
 const bot = new AIML1Bot({
   properties: { name: 'Alice', version: '1.0' },
@@ -357,7 +357,7 @@ await bot.loadDirectory('./alice/aiml');
 ## AIML 2.0
 
 ```ts
-import { AIML2Bot } from 'aimljs';
+import { AIML2Bot } from 'aiml.js';
 
 const bot = new AIML2Bot({
   properties: { name: 'Rosie' },
@@ -473,7 +473,7 @@ bot.addCategory('ARE YOU *', '<srai>HELLO</srai>', { that: 'HI THERE' });
 ## Validation
 
 ```ts
-import { validateAIML } from 'aimljs';
+import { validateAIML } from 'aiml.js';
 
 const result = validateAIML(xmlString, 'mybot.aiml');
 if (!result.valid) {

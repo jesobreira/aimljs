@@ -1,14 +1,14 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / parseAIML
+[aiml.js](../globals.md) / parseAIML
 
 # Function: parseAIML()
 
 > **parseAIML**(`xml`, `fileName?`, `defaultVersion?`): [`ParsedAIML`](../interfaces/ParsedAIML.md)
 
-Defined in: parsers/AIMLParser.ts:59
+Defined in: [parsers/AIMLParser.ts:59](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/parsers/AIMLParser.ts#L59)
 
 Parse an AIML XML string into a list of [Category](../interfaces/Category.md) objects.
 

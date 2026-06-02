@@ -1,12 +1,12 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / SessionData
+[aiml.js](../globals.md) / SessionData
 
 # Interface: SessionData
 
-Defined in: types.ts:137
+Defined in: [types.ts:137](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L137)
 
 Serialisable snapshot of a [Session](../classes/Session.md).
 
@@ -19,7 +19,7 @@ Persist this with `JSON.stringify` and restore it later with
 
 > **created**: `number`
 
-Defined in: types.ts:142
+Defined in: [types.ts:142](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L142)
 
 ***
 
@@ -27,7 +27,7 @@ Defined in: types.ts:142
 
 > **history**: [`ConversationTurn`](ConversationTurn.md)[]
 
-Defined in: types.ts:140
+Defined in: [types.ts:140](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L140)
 
 ***
 
@@ -35,7 +35,7 @@ Defined in: types.ts:140
 
 > **id**: `string`
 
-Defined in: types.ts:138
+Defined in: [types.ts:138](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L138)
 
 ***
 
@@ -43,7 +43,7 @@ Defined in: types.ts:138
 
 > **predicates**: `Record`\<`string`, `string`\>
 
-Defined in: types.ts:139
+Defined in: [types.ts:139](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L139)
 
 ***
 
@@ -51,7 +51,7 @@ Defined in: types.ts:139
 
 > **topic**: `string`
 
-Defined in: types.ts:141
+Defined in: [types.ts:141](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L141)
 
 ***
 
@@ -59,7 +59,7 @@ Defined in: types.ts:141
 
 > `optional` **tripleStore?**: [`TripleEntry`](TripleEntry.md)[]
 
-Defined in: types.ts:145
+Defined in: [types.ts:145](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L145)
 
 AIML 2.0 triple store entries.
 
@@ -69,4 +69,4 @@ AIML 2.0 triple store entries.
 
 > **updated**: `number`
 
-Defined in: types.ts:143
+Defined in: [types.ts:143](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L143)

@@ -1,6 +1,6 @@
 {
   "name": "aiml.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Full-featured AIML 1.0/2.0 parser, validator and runtime for Node.js and browser",
   "author": "jesobreira",
   "homepage": "https://jesobreira.github.io/aimljs",
@@ -18,7 +18,7 @@
     "aiml-validate": "./dist/aiml-validate.mjs",
     "aiml-serve":    "./dist/aiml-serve.mjs"
   },
-  "files": ["dist", "bin/aiml-validate.js", "README.md"],
+  "files": ["dist", "README.md"],
   "scripts": {
     "build":         "tsup",
     "dev":           "tsup --watch",

@@ -1,12 +1,12 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / PatternMatcher
+[aiml.js](../globals.md) / PatternMatcher
 
 # Class: PatternMatcher
 
-Defined in: core/PatternMatcher.ts:145
+Defined in: [core/PatternMatcher.ts:145](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L145)
 
 Low-level pattern matching engine.
 
@@ -40,7 +40,7 @@ if (result) {
 
 > **get** **size**(): `number`
 
-Defined in: core/PatternMatcher.ts:205
+Defined in: [core/PatternMatcher.ts:205](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L205)
 
 Total number of loaded categories.
 
@@ -64,7 +64,7 @@ Total number of loaded categories.
 
 > **addCategories**(`cats`): `void`
 
-Defined in: core/PatternMatcher.ts:164
+Defined in: [core/PatternMatcher.ts:164](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L164)
 
 Add multiple categories at once.
 More efficient than calling [addCategory](#addcategory) in a loop.
@@ -85,7 +85,7 @@ More efficient than calling [addCategory](#addcategory) in a loop.
 
 > **addCategory**(`cat`): `void`
 
-Defined in: core/PatternMatcher.ts:155
+Defined in: [core/PatternMatcher.ts:155](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L155)
 
 Add a single category to the matcher.
 Triggers a re-sort on the next [match](#match) call.
@@ -106,7 +106,7 @@ Triggers a re-sort on the next [match](#match) call.
 
 > **clear**(): `void`
 
-Defined in: core/PatternMatcher.ts:181
+Defined in: [core/PatternMatcher.ts:181](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L181)
 
 Remove all categories.
 
@@ -120,7 +120,7 @@ Remove all categories.
 
 > **match**(`input`, `that`, `topic`): [`MatchResult`](../interfaces/MatchResult.md) \| `null`
 
-Defined in: core/PatternMatcher.ts:234
+Defined in: [core/PatternMatcher.ts:234](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L234)
 
 Find the highest-priority category that matches the given triple.
 
@@ -165,7 +165,7 @@ const result = matcher.match('my name is Alice', '*', 'default');
 
 > **removeByFile**(`file`): `void`
 
-Defined in: core/PatternMatcher.ts:175
+Defined in: [core/PatternMatcher.ts:175](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L175)
 
 Remove all categories that were loaded from a specific file.
 Useful for hot-reloading individual AIML files.
@@ -188,7 +188,7 @@ The file name/path to remove categories from.
 
 > **setBotProperties**(`props`): `void`
 
-Defined in: core/PatternMatcher.ts:200
+Defined in: [core/PatternMatcher.ts:200](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L200)
 
 Provide the current bot properties so `<bot name="...">` pattern
 tokens can be evaluated during matching.
@@ -209,7 +209,7 @@ tokens can be evaluated during matching.
 
 > **setSet**(`name`, `set`): `void`
 
-Defined in: core/PatternMatcher.ts:192
+Defined in: [core/PatternMatcher.ts:192](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/PatternMatcher.ts#L192)
 
 Register a named set for use in `<set name="...">` pattern tokens.
 

@@ -1,8 +1,8 @@
-[**aimljs v1.0.0**](README.md)
+[**aiml.js v1.0.1**](README.md)
 
 ***
 
-# aimljs v1.0.0
+# aiml.js v1.0.1
 
 ## Classes
 

@@ -1,12 +1,12 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / AIML1Bot
+[aiml.js](../globals.md) / AIML1Bot
 
 # Class: AIML1Bot
 
-Defined in: bots/AIML1Bot.ts:93
+Defined in: [bots/AIML1Bot.ts:93](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L93)
 
 AIML 1.0 bot.
 
@@ -28,7 +28,7 @@ All AIML 1.0 template tags are supported:
 ### Basic usage
 
 ```ts
-import { AIML1Bot } from 'aimljs';
+import { AIML1Bot } from 'aiml.js';
 
 const bot = new AIML1Bot({ properties: { name: 'Alice' } });
 await bot.loadDirectory('./alice');
@@ -77,7 +77,7 @@ await bot.loadDataDirectory('/alice');
 
 > **get** **categoryCount**(): `number`
 
-Defined in: bots/AIMLBot.ts:444
+Defined in: [bots/AIMLBot.ts:444](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L444)
 
 Total number of loaded categories.
 
@@ -95,7 +95,7 @@ Total number of loaded categories.
 
 > **new AIML1Bot**(`options?`): `AIML1Bot`
 
-Defined in: bots/AIML1Bot.ts:94
+Defined in: [bots/AIML1Bot.ts:94](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L94)
 
 #### Parameters
 
@@ -117,7 +117,7 @@ Defined in: bots/AIML1Bot.ts:94
 
 > **addCategory**(`pattern`, `template`, `options?`): `void`
 
-Defined in: bots/AIML1Bot.ts:238
+Defined in: [bots/AIML1Bot.ts:238](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L238)
 
 Programmatically add an AIML 1.0 category.
 
@@ -168,7 +168,7 @@ bot.addCategory('ARE YOU *', 'I am <star/>!', { topic: 'ROBOTS' });
 
 > **addSubstitution**(`type`, `find`, `replace`): `void`
 
-Defined in: bots/AIMLBot.ts:363
+Defined in: [bots/AIMLBot.ts:363](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L363)
 
 Append a single substitution rule to a table.
 
@@ -212,7 +212,7 @@ bot.addSubstitution('normal', "ain't", 'am not');
 
 > **createSession**(`sessionId?`): [`Session`](Session.md)
 
-Defined in: bots/AIMLBot.ts:464
+Defined in: [bots/AIMLBot.ts:464](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L464)
 
 Create a new session.
 
@@ -251,7 +251,7 @@ const { response } = await bot.talkSession('hello', session);
 
 > **deleteSession**(`sessionId`): `boolean`
 
-Defined in: bots/AIMLBot.ts:502
+Defined in: [bots/AIMLBot.ts:502](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L502)
 
 Delete a session and free its memory.
 
@@ -279,7 +279,7 @@ Session to delete.
 
 > **getOrCreateSession**(`sessionId?`): [`Session`](Session.md)
 
-Defined in: bots/AIMLBot.ts:489
+Defined in: [bots/AIMLBot.ts:489](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L489)
 
 Get an existing session or create one if it does not exist.
 
@@ -308,7 +308,7 @@ Optional session ID.
 
 > **getProperty**(`name`): `string`
 
-Defined in: bots/AIMLBot.ts:305
+Defined in: [bots/AIMLBot.ts:305](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L305)
 
 Get a bot property value.
 
@@ -336,7 +336,7 @@ The property value, or `""` if not set.
 
 > **getSession**(`sessionId`): [`Session`](Session.md) \| `undefined`
 
-Defined in: bots/AIMLBot.ts:477
+Defined in: [bots/AIMLBot.ts:477](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L477)
 
 Retrieve an existing session by ID.
 
@@ -364,7 +364,7 @@ The session, or `undefined` if not found.
 
 > `protected` **handleGossip**(`_text`): `void`
 
-Defined in: bots/AIMLBot.ts:705
+Defined in: [bots/AIMLBot.ts:705](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L705)
 
 Called whenever a `<gossip>` tag is encountered.
 Override to log or store gossip messages.
@@ -389,7 +389,7 @@ Override to log or store gossip messages.
 
 > `protected` **handleNoMatch**(`_input`, `_session`): `Promise`\<`string`\>
 
-Defined in: bots/AIMLBot.ts:586
+Defined in: [bots/AIMLBot.ts:586](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L586)
 
 Called when no category matches the user's input.
 
@@ -420,7 +420,7 @@ The default implementation returns `""`.
 
 > **loadAllSerializedSessions**(`data`): `string`[]
 
-Defined in: bots/AIMLBot.ts:669
+Defined in: [bots/AIMLBot.ts:669](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L669)
 
 Restore all sessions from a JSON string produced by [serializeAllSessions](AIMLBot.md#serializeallsessions).
 
@@ -448,7 +448,7 @@ Array of restored session IDs.
 
 > **loadDataDirectory**(`dirPath`): `Promise`\<`void`\>
 
-Defined in: bots/AIML1Bot.ts:119
+Defined in: [bots/AIML1Bot.ts:119](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L119)
 
 Load a complete AIML 1.0 data directory using the standard layout.
 
@@ -486,7 +486,7 @@ await bot.loadDataDirectory('./alice-aiml');
 
 > **loadDirectory**(`dirPath`, `recursive?`, `extensions?`): `Promise`\<`void`\>
 
-Defined in: bots/AIMLBot.ts:265
+Defined in: [bots/AIMLBot.ts:265](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L265)
 
 Recursively load all `.aiml` files from a directory.
 
@@ -533,7 +533,7 @@ await bot.loadDirectory('./kb', true, ['.aiml', '.xml']);
 
 > **loadFile**(`source`): `Promise`\<`void`\>
 
-Defined in: bots/AIMLBot.ts:227
+Defined in: [bots/AIMLBot.ts:227](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L227)
 
 Load a single AIML file from any [FileSource](../type-aliases/FileSource.md).
 
@@ -576,7 +576,7 @@ await bot.loadFile({ name: 'greeting.aiml', content: xmlString });
 
 > **loadFiles**(`sources`): `Promise`\<`void`\>
 
-Defined in: bots/AIMLBot.ts:246
+Defined in: [bots/AIMLBot.ts:246](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L246)
 
 Load multiple AIML files concurrently.
 
@@ -612,7 +612,7 @@ await bot.loadFiles([
 
 > **loadMap**(`name`, `data`): `void`
 
-Defined in: bots/AIMLBot.ts:404
+Defined in: [bots/AIMLBot.ts:404](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L404)
 
 Register a named map for use in `<map name="...">` template tags.
 
@@ -652,7 +652,7 @@ bot.loadMap('scores', '{"alice":"100","bob":"200"}');
 
 > **loadProperties**(`data`): `void`
 
-Defined in: bots/AIMLBot.ts:322
+Defined in: [bots/AIMLBot.ts:322](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L322)
 
 Load bot properties from a text or JSON data source.
 
@@ -689,7 +689,7 @@ bot.loadProperties('{"name":"Alice"}');
 
 > **loadPropertiesFile**(`source`): `Promise`\<`void`\>
 
-Defined in: bots/AIML1Bot.ts:189
+Defined in: [bots/AIML1Bot.ts:189](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L189)
 
 Load bot properties from a file.
 
@@ -720,7 +720,7 @@ await bot.loadPropertiesFile({ name: 'bot.properties', content: 'name:Alice' });
 
 > **loadSerializedSession**(`data`): `string`
 
-Defined in: bots/AIMLBot.ts:643
+Defined in: [bots/AIMLBot.ts:643](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L643)
 
 Restore a session from a JSON string produced by [serializeSession](AIMLBot.md#serializesession).
 
@@ -748,7 +748,7 @@ The restored session's ID.
 
 > **loadSet**(`name`, `data`): `void`
 
-Defined in: bots/AIMLBot.ts:387
+Defined in: [bots/AIMLBot.ts:387](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L387)
 
 Register a named set for use in pattern matching.
 
@@ -791,7 +791,7 @@ bot.loadSet('fruit', '["apple","banana","cherry"]');
 
 > **loadSetFile**(`name`, `source`): `Promise`\<`void`\>
 
-Defined in: bots/AIML1Bot.ts:222
+Defined in: [bots/AIML1Bot.ts:222](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L222)
 
 Load a named set from a file (one item per line).
 
@@ -825,7 +825,7 @@ await bot.loadSetFile('color', '/path/to/colors.txt');
 
 > **loadSubstitutionFile**(`type`, `source`): `Promise`\<`void`\>
 
-Defined in: bots/AIML1Bot.ts:205
+Defined in: [bots/AIML1Bot.ts:205](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L205)
 
 Load a substitution table from a file.
 
@@ -861,7 +861,7 @@ await bot.loadSubstitutionFile('normal', '/path/to/normal.txt');
 
 > **loadSubstitutions**(`type`, `data`): `void`
 
-Defined in: bots/AIMLBot.ts:345
+Defined in: [bots/AIMLBot.ts:345](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L345)
 
 Replace a substitution table entirely.
 
@@ -902,7 +902,7 @@ bot.loadSubstitutions('person', '[{"find":"I","replace":"he or she"}]');
 
 > **loadXMLString**(`xml`, `fileName?`): `Promise`\<`void`\>
 
-Defined in: bots/AIMLBot.ts:197
+Defined in: [bots/AIMLBot.ts:197](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L197)
 
 Parse and load an AIML XML string directly.
 
@@ -951,7 +951,7 @@ await bot.loadXMLString(`
 
 > **serializeAllSessions**(): `string`
 
-Defined in: bots/AIMLBot.ts:655
+Defined in: [bots/AIMLBot.ts:655](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L655)
 
 Serialise **all** active sessions to a single JSON string.
 
@@ -972,7 +972,7 @@ Restore with [loadAllSerializedSessions](AIMLBot.md#loadallserializedsessions).
 
 > **serializeSession**(`sessionId`): `string`
 
-Defined in: bots/AIMLBot.ts:631
+Defined in: [bots/AIMLBot.ts:631](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L631)
 
 Serialise a single session to a JSON string.
 
@@ -1017,7 +1017,7 @@ const { response } = await bot.talk('hello again', id);
 
 > **setProperty**(`name`, `value`): `void`
 
-Defined in: bots/AIMLBot.ts:293
+Defined in: [bots/AIMLBot.ts:293](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L293)
 
 Set a single bot property.
 
@@ -1058,7 +1058,7 @@ bot.setProperty('name', 'Alice');
 
 > **talk**(`input`, `sessionId?`): `Promise`\<[`TalkResult`](../interfaces/TalkResult.md)\>
 
-Defined in: bots/AIMLBot.ts:532
+Defined in: [bots/AIMLBot.ts:532](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L532)
 
 Send a message to the bot and get a response.
 
@@ -1110,7 +1110,7 @@ await bot.talk('hello', 'user-2');
 
 > **talkSession**(`input`, `session`): `Promise`\<`string`\>
 
-Defined in: bots/AIMLBot.ts:547
+Defined in: [bots/AIMLBot.ts:547](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L547)
 
 Send a message using an explicit [Session](Session.md) object.
 
@@ -1146,7 +1146,7 @@ The bot's response string.
 
 > **validateXML**(`xml`, `fileName?`): [`ValidationResult`](../interfaces/ValidationResult.md)
 
-Defined in: bots/AIMLBot.ts:605
+Defined in: [bots/AIMLBot.ts:605](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L605)
 
 Validate an AIML XML string without loading it.
 

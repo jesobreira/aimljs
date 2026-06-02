@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Compiled entry-point wrapper — delegates to the built dist file.
-// This file is what `npm install -g aimljs` puts on PATH.
+// This file is what `npm install -g aiml.js` puts on PATH.
 import('../dist/aiml-validate.js').catch(err => {
   // If dist not built, fall back to tsx (dev usage)
   const { execFileSync } = require('child_process');

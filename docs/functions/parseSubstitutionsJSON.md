@@ -1,14 +1,14 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / parseSubstitutionsJSON
+[aiml.js](../globals.md) / parseSubstitutionsJSON
 
 # Function: parseSubstitutionsJSON()
 
 > **parseSubstitutionsJSON**(`json`): [`SubstitutionPair`](../interfaces/SubstitutionPair.md)[]
 
-Defined in: parsers/DataParser.ts:169
+Defined in: [parsers/DataParser.ts:169](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/parsers/DataParser.ts#L169)
 
 Parse substitution rules from a JSON string.
 

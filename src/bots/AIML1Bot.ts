@@ -51,7 +51,7 @@ export interface AIML1BotOptions extends AIMLBotOptions {
  * ### Basic usage
  *
  * ```ts
- * import { AIML1Bot } from 'aimljs';
+ * import { AIML1Bot } from 'aiml.js';
  *
  * const bot = new AIML1Bot({ properties: { name: 'Alice' } });
  * await bot.loadDirectory('./alice');

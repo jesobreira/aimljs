@@ -1,12 +1,12 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / AIML1BotOptions
+[aiml.js](../globals.md) / AIML1BotOptions
 
 # Interface: AIML1BotOptions
 
-Defined in: bots/AIML1Bot.ts:12
+Defined in: [bots/AIML1Bot.ts:12](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L12)
 
 Constructor options specific to [AIML1Bot](../classes/AIML1Bot.md).
 
@@ -20,7 +20,7 @@ Constructor options specific to [AIML1Bot](../classes/AIML1Bot.md).
 
 > `optional` **aimlVersion?**: `"1.0"` \| `"2.0"`
 
-Defined in: bots/AIMLBot.ts:40
+Defined in: [bots/AIMLBot.ts:40](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L40)
 
 AIML dialect version to use when auto-detection fails.
 
@@ -40,7 +40,7 @@ AIML dialect version to use when auto-detection fails.
 
 > `optional` **defaultTopic?**: `string`
 
-Defined in: types.ts:192
+Defined in: [types.ts:192](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L192)
 
 Default topic for new sessions.
 
@@ -60,7 +60,7 @@ Default topic for new sessions.
 
 > `optional` **enableJavaScript?**: `boolean`
 
-Defined in: bots/AIMLBot.ts:51
+Defined in: [bots/AIMLBot.ts:51](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L51)
 
 Allow `<javascript>` tags to execute arbitrary JS via `new Function`.
 
@@ -80,7 +80,7 @@ false (tag silently ignored when disabled)
 
 > `optional` **enableSystem?**: `boolean`
 
-Defined in: bots/AIMLBot.ts:46
+Defined in: [bots/AIMLBot.ts:46](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIMLBot.ts#L46)
 
 Allow `<system>` tags to execute shell commands (Node.js only).
 Disabled by default for security.
@@ -101,7 +101,7 @@ false
 
 > `optional` **locale?**: `string`
 
-Defined in: types.ts:194
+Defined in: [types.ts:194](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L194)
 
 BCP-47 locale used for date formatting.
 
@@ -115,7 +115,7 @@ BCP-47 locale used for date formatting.
 
 > `optional` **maps?**: `Record`\<`string`, `Map`\<`string`, `string`\> \| `Record`\<`string`, `string`\>\>
 
-Defined in: types.ts:177
+Defined in: [types.ts:177](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L177)
 
 Pre-load named maps (object, Map, or `key:value` text).
 
@@ -129,7 +129,7 @@ Pre-load named maps (object, Map, or `key:value` text).
 
 > `optional` **maxLoopIterations?**: `number`
 
-Defined in: types.ts:187
+Defined in: [types.ts:187](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L187)
 
 Maximum `<loop>` iterations inside a `<condition>`.
 
@@ -149,7 +149,7 @@ Maximum `<loop>` iterations inside a `<condition>`.
 
 > `optional` **maxRecursionDepth?**: `number`
 
-Defined in: types.ts:182
+Defined in: [types.ts:182](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L182)
 
 Maximum `<srai>` recursion depth before the bot gives up.
 
@@ -169,7 +169,7 @@ Maximum `<srai>` recursion depth before the bot gives up.
 
 > `optional` **name?**: `string`
 
-Defined in: types.ts:169
+Defined in: [types.ts:169](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L169)
 
 Display name exposed via `<bot name="name"/>`.
 
@@ -183,7 +183,7 @@ Display name exposed via `<bot name="name"/>`.
 
 > `optional` **properties?**: [`BotProperties`](BotProperties.md)
 
-Defined in: types.ts:171
+Defined in: [types.ts:171](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L171)
 
 Initial bot properties (see [BotProperties](BotProperties.md)).
 
@@ -197,7 +197,7 @@ Initial bot properties (see [BotProperties](BotProperties.md)).
 
 > `optional` **propertiesFile?**: [`FileSource`](../type-aliases/FileSource.md)
 
-Defined in: bots/AIML1Bot.ts:17
+Defined in: [bots/AIML1Bot.ts:17](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L17)
 
 Path or content of a `.properties` file to load at construction time.
 
@@ -213,7 +213,7 @@ Path or content of a `.properties` file to load at construction time.
 
 > `optional` **setFiles?**: `Record`\<`string`, [`FileSource`](../type-aliases/FileSource.md)\>
 
-Defined in: bots/AIML1Bot.ts:30
+Defined in: [bots/AIML1Bot.ts:30](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L30)
 
 A map of `setName → FileSource` for sets to load at construction time.
 
@@ -223,7 +223,7 @@ A map of `setName → FileSource` for sets to load at construction time.
 
 > `optional` **sets?**: `Record`\<`string`, `string`[] \| `Set`\<`string`\>\>
 
-Defined in: types.ts:175
+Defined in: [types.ts:175](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L175)
 
 Pre-load named sets (string array, Set, or one-per-line text).
 
@@ -237,7 +237,7 @@ Pre-load named sets (string array, Set, or one-per-line text).
 
 > `optional` **substitutionFiles?**: `object`
 
-Defined in: bots/AIML1Bot.ts:21
+Defined in: [bots/AIML1Bot.ts:21](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/bots/AIML1Bot.ts#L21)
 
 Paths or content of substitution files, keyed by substitution type.
 
@@ -263,7 +263,7 @@ Paths or content of substitution files, keyed by substitution type.
 
 > `optional` **substitutions?**: `Partial`\<[`Substitutions`](Substitutions.md)\>
 
-Defined in: types.ts:173
+Defined in: [types.ts:173](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L173)
 
 Override any of the built-in substitution tables.
 
@@ -277,7 +277,7 @@ Override any of the built-in substitution tables.
 
 > `optional` **timezone?**: `string`
 
-Defined in: types.ts:196
+Defined in: [types.ts:196](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/types.ts#L196)
 
 IANA timezone for date/time tags.
 

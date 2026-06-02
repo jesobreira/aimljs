@@ -1,14 +1,14 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / parseSet
+[aiml.js](../globals.md) / parseSet
 
 # Function: parseSet()
 
 > **parseSet**(`data`): [`AIMLSet`](../type-aliases/AIMLSet.md)
 
-Defined in: parsers/DataParser.ts:273
+Defined in: [parsers/DataParser.ts:273](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/parsers/DataParser.ts#L273)
 
 Parse a named set from any supported format (auto-detected).
 

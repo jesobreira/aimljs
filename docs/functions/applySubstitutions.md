@@ -1,14 +1,14 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / applySubstitutions
+[aiml.js](../globals.md) / applySubstitutions
 
 # Function: applySubstitutions()
 
 > **applySubstitutions**(`text`, `pairs`): `string`
 
-Defined in: core/Normalizer.ts:17
+Defined in: [core/Normalizer.ts:17](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Normalizer.ts#L17)
 
 Apply a list of substitution rules to a string in a single pass.
 

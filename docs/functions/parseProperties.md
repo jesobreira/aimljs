@@ -1,14 +1,14 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / parseProperties
+[aiml.js](../globals.md) / parseProperties
 
 # Function: parseProperties()
 
 > **parseProperties**(`data`): `Record`\<`string`, `string`\>
 
-Defined in: parsers/DataParser.ts:122
+Defined in: [parsers/DataParser.ts:122](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/parsers/DataParser.ts#L122)
 
 Parse properties from any supported format (auto-detected).
 

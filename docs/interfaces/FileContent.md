@@ -1,12 +1,12 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / FileContent
+[aiml.js](../globals.md) / FileContent
 
 # Interface: FileContent
 
-Defined in: loaders/FileLoader.ts:3
+Defined in: [loaders/FileLoader.ts:3](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/loaders/FileLoader.ts#L3)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: loaders/FileLoader.ts:3
 
 > **content**: `string`
 
-Defined in: loaders/FileLoader.ts:5
+Defined in: [loaders/FileLoader.ts:5](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/loaders/FileLoader.ts#L5)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: loaders/FileLoader.ts:5
 
 > **name**: `string`
 
-Defined in: loaders/FileLoader.ts:4
+Defined in: [loaders/FileLoader.ts:4](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/loaders/FileLoader.ts#L4)

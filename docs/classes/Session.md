@@ -1,12 +1,12 @@
-[**aimljs v1.0.0**](../README.md)
+[**aiml.js v1.0.1**](../README.md)
 
 ***
 
-[aimljs](../globals.md) / Session
+[aiml.js](../globals.md) / Session
 
 # Class: Session
 
-Defined in: core/Session.ts:33
+Defined in: [core/Session.ts:33](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L33)
 
 Represents a single user's conversation state.
 
@@ -41,7 +41,7 @@ const restored = Session.fromJSON(saved);
 
 > **new Session**(`id?`): `Session`
 
-Defined in: core/Session.ts:45
+Defined in: [core/Session.ts:45](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L45)
 
 #### Parameters
 
@@ -61,7 +61,7 @@ Optional explicit session ID; a unique ID is generated if omitted.
 
 > **addTriple**(`subject`, `predicate`, `object`): `void`
 
-Defined in: core/Session.ts:194
+Defined in: [core/Session.ts:194](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L194)
 
 Add a subject/predicate/object triple.
 
@@ -99,7 +99,7 @@ session.queryTriples('alice', 'likes'); // → [{ subject:'alice', predicate:'li
 
 > **addTurn**(`input`, `response`): `void`
 
-Defined in: core/Session.ts:123
+Defined in: [core/Session.ts:123](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L123)
 
 Append a completed conversation turn to the history.
 Called automatically after each [AIMLBot.talk](AIMLBot.md#talk) call.
@@ -124,7 +124,7 @@ Called automatically after each [AIMLBot.talk](AIMLBot.md#talk) call.
 
 > **clearHistory**(): `void`
 
-Defined in: core/Session.ts:178
+Defined in: [core/Session.ts:178](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L178)
 
 Clear all conversation history.
 
@@ -138,7 +138,7 @@ Clear all conversation history.
 
 > **deletePredicate**(`name`): `void`
 
-Defined in: core/Session.ts:85
+Defined in: [core/Session.ts:85](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L85)
 
 Delete a named predicate.
 
@@ -160,7 +160,7 @@ Predicate name.
 
 > **deleteTriple**(`subject`, `predicate`, `object`): `void`
 
-Defined in: core/Session.ts:209
+Defined in: [core/Session.ts:209](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L209)
 
 Delete a specific triple.  Called by `<deletetriple>`.
 
@@ -188,7 +188,7 @@ Delete a specific triple.  Called by `<deletetriple>`.
 
 > **getAllPredicates**(): `Record`\<`string`, `string`\>
 
-Defined in: core/Session.ts:93
+Defined in: [core/Session.ts:93](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L93)
 
 Return all predicates as a plain object snapshot.
 Useful for debugging or serialisation.
@@ -203,7 +203,7 @@ Useful for debugging or serialisation.
 
 > **getHistory**(): [`ConversationTurn`](../interfaces/ConversationTurn.md)[]
 
-Defined in: core/Session.ts:173
+Defined in: [core/Session.ts:173](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L173)
 
 Return a copy of the full conversation history.
 
@@ -217,7 +217,7 @@ Return a copy of the full conversation history.
 
 > **getInput**(`index?`): `string`
 
-Defined in: core/Session.ts:140
+Defined in: [core/Session.ts:140](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L140)
 
 Return the Nth previous user input (1-based, 1 = most recent).
 
@@ -241,7 +241,7 @@ Used by the `<input index="N"/>` template tag.
 
 > **getPredicate**(`name`): `string`
 
-Defined in: core/Session.ts:61
+Defined in: [core/Session.ts:61](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L61)
 
 Read a named predicate value.
 
@@ -266,7 +266,7 @@ Predicate name (case-insensitive).
 
 > **getResponse**(`index?`): `string`
 
-Defined in: core/Session.ts:152
+Defined in: [core/Session.ts:152](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L152)
 
 Return the Nth previous bot response (1-based, 1 = most recent).
 
@@ -290,7 +290,7 @@ Used by the `<response index="N"/>` template tag (AIML 2.0).
 
 > **getThat**(`responseIndex?`, `sentenceIndex?`): `string`
 
-Defined in: core/Session.ts:165
+Defined in: [core/Session.ts:165](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L165)
 
 Return the Mth sentence of the Nth previous bot response.
 
@@ -320,7 +320,7 @@ Sentence index within that response (1 = first).
 
 > **getTopic**(): `string`
 
-Defined in: core/Session.ts:103
+Defined in: [core/Session.ts:103](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L103)
 
 Return the current conversation topic.
 
@@ -340,7 +340,7 @@ Return the current conversation topic.
 
 > **queryTriples**(`subject?`, `predicate?`, `object?`): [`TripleEntry`](../interfaces/TripleEntry.md)[]
 
-Defined in: core/Session.ts:226
+Defined in: [core/Session.ts:226](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L226)
 
 Query the triple store.  Pass `undefined` to a field to act as a wildcard.
 
@@ -376,7 +376,7 @@ Matching triples.
 
 > **serialize**(): [`SessionData`](../interfaces/SessionData.md)
 
-Defined in: core/Session.ts:247
+Defined in: [core/Session.ts:247](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L247)
 
 Serialise the session to a plain [SessionData](../interfaces/SessionData.md) object.
 
@@ -393,7 +393,7 @@ Restore with [Session.deserialize](#deserialize).
 
 > **setPredicate**(`name`, `value`): `void`
 
-Defined in: core/Session.ts:76
+Defined in: [core/Session.ts:76](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L76)
 
 Set a named predicate.
 
@@ -424,7 +424,7 @@ New value.
 
 > **setTopic**(`topic`): `void`
 
-Defined in: core/Session.ts:111
+Defined in: [core/Session.ts:111](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L111)
 
 Set the current conversation topic.
 Also updates the `"topic"` predicate so `<get name="topic"/>` works.
@@ -445,7 +445,7 @@ Also updates the `"topic"` predicate so `<get name="topic"/>` works.
 
 > **toJSON**(): `string`
 
-Defined in: core/Session.ts:288
+Defined in: [core/Session.ts:288](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L288)
 
 Serialise the session to a JSON string.
 
@@ -467,7 +467,7 @@ localStorage.setItem('session', session.toJSON());
 
 > `static` **deserialize**(`data`): `Session`
 
-Defined in: core/Session.ts:267
+Defined in: [core/Session.ts:267](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L267)
 
 Restore a session from a [SessionData](../interfaces/SessionData.md) object.
 
@@ -495,7 +495,7 @@ const session2 = Session.deserialize(saved);
 
 > `static` **fromJSON**(`json`): `Session`
 
-Defined in: core/Session.ts:298
+Defined in: [core/Session.ts:298](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L298)
 
 Restore a session from a JSON string produced by [Session.toJSON](#tojson).
 
@@ -521,7 +521,7 @@ const session = Session.fromJSON(localStorage.getItem('session')!);
 
 > `readonly` **created**: `number`
 
-Defined in: core/Session.ts:41
+Defined in: [core/Session.ts:41](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L41)
 
 Unix timestamp (ms) when the session was created.
 
@@ -531,6 +531,6 @@ Unix timestamp (ms) when the session was created.
 
 > `readonly` **id**: `string`
 
-Defined in: core/Session.ts:35
+Defined in: [core/Session.ts:35](https://github.com/jesobreira/aimljs/blob/d8104ce59bfa79bf2060f0fdc08bc026969d8990/src/core/Session.ts#L35)
 
 Unique session identifier.

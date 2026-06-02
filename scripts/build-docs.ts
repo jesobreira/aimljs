@@ -1,20 +1,28 @@
 #!/usr/bin/env node
 /**
- * build-docs — Generate a static documentation site into gh-pages/
+ * build-docs — Build the documentation site and push it to the gh-pages branch.
  *
  * Usage:
- *   npm run build:docs
- *   npx tsx scripts/build-docs.ts
+ *   npm run build:docs              # build + push to gh-pages branch
+ *   npm run build:docs -- --local   # build to ./gh-pages/ folder only (no git)
+ *
+ * The script uses a git worktree so it never touches your current working branch.
  */
 
-import { readFile, writeFile, mkdir, readdir } from 'fs/promises';
+import { readFile, writeFile, mkdir, readdir, rm } from 'fs/promises';
+import { mkdtempSync } from 'fs';
 import { join, basename, extname, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { tmpdir } from 'os';
+import { execSync } from 'child_process';
 import { marked, Renderer } from 'marked';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
-const OUT  = join(ROOT, 'gh-pages');
+
+// --local flag → write to ./gh-pages/ without any git operations
+const LOCAL = process.argv.includes('--local');
+const OUT   = LOCAL ? join(ROOT, 'gh-pages') : mkdtempSync(join(tmpdir(), 'aiml.js-docs-'));
 
 // ─── Marked: custom renderer adds slug IDs to every heading ──────────────────
 
@@ -78,7 +86,7 @@ function page(opts: {
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <meta name="description" content="${opts.description}"/>
-  <title>${opts.title} — aimljs</title>
+  <title>${opts.title} — aiml.js</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>"/>
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"/>
@@ -86,7 +94,7 @@ function page(opts: {
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">🤖 aimljs</a>
+      <a href="index.html" class="logo">🤖 aiml.js</a>
       <nav class="site-nav">${nav}</nav>
       <a href="https://github.com/jesobreira/aimljs" class="gh-link" target="_blank" rel="noopener">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -101,7 +109,7 @@ function page(opts: {
 
   <footer class="site-footer">
     <div class="container">
-      <p>Built with <strong>aimljs</strong> · MIT License ·
+      <p>MIT License ·
          <a href="https://github.com/jesobreira/aimljs">GitHub</a></p>
     </div>
   </footer>
@@ -326,7 +334,7 @@ function buildIndex(): string {
     <div class="feature-desc">${f.desc}</div>
   </div>`).join('');
 
-  const code = `<pre><code class="language-typescript">import { AIML2Bot } from 'aimljs';
+  const code = `<pre><code class="language-typescript">import { AIML2Bot } from 'aiml.js';
 
 const bot = new AIML2Bot({
   properties: { name: 'Alice' },
@@ -360,7 +368,7 @@ const id    = bot.loadSerializedSession(saved);</code></pre>`;
       <a href="api.html"             class="btn btn-secondary">API Docs</a>
       <a href="https://github.com/jesobreira/aimljs" class="btn btn-secondary" target="_blank">GitHub</a>
     </div>
-    <div class="hero-install"><span class="prompt">$</span><code>npm install aimljs</code></div>
+    <div class="hero-install"><span class="prompt">$</span><code>npm install aiml.js</code></div>
   </div>
 </section>
 
@@ -396,7 +404,6 @@ const id    = bot.loadSerializedSession(saved);</code></pre>`;
     <div class="stat"><div class="stat-num">2</div><div class="stat-label">AIML versions</div></div>
     <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Template tags</div></div>
     <div class="stat"><div class="stat-num">151</div><div class="stat-label">Unit tests</div></div>
-    <div class="stat"><div class="stat-num">20K+</div><div class="stat-label">Categories (Rosie+Free)</div></div>
   </div>
 </div>`;
 
@@ -409,7 +416,7 @@ async function buildGettingStarted(): Promise<string> {
   const html = md(src);
   return page({
     title: 'Getting Started',
-    description: 'Install aimljs and build your first AIML chatbot.',
+    description: 'Install aiml.js and build your first AIML chatbot.',
     active: 'getting-started',
     body: `<div class="prose">${html}</div>`,
   });
@@ -418,7 +425,7 @@ async function buildGettingStarted(): Promise<string> {
 async function buildCli(): Promise<string> {
   const src = `# CLI Reference
 
-aimljs ships two command-line tools.
+aiml.js ships two command-line tools.
 
 ---
 
@@ -429,8 +436,8 @@ Validate AIML files for syntax errors before loading them into your bot.
 ### Install
 
 \`\`\`bash
-npm install -g aimljs          # global
-npx aimljs aiml-validate ...  # one-off, no install
+npm install -g aiml.js          # global
+npx aiml.js aiml-validate ...  # one-off, no install
 \`\`\`
 
 ### Usage
@@ -479,7 +486,7 @@ Expose any AIML bot as a **ChatGPT-compatible REST API** with a Swagger UI.
 ### Install
 
 \`\`\`bash
-npm install -g aimljs
+npm install -g aiml.js
 \`\`\`
 
 ### Usage
@@ -525,7 +532,7 @@ curl http://localhost:8080/v1/chat/completions \\
 
 \`\`\`json
 {
-  "id": "chatcmpl-aimljs-4s49pq3j",
+  "id": "chatcmpl-aiml.js-4s49pq3j",
   "object": "chat.completion",
   "created": 1700000000,
   "model": "aiml-bot-1",
@@ -634,7 +641,7 @@ class LoggingBot extends AIML1Bot {
 
   return page({
     title: 'CLI Reference',
-    description: 'aiml-validate and aiml-serve CLI tools for aimljs.',
+    description: 'aiml-validate and aiml-serve CLI tools for aiml.js.',
     active: 'cli',
     body: `
 <div class="docs-layout">
@@ -696,7 +703,7 @@ Run \`npm run docs\` then \`npm run build:docs\` to populate this page.
 
   return page({
     title: 'API Reference',
-    description: 'Full API reference for aimljs classes, methods, and types.',
+    description: 'Full API reference for aiml.js classes, methods, and types.',
     active: 'api',
     body: `
 <div class="docs-layout">
@@ -732,7 +739,68 @@ async function build() {
   }
 
   await writeFile(join(OUT, '.nojekyll'), '');
-  console.log('\n✅ Site built →', OUT, '\n');
+
+  if (LOCAL) {
+    console.log('\n✅ Site built →', OUT, '\n');
+    return;
+  }
+
+  // ── Deploy to gh-pages branch via git worktree ──────────────────────────────
+  console.log('\n🚀 Deploying to gh-pages branch…\n');
+
+  // We need a path that doesn't exist yet for the worktree
+  const wtDir = OUT + '-wt';
+  const git = (cmd: string) => execSync(`git ${cmd}`, { cwd: ROOT, stdio: 'pipe' }).toString().trim();
+
+  try {
+    // Remove any stale gh-pages worktrees left by a previous failed run.
+    // git worktree prune alone won't help if the directory still exists on disk —
+    // we must force-remove each stale worktree first, then prune the metadata.
+    try {
+      const list = execSync('git worktree list --porcelain', { cwd: ROOT, stdio: 'pipe' }).toString();
+      for (const block of list.split('\n\n')) {
+        const wLine = block.split('\n').find((l: string) => l.startsWith('worktree '));
+        const bLine = block.split('\n').find((l: string) => l.startsWith('branch '));
+        if (wLine && bLine?.includes('gh-pages')) {
+          const stale = wLine.replace('worktree ', '').trim();
+          if (stale !== ROOT) try { git(`worktree remove "${stale}" --force`); } catch {}
+        }
+      }
+      git('worktree prune');
+    } catch {}
+
+    // Add a worktree pointing at the gh-pages branch
+    git(`worktree add "${wtDir}" gh-pages`);
+
+    // Remove all tracked files from the worktree (keep .git folder)
+    execSync(`find "${wtDir}" -mindepth 1 -not -path '*/.git*' -delete`, { stdio: 'pipe' });
+
+    // Copy freshly generated files into the worktree
+    execSync(`cp -r "${OUT}/." "${wtDir}/"`, { stdio: 'pipe' });
+
+    // Stage everything
+    git(`-C "${wtDir}" add -A`);
+
+    // Check if there's actually anything to commit
+    const status = execSync(`git -C "${wtDir}" status --porcelain`, { stdio: 'pipe' }).toString().trim();
+    if (!status) {
+      console.log('  ✓ Nothing changed — gh-pages branch is already up to date.\n');
+    } else {
+      const pkg = JSON.parse(await readFile(join(ROOT, 'package.json'), 'utf-8'));
+      git(`-C "${wtDir}" commit -m "docs: update site for v${pkg.version}"`);
+      git(`-C "${wtDir}" push origin gh-pages`);
+      console.log('  ✓ Pushed to gh-pages branch\n');
+      console.log(`  🌐 ${pkg.homepage ?? 'https://<your-username>.github.io/<repo>'}\n`);
+    }
+  } catch (err) {
+    console.error('\n❌ Git deploy failed:', String(err));
+    console.error('   Hint: make sure the gh-pages branch exists and origin is set.\n');
+    process.exit(1);
+  } finally {
+    // Always clean up the worktree and temp dir
+    try { git(`worktree remove "${wtDir}" --force`); } catch {}
+    try { await rm(OUT, { recursive: true, force: true }); } catch {}
+  }
 }
 
 console.log('\n📚 Building documentation site…\n');

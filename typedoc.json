@@ -4,7 +4,7 @@
   "out": "docs",
   "plugin": ["typedoc-plugin-markdown"],
   "readme": "README.md",
-  "name": "aimljs",
+  "name": "aiml.js",
   "includeVersion": true,
   "searchInComments": true,
   "categorizeByGroup": true,
@@ -14,6 +14,6 @@
   "excludeProtected": false,
   "excludeInternal": true,
   "navigationLinks": {
-    "GitHub": "https://github.com/your-org/aimljs"
+    "GitHub": "https://github.com/jesobreira/aimljs"
   }
 }
