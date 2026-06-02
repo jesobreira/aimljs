@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm test *)",
+      "Read(//usr/local/bin/**)",
+      "Read(//Users/user/.nvm/versions/node/**)",
+      "Read(//opt/homebrew/bin/**)"
+    ]
+  }
+}
