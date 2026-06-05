@@ -33,9 +33,11 @@
     "build:docs": "tsx scripts/build-docs.ts",
     "validate": "tsx bin/aiml-validate.ts",
     "serve": "tsx bin/aiml-serve.ts",
-    "chat:freeaiml": "tsx dev/freeaiml/chat.ts",
-    "chat:rosie": "tsx dev/rosie/chat.ts",
-    "app": "tsx app/server.ts"
+    "chat:freeaiml":   "tsx dev/freeaiml/chat.ts",
+    "chat:rosie":      "tsx dev/rosie/chat.ts",
+    "chat:squarebear": "tsx dev/squarebear/chat.ts",
+    "chat:alice":      "tsx dev/alice/chat.ts",
+    "app":             "tsx app/server.ts"
   },
   "keywords": [
     "aiml",
