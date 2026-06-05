@@ -194,13 +194,23 @@ export class AIMLBot {
    * `);
    * ```
    */
-  async loadXMLString(xml: string, fileName?: string): Promise<void> {
+  async loadXMLString(xml: string, fileName?: string, lenient = false): Promise<void> {
     const { categories, errors } = parseAIML(xml, fileName, this.aimlVersion);
     if (errors.length > 0) {
-      const msg = errors.map(e => e.message).join('; ');
-      throw new Error(`AIML parse errors: ${msg}`);
+      if (lenient) {
+        // Load whatever was successfully parsed and print a warning
+        const msg = errors.map(e => e.message).join('; ');
+        console.warn(`[aiml.js] ${fileName ?? 'inline'}: ${errors.length} error(s) — ${msg}`);
+      } else {
+        const msg = errors.map(e => e.message).join('; ');
+        throw new Error(`AIML parse errors: ${msg}`);
+      }
     }
     this.matcher.addCategories(categories);
+  }
+
+  async loadXMLStringLenient(xml: string, fileName?: string): Promise<void> {
+    return this.loadXMLString(xml, fileName, true);
   }
 
   /**
@@ -266,13 +276,14 @@ export class AIMLBot {
     dirPath: string,
     recursive = true,
     extensions: string[] = ['.aiml'],
+    lenient = false,
   ): Promise<void> {
     if (typeof process === 'undefined') {
       throw new Error('loadDirectory is only available in Node.js environments');
     }
     const files = await loadDirectory(dirPath, extensions, recursive);
     for (const { name, content } of files) {
-      await this.loadXMLString(content, name);
+      await this.loadXMLString(content, name, lenient);
     }
   }
 
