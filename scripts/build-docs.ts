@@ -403,7 +403,7 @@ const id    = bot.loadSerializedSession(saved);</code></pre>`;
   <div class="stats">
     <div class="stat"><div class="stat-num">2</div><div class="stat-label">AIML versions</div></div>
     <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Template tags</div></div>
-    <div class="stat"><div class="stat-num">151</div><div class="stat-label">Unit tests</div></div>
+    <div class="stat"><div class="stat-num">234</div><div class="stat-label">Unit tests</div></div>
   </div>
 </div>`;
 
