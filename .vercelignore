@@ -1,0 +1,33 @@
+# Build artefacts
+dist/
+gh-pages/
+
+# Dev tools and docs
+docs/
+coverage/
+scripts/
+typedoc.json
+jest.config.js
+tsup.config.ts
+tsconfig*.json
+
+# Tests
+tests/
+
+# Examples (not needed at runtime)
+examples/
+
+# App source (only app/public/ is needed — copied to public/ by build step)
+app/server.ts
+
+# Dev chat scripts (not needed on server)
+dev/freeaiml/chat.ts
+dev/rosie/chat.ts
+dev/squarebear/chat.ts
+dev/alice/chat.ts
+dev/debug.ts
+dev/matchtest.ts
+
+# Local-only files
+.claude/
+node_modules/
