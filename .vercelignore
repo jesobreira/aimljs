@@ -1,5 +1,4 @@
 # Build artefacts
-dist/
 gh-pages/
 
 # Dev tools and docs

@@ -25,7 +25,7 @@ import {
   parseSubstitutions,
   parseSet,
   parseMap,
-} from '../src/index.js';
+} from '../dist/index.js';
 
 // In the Vercel bundle, __dirname is the api/ directory.
 // The dev/ folder is bundled at the project root, so ROOT = one level up.
